@@ -1,5 +1,49 @@
 <!-- Content Wrapper START -->
 <div class="main-content">
+    <div class="page-header no-gutters">
+        <div class="d-md-flex align-items-md-center justify-content-between">
+            <div class="media m-v-10 align-items-center">
+                <div class="avatar avatar-image avatar-lg">
+                    <img src="assets/images/avatars/thumb-3.jpg" alt="">
+                </div>
+                <div class="media-body m-l-15">
+                    <h4 class="m-b-0">Bem-Vindo, <?= $_SESSION['userName']; ?></h4>
+                    <span class="text-gray">Função do usuário</span>
+                </div>
+            </div>
+            <div class="d-md-flex align-items-center d-none">
+                <div class="media align-items-center m-r-40 m-v-5">
+                    <!--<div class="font-size-27">
+                                        <i class="text-primary anticon anticon-profile"></i>
+                                    </div>
+
+                                   <div class="d-flex align-items-center m-l-10">
+                                        <h2 class="m-b-0 m-r-5">78</h2>
+                                        <span class="text-gray">Tarefas</span>
+                                    </div>-->
+                </div>
+                <div class="media align-items-center m-r-40 m-v-5">
+                    <div class="font-size-27">
+                        <i class="text-success  anticon anticon-appstore"></i>
+                    </div>
+                    <div class="d-flex align-items-center m-l-10">
+                        <h2 class="m-b-0 m-r-5">21</h2>
+                        <span class="text-gray">Projetos</span>
+                    </div>
+                </div>
+                <div class="media align-items-center m-v-5">
+                    <div class="font-size-27">
+                        <i class="text-danger anticon anticon-team"></i>
+                    </div>
+                    <div class="d-flex align-items-center m-l-10">
+                        <h2 class="m-b-0 m-r-5">39</h2>
+                        <span class="text-gray">Clientes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="row">
         <div class="col-md-6 col-lg-3">
             <div class="card">
