@@ -757,6 +757,8 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     <script src="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
     <script src="assets/js/pages/dashboard-project.js"></script>
 
+    <script src="assets/js/pages/dashboard-crm.js"></script>
+
     <!-- Core JS -->
     <script src="assets/js/app.min.js"></script>
 

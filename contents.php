@@ -1,7 +1,7 @@
 <?php
 
 if (!isset($_GET['page']) || $_GET['page'] == null) {
-  include "./pages/dashboard.php";
+  include "./pages/index-crm.php";
 } else {
   switch (@$_GET['page']) {
     case 'inicio':
@@ -10,6 +10,18 @@ if (!isset($_GET['page']) || $_GET['page'] == null) {
 
     case 'profile': //Perfil de usuario
       include "./pages/profile.php";
+      break;
+
+    case 'users': //Usuarios
+      include "./pages/usuarios.php";
+      break;
+
+    case 'customers': //Clientes
+      include "./pages/customers.php";
+      break;
+
+    case 'projects': //Projetos
+      include "./pages/projects.php";
       break;
 
     case 'usuarios':  // Usuarios
