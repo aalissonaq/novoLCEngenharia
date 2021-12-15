@@ -211,7 +211,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
                 <div class="side-nav-inner">
                     <ul class="side-nav-menu scrollable">
                         <li class="nav-item  ">
-                            <a class="" href="<?= $_SERVER['PHP_SELF'] ?>">
+                            <a class="" href="index.php">
                                 <span class="icon-holder">
                                     <i class="anticon anticon-dashboard"></i>
                                 </span>

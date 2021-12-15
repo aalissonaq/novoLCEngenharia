@@ -17,7 +17,7 @@ if (isset($_POST['login']) && $_POST['login'] == 'entra') {
     if ($login['userName'] == '00000000000' && $login['password'] == md5('admin')) {
         session_start();
 
-        $_SESSION['userName'] = 'Root';
+        $_SESSION['userName'] = 'Admininstrador do Sistema';
         $_SESSION['released'] = true;
         header('Location: index.php');
     } else {

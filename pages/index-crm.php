@@ -7,7 +7,9 @@
                     <img src="assets/images/avatars/thumb-3.jpg" alt="">
                 </div>
                 <div class="media-body m-l-15">
-                    <h4 class="m-b-0">Bem-Vindo, <?= $_SESSION['userName']; ?></h4>
+                    <h4 class="m-b-0">Bem-Vindo,
+                        <?= explode(' ',  $_SESSION['userName'])[0]; ?>
+                    </h4>
                     <span class="text-gray">Função do usuário</span>
                 </div>
             </div>
