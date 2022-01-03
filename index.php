@@ -141,20 +141,20 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
                         <li class="dropdown dropdown-animated scale-left">
                             <div class="pointer" data-toggle="dropdown">
                                 <div class="avatar avatar-image  m-h-10 m-r-15">
-                                    <img src="assets/images/avatars/thumb-3.jpg" alt="">
+                                    <img src="assets/images/avatars/thumb-3.jpg" class="img-fluid" alt="">
                                 </div>
                             </div>
                             <div class="p-b-15 p-t-20 dropdown-menu pop-profile">
                                 <div class="p-h-20 p-b-15 m-b-10 border-bottom">
                                     <div class="d-flex m-r-50">
-                                        <div class="avatar avatar-lg avatar-image">
-                                            <img src="assets/images/avatars/thumb-3.jpg" alt="">
+                                        <div class="avatar avatar-lg avatar-image" style="">
+                                            <img src="assets/images/avatars/thumb-3.jpg" class="img-fluid" alt="" style=" ">
                                         </div>
                                         <div class="m-l-10">
                                             <p class="m-b-0 text-dark font-weight-semibold text-uppercase">
-                                                <?= $_SESSION['userName']; ?>
+                                                <?= explode(' ',  $_SESSION['userName'])[0]; ?>
                                             </p>
-                                            <p class="m-b-0 opacity-07"> Desinger</p>
+                                            <p class="m-b-0 opacity-07" style="font-size:.8rem;"> Função do usuário</p>
                                         </div>
                                     </div>
                                 </div>
@@ -755,9 +755,10 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     <!-- page js -->
     <script src="assets/vendors/chartjs/Chart.min.js"></script>
     <script src="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-    <script src="assets/js/pages/dashboard-project.js"></script>
 
+    <script src="assets/js/pages/dashboard-project.js"></script>
     <script src="assets/js/pages/dashboard-crm.js"></script>
+    <script src="assets/js/pages/project-list.js"></script>
 
     <!-- Core JS -->
     <script src="assets/js/app.min.js"></script>

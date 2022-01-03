@@ -25,7 +25,9 @@
                                 </div>
                             </div>
                             <div class="text-center text-sm-left m-v-15 p-l-30">
-                                <h2 class="m-b-5">Marshall Nichols</h2>
+                                <h2 class="m-b-5">
+                                <?= $_SESSION['userName']; ?>
+                                </h2>
                                 <p class="text-opacity font-size-13">@Marshallnich</p>
                                 <p class="text-dark m-b-20">Frontend Developer, UI/UX Designer</p>
                                 <button class="btn btn-primary btn-tone">Contact</button>
