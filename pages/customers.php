@@ -1,1313 +1,501 @@
                 <!-- Content Wrapper START -->
                 <div class="main-content">
-                    <div class="page-header no-gutters">
-                        <div class="row align-items-md-center">
-                            <div class="col-md-6">
-                                <div class="row">
-                                    <div class="col-md-5">
-                                        <div class="input-affix m-v-10">
-                                            <i class="prefix-icon anticon anticon-search opacity-04"></i>
-                                            <input type="text" class="form-control" placeholder="Search Project">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="text-md-right m-v-10">
-                                    <div class="btn-group m-r-10">
-                                        <button id="list-view-btn" type="button" class="btn btn-default btn-icon" data-toggle="tooltip" data-placement="bottom" title="List View">
-                                            <i class="anticon anticon-ordered-list"></i>
-                                        </button>
-                                        <button id="card-view-btn" type="button" class="btn btn-default btn-icon active" data-toggle="tooltip" data-placement="bottom" title="Card View">
-                                            <i class="anticon anticon-appstore"></i>
-                                        </button>
-                                    </div>
-                                    <button class="btn btn-primary" data-toggle="modal" data-target="#create-new-project">
-                                        <i class="anticon anticon-plus"></i>
-                                        <span class="m-l-5">New Project</span>
-                                    </button>
-                                </div>
-                            </div>
+                    <div class="page-header">
+                        <h2 class="header-title">Clientes</h2>
+                        <div class="header-sub-title">
+                            <nav class="breadcrumb breadcrumb-dash">
+                                <a href="/" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home</a>
+                                <span class="breadcrumb-item active">Clientes</span>
+                            </nav>
                         </div>
                     </div>
-                    <div class="container-fluid">
-                        <div id="card-view">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="media">
-                                                    <div class="avatar avatar-image rounded">
-                                                        <img src="assets/images/others/thumb-1.jpg" alt="">
-                                                    </div>
-                                                    <div class="m-l-10">
-                                                        <h5 class="m-b-0">Mind Cog App</h5>
-                                                        <span class="text-muted font-size-13">31 Tasks</span>
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown dropdown-animated scale-left">
-                                                    <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
-                                                        <i class="anticon anticon-ellipsis"></i>
-                                                    </a>
-                                                    <div class="dropdown-menu">
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-eye"></i>
-                                                            <span class="m-l-10">View</span>
-                                                        </button>
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-edit"></i>
-                                                            <span class="m-l-10">Edit</span>
-                                                        </button>
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-delete"></i>
-                                                            <span class="m-l-10">Delete</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <p class="m-t-25">European minnow priapumfish mosshead warbonnet shrimpfish.</p>
-                                            <div class="m-t-30">
-                                                <div class="d-flex justify-content-between">
-                                                    <span class="font-weight-semibold">Progress</span>
-                                                    <span class="font-weight-semibold">100%</span>
-                                                </div>
-                                                <div class="progress progress-sm m-t-10">
-                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%"></div>
-                                                </div>
-                                            </div>
-                                            <div class="m-t-20">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div>
-                                                        <span class="badge badge-pill badge-cyan">Ready</span>
-                                                    </div>
-                                                    <div>
-                                                        <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Pamela Wanda">
-                                                            <div class="avatar avatar-image avatar-sm">
-                                                                <img src="assets/images/avatars/thumb-7.jpg" alt="">
-                                                            </div>
-                                                        </a>
-                                                        <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Darryl Day">
-                                                            <div class="avatar avatar-image avatar-sm">
-                                                                <img src="assets/images/avatars/thumb-2.jpg" alt="">
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="media">
-                                                    <div class="avatar avatar-image rounded">
-                                                        <img src="assets/images/others/thumb-2.jpg" alt="">
-                                                    </div>
-                                                    <div class="m-l-10">
-                                                        <h5 class="m-b-0">Mill Real Estate</h5>
-                                                        <span class="text-muted font-size-13">56 Tasks</span>
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown dropdown-animated scale-left">
-                                                    <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
-                                                        <i class="anticon anticon-ellipsis"></i>
-                                                    </a>
-                                                    <div class="dropdown-menu">
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-eye"></i>
-                                                            <span class="m-l-10">View</span>
-                                                        </button>
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-edit"></i>
-                                                            <span class="m-l-10">Edit</span>
-                                                        </button>
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-delete"></i>
-                                                            <span class="m-l-10">Delete</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <p class="m-t-25">Efficiently unleash cross-media information without cross-media value.</p>
-                                            <div class="m-t-30">
-                                                <div class="d-flex justify-content-between">
-                                                    <span class="font-weight-semibold">Progress</span>
-                                                    <span class="font-weight-semibold">100%</span>
-                                                </div>
-                                                <div class="progress progress-sm m-t-10">
-                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%"></div>
-                                                </div>
-                                            </div>
-                                            <div class="m-t-20">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div>
-                                                        <span class="badge badge-pill badge-cyan">Ready</span>
-                                                    </div>
-                                                    <div>
-                                                        <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Virgil Gonzales">
-                                                            <div class="avatar avatar-image avatar-sm">
-                                                                <img src="assets/images/avatars/thumb-4.jpg" alt="">
-                                                            </div>
-                                                        </a>
-                                                        <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Erin Gonzales">
-                                                            <div class="avatar avatar-image avatar-sm">
-                                                                <img src="assets/images/avatars/thumb-1.jpg" alt="">
-                                                            </div>
-                                                        </a>
-                                                        <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="2 More">
-                                                            <div class="avatar avatar-text avatar-sm">
-                                                                <span class="text-dark">+2</span>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="media">
-                                                    <div class="avatar avatar-image rounded">
-                                                        <img src="assets/images/others/thumb-3.jpg" alt="">
-                                                    </div>
-                                                    <div class="m-l-10">
-                                                        <h5 class="m-b-0">Eastern Sack</h5>
-                                                        <span class="text-muted font-size-13">21 Tasks</span>
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown dropdown-animated scale-left">
-                                                    <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
-                                                        <i class="anticon anticon-ellipsis"></i>
-                                                    </a>
-                                                    <div class="dropdown-menu">
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-eye"></i>
-                                                            <span class="m-l-10">View</span>
-                                                        </button>
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-edit"></i>
-                                                            <span class="m-l-10">Edit</span>
-                                                        </button>
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-delete"></i>
-                                                            <span class="m-l-10">Delete</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <p class="m-t-25">Jelly-o sesame snaps halvah croissant oat cake cookie.</p>
-                                            <div class="m-t-30">
-                                                <div class="d-flex justify-content-between">
-                                                    <span class="font-weight-semibold">Progress</span>
-                                                    <span class="font-weight-semibold">87%</span>
-                                                </div>
-                                                <div class="progress progress-sm m-t-10">
-                                                    <div class="progress-bar" role="progressbar" style="width: 87%"></div>
-                                                </div>
-                                            </div>
-                                            <div class="m-t-20">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div>
-                                                        <span class="badge badge-pill badge-blue">In Progress</span>
-                                                    </div>
-                                                    <div>
-                                                        <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Lilian Stone">
-                                                            <div class="avatar avatar-image avatar-sm">
-                                                                <img src="assets/images/avatars/thumb-10.jpg" alt="">
-                                                            </div>
-                                                        </a>
-                                                        <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Victor Terry">
-                                                            <div class="avatar avatar-image avatar-sm">
-                                                                <img src="assets/images/avatars/thumb-11.jpg" alt="">
-                                                            </div>
-                                                        </a>
-                                                        <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="3 More">
-                                                            <div class="avatar avatar-text avatar-sm">
-                                                                <span class="text-dark">+3</span>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="media">
-                                                    <div class="avatar avatar-image rounded">
-                                                        <img src="assets/images/others/thumb-4.jpg" alt="">
-                                                    </div>
-                                                    <div class="m-l-10">
-                                                        <h5 class="m-b-0">Good Beat</h5>
-                                                        <span class="text-muted font-size-13">38 Tasks</span>
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown dropdown-animated scale-left">
-                                                    <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
-                                                        <i class="anticon anticon-ellipsis"></i>
-                                                    </a>
-                                                    <div class="dropdown-menu">
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-eye"></i>
-                                                            <span class="m-l-10">View</span>
-                                                        </button>
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-edit"></i>
-                                                            <span class="m-l-10">Edit</span>
-                                                        </button>
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-delete"></i>
-                                                            <span class="m-l-10">Delete</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <p class="m-t-25">Irish skinny, grinder affogato, dark, sweet carajillo flavour seasonal.</p>
-                                            <div class="m-t-30">
-                                                <div class="d-flex justify-content-between">
-                                                    <span class="font-weight-semibold">Progress</span>
-                                                    <span class="font-weight-semibold">73%</span>
-                                                </div>
-                                                <div class="progress progress-sm m-t-10">
-                                                    <div class="progress-bar" role="progressbar" style="width: 73%"></div>
-                                                </div>
-                                            </div>
-                                            <div class="m-t-20">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div>
-                                                        <span class="badge badge-pill badge-blue">In Progress</span>
-                                                    </div>
-                                                    <div>
-                                                        <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Marshall Nichols">
-                                                            <div class="avatar avatar-image avatar-sm">
-                                                                <img src="assets/images/avatars/thumb-3.jpg" alt="">
-                                                            </div>
-                                                        </a>
-                                                        <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Pamela Wanda">
-                                                            <div class="avatar avatar-image avatar-sm">
-                                                                <img src="assets/images/avatars/thumb-7.jpg" alt="">
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="media">
-                                                    <div class="avatar avatar-image rounded">
-                                                        <img src="assets/images/others/thumb-5.jpg" alt="">
-                                                    </div>
-                                                    <div class="m-l-10">
-                                                        <h5 class="m-b-0">Fortier Studio</h5>
-                                                        <span class="text-muted font-size-13">68 Tasks</span>
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown dropdown-animated scale-left">
-                                                    <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
-                                                        <i class="anticon anticon-ellipsis"></i>
-                                                    </a>
-                                                    <div class="dropdown-menu">
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-eye"></i>
-                                                            <span class="m-l-10">View</span>
-                                                        </button>
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-edit"></i>
-                                                            <span class="m-l-10">Edit</span>
-                                                        </button>
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-delete"></i>
-                                                            <span class="m-l-10">Delete</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <p class="m-t-25">Let us wax poetic about the beauty of the cheeseburger.</p>
-                                            <div class="m-t-30">
-                                                <div class="d-flex justify-content-between">
-                                                    <span class="font-weight-semibold">Progress</span>
-                                                    <span class="font-weight-semibold">73%</span>
-                                                </div>
-                                                <div class="progress progress-sm m-t-10">
-                                                    <div class="progress-bar" role="progressbar" style="width: 73%"></div>
-                                                </div>
-                                            </div>
-                                            <div class="m-t-20">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div>
-                                                        <span class="badge badge-pill badge-blue">In Progress</span>
-                                                    </div>
-                                                    <div>
-                                                        <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Erin Gonzales">
-                                                            <div class="avatar avatar-image avatar-sm">
-                                                                <img src="assets/images/avatars/thumb-1.jpg" alt="">
-                                                            </div>
-                                                        </a>
-                                                        <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Lilian Stone">
-                                                            <div class="avatar avatar-image avatar-sm">
-                                                                <img src="assets/images/avatars/thumb-10.jpg" alt="">
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="media">
-                                                    <div class="avatar avatar-image rounded">
-                                                        <img src="assets/images/others/thumb-6.jpg" alt="">
-                                                    </div>
-                                                    <div class="m-l-10">
-                                                        <h5 class="m-b-0">Indi Wheel Web</h5>
-                                                        <span class="text-muted font-size-13">68 Tasks</span>
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown dropdown-animated scale-left">
-                                                    <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
-                                                        <i class="anticon anticon-ellipsis"></i>
-                                                    </a>
-                                                    <div class="dropdown-menu">
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-eye"></i>
-                                                            <span class="m-l-10">View</span>
-                                                        </button>
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-edit"></i>
-                                                            <span class="m-l-10">Edit</span>
-                                                        </button>
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-delete"></i>
-                                                            <span class="m-l-10">Delete</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <p class="m-t-25">Here's the story of a man named Brady who was busy with three boys</p>
-                                            <div class="m-t-30">
-                                                <div class="d-flex justify-content-between">
-                                                    <span class="font-weight-semibold">Progress</span>
-                                                    <span class="font-weight-semibold">62%</span>
-                                                </div>
-                                                <div class="progress progress-sm m-t-10">
-                                                    <div class="progress-bar" role="progressbar" style="width: 62%"></div>
-                                                </div>
-                                            </div>
-                                            <div class="m-t-20">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div>
-                                                        <span class="badge badge-pill badge-blue">In Progress</span>
-                                                    </div>
-                                                    <div>
-                                                        <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Virgil Gonzales">
-                                                            <div class="avatar avatar-image avatar-sm">
-                                                                <img src="assets/images/avatars/thumb-4.jpg" alt="">
-                                                            </div>
-                                                        </a>
-                                                        <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Darryl Day">
-                                                            <div class="avatar avatar-image avatar-sm">
-                                                                <img src="assets/images/avatars/thumb-2.jpg" alt="">
-                                                            </div>
-                                                        </a>
-                                                        <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="2 More">
-                                                            <div class="avatar avatar-text avatar-sm">
-                                                                <span class="text-dark">+2</span>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="media">
-                                                    <div class="avatar avatar-image rounded">
-                                                        <img src="assets/images/others/thumb-7.jpg" alt="">
-                                                    </div>
-                                                    <div class="m-l-10">
-                                                        <h5 class="m-b-0">Austin Lab</h5>
-                                                        <span class="text-muted font-size-13">90 Tasks</span>
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown dropdown-animated scale-left">
-                                                    <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
-                                                        <i class="anticon anticon-ellipsis"></i>
-                                                    </a>
-                                                    <div class="dropdown-menu">
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-eye"></i>
-                                                            <span class="m-l-10">View</span>
-                                                        </button>
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-edit"></i>
-                                                            <span class="m-l-10">Edit</span>
-                                                        </button>
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-delete"></i>
-                                                            <span class="m-l-10">Delete</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <p class="m-t-25">Caerphilly swiss fromage frais. Brie cheese and wine fromage.</p>
-                                            <div class="m-t-30">
-                                                <div class="d-flex justify-content-between">
-                                                    <span class="font-weight-semibold">Progress</span>
-                                                    <span class="font-weight-semibold">62%</span>
-                                                </div>
-                                                <div class="progress progress-sm m-t-10">
-                                                    <div class="progress-bar" role="progressbar" style="width: 62%"></div>
-                                                </div>
-                                            </div>
-                                            <div class="m-t-20">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div>
-                                                        <span class="badge badge-pill badge-blue">In Progress</span>
-                                                    </div>
-                                                    <div>
-                                                        <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Lilian Stone">
-                                                            <div class="avatar avatar-image avatar-sm">
-                                                                <img src="assets/images/avatars/thumb-8.jpg" alt="">
-                                                            </div>
-                                                        </a>
-                                                        <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Victor Terry">
-                                                            <div class="avatar avatar-image avatar-sm">
-                                                                <img src="assets/images/avatars/thumb-9.jpg" alt="">
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="media">
-                                                    <div class="avatar avatar-image rounded">
-                                                        <img src="assets/images/others/thumb-8.jpg" alt="">
-                                                    </div>
-                                                    <div class="m-l-10">
-                                                        <h5 class="m-b-0">Moody Agency</h5>
-                                                        <span class="text-muted font-size-13">165 Tasks</span>
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown dropdown-animated scale-left">
-                                                    <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
-                                                        <i class="anticon anticon-ellipsis"></i>
-                                                    </a>
-                                                    <div class="dropdown-menu">
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-eye"></i>
-                                                            <span class="m-l-10">View</span>
-                                                        </button>
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-edit"></i>
-                                                            <span class="m-l-10">Edit</span>
-                                                        </button>
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-delete"></i>
-                                                            <span class="m-l-10">Delete</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <p class="m-t-25">Do you see any Teletubbies in here? The path of the righteous.</p>
-                                            <div class="m-t-30">
-                                                <div class="d-flex justify-content-between">
-                                                    <span class="font-weight-semibold">Behind</span>
-                                                    <span class="font-weight-semibold">28%</span>
-                                                </div>
-                                                <div class="progress progress-sm m-t-10">
-                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 28%"></div>
-                                                </div>
-                                            </div>
-                                            <div class="m-t-20">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div>
-                                                        <span class="badge badge-pill badge-red">In Progress</span>
-                                                    </div>
-                                                    <div>
-                                                        <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Lilian Stone">
-                                                            <div class="avatar avatar-image avatar-sm">
-                                                                <img src="assets/images/avatars/thumb-8.jpg" alt="">
-                                                            </div>
-                                                        </a>
-                                                        <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Darryl Day">
-                                                            <div class="avatar avatar-image avatar-sm">
-                                                                <img src="assets/images/avatars/thumb-2.jpg" alt="">
-                                                            </div>
-                                                        </a>
-                                                        <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="3 More">
-                                                            <div class="avatar avatar-text avatar-sm">
-                                                                <span class="text-dark">+3</span>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card d-none" id="list-view">
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>Project</th>
-                                                <th>Tasks</th>
-                                                <th>Members</th>
-                                                <th>Progress</th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="media align-items-center">
-                                                        <div class="avatar avatar-image rounded">
-                                                            <img src="assets/images/others/thumb-1.jpg" alt="">
-                                                        </div>
-                                                        <div class="m-l-10">
-                                                            <h5 class="m-b-0">Mind Cog App</h5>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span>31 Tasks</span>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div>
-                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Pamela Wanda">
-                                                                <div class="avatar avatar-image avatar-sm">
-                                                                    <img src="assets/images/avatars/thumb-7.jpg" alt="">
-                                                                </div>
-                                                            </a>
-                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Darryl Day">
-                                                                <div class="avatar avatar-image avatar-sm">
-                                                                    <img src="assets/images/avatars/thumb-2.jpg" alt="">
-                                                                </div>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="progress progress-sm w-100 m-b-0">
-                                                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%"></div>
-                                                        </div>
-                                                        <div class="m-l-10">
-                                                            <i class="anticon anticon-check-o text-success"></i>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="text-right">
-                                                    <div class="dropdown dropdown-animated scale-left">
-                                                        <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
-                                                            <i class="anticon anticon-ellipsis"></i>
-                                                        </a>
-                                                        <div class="dropdown-menu">
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-eye"></i>
-                                                                <span class="m-l-10">View</span>
-                                                            </button>
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-edit"></i>
-                                                                <span class="m-l-10">Edit</span>
-                                                            </button>
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-delete"></i>
-                                                                <span class="m-l-10">Delete</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="media align-items-center">
-                                                        <div class="avatar avatar-image rounded">
-                                                            <img src="assets/images/others/thumb-2.jpg" alt="">
-                                                        </div>
-                                                        <div class="m-l-10">
-                                                            <h5 class="m-b-0">Mill Real Estate</h5>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span>56 Tasks</span>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div>
-                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Virgil Gonzales">
-                                                                <div class="avatar avatar-image avatar-sm">
-                                                                    <img src="assets/images/avatars/thumb-4.jpg" alt="">
-                                                                </div>
-                                                            </a>
-                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Erin Gonzales">
-                                                                <div class="avatar avatar-image avatar-sm">
-                                                                    <img src="assets/images/avatars/thumb-1.jpg" alt="">
-                                                                </div>
-                                                            </a>
-                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="2 More">
-                                                                <div class="avatar avatar-text avatar-sm">
-                                                                    <span class="text-dark">+2</span>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="progress progress-sm w-100 m-b-0">
-                                                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%"></div>
-                                                        </div>
-                                                        <div class="m-l-10">
-                                                            <i class="anticon anticon-check-o text-success"></i>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="text-right">
-                                                    <div class="dropdown dropdown-animated scale-left">
-                                                        <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
-                                                            <i class="anticon anticon-ellipsis"></i>
-                                                        </a>
-                                                        <div class="dropdown-menu">
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-eye"></i>
-                                                                <span class="m-l-10">View</span>
-                                                            </button>
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-edit"></i>
-                                                                <span class="m-l-10">Edit</span>
-                                                            </button>
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-delete"></i>
-                                                                <span class="m-l-10">Delete</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="media align-items-center">
-                                                        <div class="avatar avatar-image rounded">
-                                                            <img src="assets/images/others/thumb-3.jpg" alt="">
-                                                        </div>
-                                                        <div class="m-l-10">
-                                                            <h5 class="m-b-0">Eastern Sack</h5>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span>21 Tasks</span>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div>
-                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Lilian Stone">
-                                                                <div class="avatar avatar-image avatar-sm">
-                                                                    <img src="assets/images/avatars/thumb-10.jpg" alt="">
-                                                                </div>
-                                                            </a>
-                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Victor Terry">
-                                                                <div class="avatar avatar-image avatar-sm">
-                                                                    <img src="assets/images/avatars/thumb-11.jpg" alt="">
-                                                                </div>
-                                                            </a>
-                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="3 More">
-                                                                <div class="avatar avatar-text avatar-sm">
-                                                                    <span class="text-dark">+3</span>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="progress progress-sm w-100 m-b-0">
-                                                            <div class="progress-bar" role="progressbar" style="width: 87%"></div>
-                                                        </div>
-                                                        <div class="m-l-10">
-                                                            87%
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="text-right">
-                                                    <div class="dropdown dropdown-animated scale-left">
-                                                        <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
-                                                            <i class="anticon anticon-ellipsis"></i>
-                                                        </a>
-                                                        <div class="dropdown-menu">
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-eye"></i>
-                                                                <span class="m-l-10">View</span>
-                                                            </button>
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-edit"></i>
-                                                                <span class="m-l-10">Edit</span>
-                                                            </button>
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-delete"></i>
-                                                                <span class="m-l-10">Delete</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="media align-items-center">
-                                                        <div class="avatar avatar-image rounded">
-                                                            <img src="assets/images/others/thumb-4.jpg" alt="">
-                                                        </div>
-                                                        <div class="m-l-10">
-                                                            <h5 class="m-b-0">Good Beat</h5>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span>38 Tasks</span>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div>
-                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Marshall Nichols">
-                                                                <div class="avatar avatar-image avatar-sm">
-                                                                    <img src="assets/images/avatars/thumb-3.jpg" alt="">
-                                                                </div>
-                                                            </a>
-                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Pamela Wanda">
-                                                                <div class="avatar avatar-image avatar-sm">
-                                                                    <img src="assets/images/avatars/thumb-7.jpg" alt="">
-                                                                </div>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="progress progress-sm w-100 m-b-0">
-                                                            <div class="progress-bar" role="progressbar" style="width: 73%"></div>
-                                                        </div>
-                                                        <div class="m-l-10">
-                                                            73%
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="text-right">
-                                                    <div class="dropdown dropdown-animated scale-left">
-                                                        <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
-                                                            <i class="anticon anticon-ellipsis"></i>
-                                                        </a>
-                                                        <div class="dropdown-menu">
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-eye"></i>
-                                                                <span class="m-l-10">View</span>
-                                                            </button>
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-edit"></i>
-                                                                <span class="m-l-10">Edit</span>
-                                                            </button>
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-delete"></i>
-                                                                <span class="m-l-10">Delete</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="media align-items-center">
-                                                        <div class="avatar avatar-image rounded">
-                                                            <img src="assets/images/others/thumb-5.jpg" alt="">
-                                                        </div>
-                                                        <div class="m-l-10">
-                                                            <h5 class="m-b-0">Fortier Studio</h5>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span>68 Tasks</span>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div>
-                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Erin Gonzales">
-                                                                <div class="avatar avatar-image avatar-sm">
-                                                                    <img src="assets/images/avatars/thumb-1.jpg" alt="">
-                                                                </div>
-                                                            </a>
-                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Lilian Stone">
-                                                                <div class="avatar avatar-image avatar-sm">
-                                                                    <img src="assets/images/avatars/thumb-10.jpg" alt="">
-                                                                </div>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="progress progress-sm w-100 m-b-0">
-                                                            <div class="progress-bar" role="progressbar" style="width: 73%"></div>
-                                                        </div>
-                                                        <div class="m-l-10">
-                                                            73%
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="text-right">
-                                                    <div class="dropdown dropdown-animated scale-left">
-                                                        <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
-                                                            <i class="anticon anticon-ellipsis"></i>
-                                                        </a>
-                                                        <div class="dropdown-menu">
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-eye"></i>
-                                                                <span class="m-l-10">View</span>
-                                                            </button>
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-edit"></i>
-                                                                <span class="m-l-10">Edit</span>
-                                                            </button>
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-delete"></i>
-                                                                <span class="m-l-10">Delete</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="media align-items-center">
-                                                        <div class="avatar avatar-image rounded">
-                                                            <img src="assets/images/others/thumb-6.jpg" alt="">
-                                                        </div>
-                                                        <div class="m-l-10">
-                                                            <h5 class="m-b-0">Indi Wheel Web</h5>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span>68 Tasks</span>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div>
-                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Virgil Gonzales">
-                                                                <div class="avatar avatar-image avatar-sm">
-                                                                    <img src="assets/images/avatars/thumb-4.jpg" alt="">
-                                                                </div>
-                                                            </a>
-                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Darryl Day">
-                                                                <div class="avatar avatar-image avatar-sm">
-                                                                    <img src="assets/images/avatars/thumb-2.jpg" alt="">
-                                                                </div>
-                                                            </a>
-                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="2 More">
-                                                                <div class="avatar avatar-text avatar-sm">
-                                                                    <span class="text-dark">+2</span>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="progress progress-sm w-100 m-b-0">
-                                                            <div class="progress-bar" role="progressbar" style="width: 62%"></div>
-                                                        </div>
-                                                        <div class="m-l-10">
-                                                            62%
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="text-right">
-                                                    <div class="dropdown dropdown-animated scale-left">
-                                                        <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
-                                                            <i class="anticon anticon-ellipsis"></i>
-                                                        </a>
-                                                        <div class="dropdown-menu">
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-eye"></i>
-                                                                <span class="m-l-10">View</span>
-                                                            </button>
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-edit"></i>
-                                                                <span class="m-l-10">Edit</span>
-                                                            </button>
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-delete"></i>
-                                                                <span class="m-l-10">Delete</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="media align-items-center">
-                                                        <div class="avatar avatar-image rounded">
-                                                            <img src="assets/images/others/thumb-7.jpg" alt="">
-                                                        </div>
-                                                        <div class="m-l-10">
-                                                            <h5 class="m-b-0">Austin Lab</h5>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span>90 Tasks</span>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div>
-                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Lilian Stone">
-                                                                <div class="avatar avatar-image avatar-sm">
-                                                                    <img src="assets/images/avatars/thumb-8.jpg" alt="">
-                                                                </div>
-                                                            </a>
-                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Victor Terry">
-                                                                <div class="avatar avatar-image avatar-sm">
-                                                                    <img src="assets/images/avatars/thumb-9.jpg" alt="">
-                                                                </div>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="progress progress-sm w-100 m-b-0">
-                                                            <div class="progress-bar" role="progressbar" style="width: 62%"></div>
-                                                        </div>
-                                                        <div class="m-l-10">
-                                                            62%
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="text-right">
-                                                    <div class="dropdown dropdown-animated scale-left">
-                                                        <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
-                                                            <i class="anticon anticon-ellipsis"></i>
-                                                        </a>
-                                                        <div class="dropdown-menu">
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-eye"></i>
-                                                                <span class="m-l-10">View</span>
-                                                            </button>
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-edit"></i>
-                                                                <span class="m-l-10">Edit</span>
-                                                            </button>
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-delete"></i>
-                                                                <span class="m-l-10">Delete</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="media align-items-center">
-                                                        <div class="avatar avatar-image rounded">
-                                                            <img src="assets/images/others/thumb-8.jpg" alt="">
-                                                        </div>
-                                                        <div class="m-l-10">
-                                                            <h5 class="m-b-0">Moody Agency</h5>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span>165 Tasks</span>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div>
-                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Lilian Stone">
-                                                                <div class="avatar avatar-image avatar-sm">
-                                                                    <img src="assets/images/avatars/thumb-8.jpg" alt="">
-                                                                </div>
-                                                            </a>
-                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Darryl Day">
-                                                                <div class="avatar avatar-image avatar-sm">
-                                                                    <img src="assets/images/avatars/thumb-2.jpg" alt="">
-                                                                </div>
-                                                            </a>
-                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="3 More">
-                                                                <div class="avatar avatar-text avatar-sm">
-                                                                    <span class="text-dark">+3</span>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="progress progress-sm w-100 m-b-0">
-                                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 28%"></div>
-                                                        </div>
-                                                        <div class="m-l-10">
-                                                            <i class="anticon anticon-close-o text-danger"></i>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="text-right">
-                                                    <div class="dropdown dropdown-animated scale-left">
-                                                        <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
-                                                            <i class="anticon anticon-ellipsis"></i>
-                                                        </a>
-                                                        <div class="dropdown-menu">
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-eye"></i>
-                                                                <span class="m-l-10">View</span>
-                                                            </button>
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-edit"></i>
-                                                                <span class="m-l-10">Edit</span>
-                                                            </button>
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-delete"></i>
-                                                                <span class="m-l-10">Delete</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal fade" id="create-new-project">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Create New Project</h5>
-                                    <button type="button" class="close" data-dismiss="modal">
-                                        <i class="anticon anticon-close"></i>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="new-project-name">Project</label>
-                                            <input type="text" class="form-control" id="new-project-name" placeholder="Please input project name">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="new-project-desc">Description</label>
-                                            <textarea id="new-project-desc" class="form-control" placeholder=""></textarea>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary">Create Project</button>
-                                </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Clientes</h4>
+
+                            <div class="m-t-25">
+                                <table id="data-table" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Position</th>
+                                            <th>Office</th>
+                                            <th>Age</th>
+                                            <th>Start date</th>
+                                            <th>Salary</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Tiger Nixon</td>
+                                            <td>System Architect</td>
+                                            <td>Edinburgh</td>
+                                            <td>61</td>
+                                            <td>2011/04/25</td>
+                                            <td>$320,800</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garrett Winters</td>
+                                            <td>Accountant</td>
+                                            <td>Tokyo</td>
+                                            <td>63</td>
+                                            <td>2011/07/25</td>
+                                            <td>$170,750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ashton Cox</td>
+                                            <td>Junior Technical Author</td>
+                                            <td>San Francisco</td>
+                                            <td>66</td>
+                                            <td>2009/01/12</td>
+                                            <td>$86,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cedric Kelly</td>
+                                            <td>Senior Javascript Developer</td>
+                                            <td>Edinburgh</td>
+                                            <td>22</td>
+                                            <td>2012/03/29</td>
+                                            <td>$433,060</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Airi Satou</td>
+                                            <td>Accountant</td>
+                                            <td>Tokyo</td>
+                                            <td>33</td>
+                                            <td>2008/11/28</td>
+                                            <td>$162,700</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Brielle Williamson</td>
+                                            <td>Integration Specialist</td>
+                                            <td>New York</td>
+                                            <td>61</td>
+                                            <td>2012/12/02</td>
+                                            <td>$372,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Herrod Chandler</td>
+                                            <td>Sales Assistant</td>
+                                            <td>San Francisco</td>
+                                            <td>59</td>
+                                            <td>2012/08/06</td>
+                                            <td>$137,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rhona Davidson</td>
+                                            <td>Integration Specialist</td>
+                                            <td>Tokyo</td>
+                                            <td>55</td>
+                                            <td>2010/10/14</td>
+                                            <td>$327,900</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Colleen Hurst</td>
+                                            <td>Javascript Developer</td>
+                                            <td>San Francisco</td>
+                                            <td>39</td>
+                                            <td>2009/09/15</td>
+                                            <td>$205,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sonya Frost</td>
+                                            <td>Software Engineer</td>
+                                            <td>Edinburgh</td>
+                                            <td>23</td>
+                                            <td>2008/12/13</td>
+                                            <td>$103,600</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jena Gaines</td>
+                                            <td>Office Manager</td>
+                                            <td>London</td>
+                                            <td>30</td>
+                                            <td>2008/12/19</td>
+                                            <td>$90,560</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Quinn Flynn</td>
+                                            <td>Support Lead</td>
+                                            <td>Edinburgh</td>
+                                            <td>22</td>
+                                            <td>2013/03/03</td>
+                                            <td>$342,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Charde Marshall</td>
+                                            <td>Regional Director</td>
+                                            <td>San Francisco</td>
+                                            <td>36</td>
+                                            <td>2008/10/16</td>
+                                            <td>$470,600</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Haley Kennedy</td>
+                                            <td>Senior Marketing Designer</td>
+                                            <td>London</td>
+                                            <td>43</td>
+                                            <td>2012/12/18</td>
+                                            <td>$313,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tatyana Fitzpatrick</td>
+                                            <td>Regional Director</td>
+                                            <td>London</td>
+                                            <td>19</td>
+                                            <td>2010/03/17</td>
+                                            <td>$385,750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Michael Silva</td>
+                                            <td>Marketing Designer</td>
+                                            <td>London</td>
+                                            <td>66</td>
+                                            <td>2012/11/27</td>
+                                            <td>$198,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Paul Byrd</td>
+                                            <td>Chief Financial Officer (CFO)</td>
+                                            <td>New York</td>
+                                            <td>64</td>
+                                            <td>2010/06/09</td>
+                                            <td>$725,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gloria Little</td>
+                                            <td>Systems Administrator</td>
+                                            <td>New York</td>
+                                            <td>59</td>
+                                            <td>2009/04/10</td>
+                                            <td>$237,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bradley Greer</td>
+                                            <td>Software Engineer</td>
+                                            <td>London</td>
+                                            <td>41</td>
+                                            <td>2012/10/13</td>
+                                            <td>$132,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dai Rios</td>
+                                            <td>Personnel Lead</td>
+                                            <td>Edinburgh</td>
+                                            <td>35</td>
+                                            <td>2012/09/26</td>
+                                            <td>$217,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jenette Caldwell</td>
+                                            <td>Development Lead</td>
+                                            <td>New York</td>
+                                            <td>30</td>
+                                            <td>2011/09/03</td>
+                                            <td>$345,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Yuri Berry</td>
+                                            <td>Chief Marketing Officer (CMO)</td>
+                                            <td>New York</td>
+                                            <td>40</td>
+                                            <td>2009/06/25</td>
+                                            <td>$675,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Caesar Vance</td>
+                                            <td>Pre-Sales Support</td>
+                                            <td>New York</td>
+                                            <td>21</td>
+                                            <td>2011/12/12</td>
+                                            <td>$106,450</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Doris Wilder</td>
+                                            <td>Sales Assistant</td>
+                                            <td>Sidney</td>
+                                            <td>23</td>
+                                            <td>2010/09/20</td>
+                                            <td>$85,600</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Angelica Ramos</td>
+                                            <td>Chief Executive Officer (CEO)</td>
+                                            <td>London</td>
+                                            <td>47</td>
+                                            <td>2009/10/09</td>
+                                            <td>$1,200,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gavin Joyce</td>
+                                            <td>Developer</td>
+                                            <td>Edinburgh</td>
+                                            <td>42</td>
+                                            <td>2010/12/22</td>
+                                            <td>$92,575</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jennifer Chang</td>
+                                            <td>Regional Director</td>
+                                            <td>Singapore</td>
+                                            <td>28</td>
+                                            <td>2010/11/14</td>
+                                            <td>$357,650</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Brenden Wagner</td>
+                                            <td>Software Engineer</td>
+                                            <td>San Francisco</td>
+                                            <td>28</td>
+                                            <td>2011/06/07</td>
+                                            <td>$206,850</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fiona Green</td>
+                                            <td>Chief Operating Officer (COO)</td>
+                                            <td>San Francisco</td>
+                                            <td>48</td>
+                                            <td>2010/03/11</td>
+                                            <td>$850,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Shou Itou</td>
+                                            <td>Regional Marketing</td>
+                                            <td>Tokyo</td>
+                                            <td>20</td>
+                                            <td>2011/08/14</td>
+                                            <td>$163,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Michelle House</td>
+                                            <td>Integration Specialist</td>
+                                            <td>Sidney</td>
+                                            <td>37</td>
+                                            <td>2011/06/02</td>
+                                            <td>$95,400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Suki Burks</td>
+                                            <td>Developer</td>
+                                            <td>London</td>
+                                            <td>53</td>
+                                            <td>2009/10/22</td>
+                                            <td>$114,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Prescott Bartlett</td>
+                                            <td>Technical Author</td>
+                                            <td>London</td>
+                                            <td>27</td>
+                                            <td>2011/05/07</td>
+                                            <td>$145,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gavin Cortez</td>
+                                            <td>Team Leader</td>
+                                            <td>San Francisco</td>
+                                            <td>22</td>
+                                            <td>2008/10/26</td>
+                                            <td>$235,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Martena Mccray</td>
+                                            <td>Post-Sales support</td>
+                                            <td>Edinburgh</td>
+                                            <td>46</td>
+                                            <td>2011/03/09</td>
+                                            <td>$324,050</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Unity Butler</td>
+                                            <td>Marketing Designer</td>
+                                            <td>San Francisco</td>
+                                            <td>47</td>
+                                            <td>2009/12/09</td>
+                                            <td>$85,675</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Howard Hatfield</td>
+                                            <td>Office Manager</td>
+                                            <td>San Francisco</td>
+                                            <td>51</td>
+                                            <td>2008/12/16</td>
+                                            <td>$164,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hope Fuentes</td>
+                                            <td>Secretary</td>
+                                            <td>San Francisco</td>
+                                            <td>41</td>
+                                            <td>2010/02/12</td>
+                                            <td>$109,850</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vivian Harrell</td>
+                                            <td>Financial Controller</td>
+                                            <td>San Francisco</td>
+                                            <td>62</td>
+                                            <td>2009/02/14</td>
+                                            <td>$452,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Timothy Mooney</td>
+                                            <td>Office Manager</td>
+                                            <td>London</td>
+                                            <td>37</td>
+                                            <td>2008/12/11</td>
+                                            <td>$136,200</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jackson Bradshaw</td>
+                                            <td>Director</td>
+                                            <td>New York</td>
+                                            <td>65</td>
+                                            <td>2008/09/26</td>
+                                            <td>$645,750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Olivia Liang</td>
+                                            <td>Support Engineer</td>
+                                            <td>Singapore</td>
+                                            <td>64</td>
+                                            <td>2011/02/03</td>
+                                            <td>$234,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bruno Nash</td>
+                                            <td>Software Engineer</td>
+                                            <td>London</td>
+                                            <td>38</td>
+                                            <td>2011/05/03</td>
+                                            <td>$163,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sakura Yamamoto</td>
+                                            <td>Support Engineer</td>
+                                            <td>Tokyo</td>
+                                            <td>37</td>
+                                            <td>2009/08/19</td>
+                                            <td>$139,575</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Thor Walton</td>
+                                            <td>Developer</td>
+                                            <td>New York</td>
+                                            <td>61</td>
+                                            <td>2013/08/11</td>
+                                            <td>$98,540</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Finn Camacho</td>
+                                            <td>Support Engineer</td>
+                                            <td>San Francisco</td>
+                                            <td>47</td>
+                                            <td>2009/07/07</td>
+                                            <td>$87,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Serge Baldwin</td>
+                                            <td>Data Coordinator</td>
+                                            <td>Singapore</td>
+                                            <td>64</td>
+                                            <td>2012/04/09</td>
+                                            <td>$138,575</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Zenaida Frank</td>
+                                            <td>Software Engineer</td>
+                                            <td>New York</td>
+                                            <td>63</td>
+                                            <td>2010/01/04</td>
+                                            <td>$125,250</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Zorita Serrano</td>
+                                            <td>Software Engineer</td>
+                                            <td>San Francisco</td>
+                                            <td>56</td>
+                                            <td>2012/06/01</td>
+                                            <td>$115,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jennifer Acosta</td>
+                                            <td>Junior Javascript Developer</td>
+                                            <td>Edinburgh</td>
+                                            <td>43</td>
+                                            <td>2013/02/01</td>
+                                            <td>$75,650</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cara Stevens</td>
+                                            <td>Sales Assistant</td>
+                                            <td>New York</td>
+                                            <td>46</td>
+                                            <td>2011/12/06</td>
+                                            <td>$145,600</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hermione Butler</td>
+                                            <td>Regional Director</td>
+                                            <td>London</td>
+                                            <td>47</td>
+                                            <td>2011/03/21</td>
+                                            <td>$356,250</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lael Greer</td>
+                                            <td>Systems Administrator</td>
+                                            <td>London</td>
+                                            <td>21</td>
+                                            <td>2009/02/27</td>
+                                            <td>$103,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jonas Alexander</td>
+                                            <td>Developer</td>
+                                            <td>San Francisco</td>
+                                            <td>30</td>
+                                            <td>2010/07/14</td>
+                                            <td>$86,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Shad Decker</td>
+                                            <td>Regional Director</td>
+                                            <td>Edinburgh</td>
+                                            <td>51</td>
+                                            <td>2008/11/13</td>
+                                            <td>$183,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Michael Bruce</td>
+                                            <td>Javascript Developer</td>
+                                            <td>Singapore</td>
+                                            <td>29</td>
+                                            <td>2011/06/27</td>
+                                            <td>$183,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Donna Snider</td>
+                                            <td>Customer Support</td>
+                                            <td>New York</td>
+                                            <td>27</td>
+                                            <td>2011/01/25</td>
+                                            <td>$112,000</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Position</th>
+                                            <th>Office</th>
+                                            <th>Age</th>
+                                            <th>Start date</th>
+                                            <th>Salary</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Content Wrapper END -->
-
-
-                <!-- Search Start-->
-                <div class="modal modal-left fade search" id="search-drawer">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header justify-content-between align-items-center">
-                                <h5 class="modal-title">Search</h5>
-                                <button type="button" class="close" data-dismiss="modal">
-                                    <i class="anticon anticon-close"></i>
-                                </button>
-                            </div>
-                            <div class="modal-body scrollable">
-                                <div class="input-affix">
-                                    <i class="prefix-icon anticon anticon-search"></i>
-                                    <input type="text" class="form-control" placeholder="Search">
-                                </div>
-                                <div class="m-t-30">
-                                    <h5 class="m-b-20">Files</h5>
-                                    <div class="d-flex m-b-30">
-                                        <div class="avatar avatar-cyan avatar-icon">
-                                            <i class="anticon anticon-file-excel"></i>
-                                        </div>
-                                        <div class="m-l-15">
-                                            <a href="javascript:void(0);" class="text-dark m-b-0 font-weight-semibold">Quater Report.exl</a>
-                                            <p class="m-b-0 text-muted font-size-13">by Finance</p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex m-b-30">
-                                        <div class="avatar avatar-blue avatar-icon">
-                                            <i class="anticon anticon-file-word"></i>
-                                        </div>
-                                        <div class="m-l-15">
-                                            <a href="javascript:void(0);" class="text-dark m-b-0 font-weight-semibold">Documentaion.docx</a>
-                                            <p class="m-b-0 text-muted font-size-13">by Developers</p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex m-b-30">
-                                        <div class="avatar avatar-purple avatar-icon">
-                                            <i class="anticon anticon-file-text"></i>
-                                        </div>
-                                        <div class="m-l-15">
-                                            <a href="javascript:void(0);" class="text-dark m-b-0 font-weight-semibold">Recipe.txt</a>
-                                            <p class="m-b-0 text-muted font-size-13">by The Chef</p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex m-b-30">
-                                        <div class="avatar avatar-red avatar-icon">
-                                            <i class="anticon anticon-file-pdf"></i>
-                                        </div>
-                                        <div class="m-l-15">
-                                            <a href="javascript:void(0);" class="text-dark m-b-0 font-weight-semibold">Project Requirement.pdf</a>
-                                            <p class="m-b-0 text-muted font-size-13">by Project Manager</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="m-t-30">
-                                    <h5 class="m-b-20">Members</h5>
-                                    <div class="d-flex m-b-30">
-                                        <div class="avatar avatar-image">
-                                            <img src="assets/images/avatars/thumb-1.jpg" alt="">
-                                        </div>
-                                        <div class="m-l-15">
-                                            <a href="javascript:void(0);" class="text-dark m-b-0 font-weight-semibold">Erin Gonzales</a>
-                                            <p class="m-b-0 text-muted font-size-13">UI/UX Designer</p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex m-b-30">
-                                        <div class="avatar avatar-image">
-                                            <img src="assets/images/avatars/thumb-2.jpg" alt="">
-                                        </div>
-                                        <div class="m-l-15">
-                                            <a href="javascript:void(0);" class="text-dark m-b-0 font-weight-semibold">Darryl Day</a>
-                                            <p class="m-b-0 text-muted font-size-13">Software Engineer</p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex m-b-30">
-                                        <div class="avatar avatar-image">
-                                            <img src="assets/images/avatars/thumb-3.jpg" alt="">
-                                        </div>
-                                        <div class="m-l-15">
-                                            <a href="javascript:void(0);" class="text-dark m-b-0 font-weight-semibold">Marshall Nichols</a>
-                                            <p class="m-b-0 text-muted font-size-13">Data Analyst</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="m-t-30">
-                                    <h5 class="m-b-20">News</h5>
-                                    <div class="d-flex m-b-30">
-                                        <div class="avatar avatar-image">
-                                            <img src="assets/images/others/img-1.jpg" alt="">
-                                        </div>
-                                        <div class="m-l-15">
-                                            <a href="javascript:void(0);" class="text-dark m-b-0 font-weight-semibold">5 Best Handwriting Fonts</a>
-                                            <p class="m-b-0 text-muted font-size-13">
-                                                <i class="anticon anticon-clock-circle"></i>
-                                                <span class="m-l-5">25 Nov 2018</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Search End-->
-
-                <!-- Quick View START -->
-                <div class="modal modal-right fade quick-view" id="quick-view">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header justify-content-between align-items-center">
-                                <h5 class="modal-title">Theme Config</h5>
-                            </div>
-                            <div class="modal-body scrollable">
-                                <div class="m-b-30">
-                                    <h5 class="m-b-0">Header Color</h5>
-                                    <p>Config header background color</p>
-                                    <div class="theme-configurator d-flex m-t-10">
-                                        <div class="radio">
-                                            <input id="header-default" name="header-theme" type="radio" checked value="default">
-                                            <label for="header-default"></label>
-                                        </div>
-                                        <div class="radio">
-                                            <input id="header-primary" name="header-theme" type="radio" value="primary">
-                                            <label for="header-primary"></label>
-                                        </div>
-                                        <div class="radio">
-                                            <input id="header-success" name="header-theme" type="radio" value="success">
-                                            <label for="header-success"></label>
-                                        </div>
-                                        <div class="radio">
-                                            <input id="header-secondary" name="header-theme" type="radio" value="secondary">
-                                            <label for="header-secondary"></label>
-                                        </div>
-                                        <div class="radio">
-                                            <input id="header-danger" name="header-theme" type="radio" value="danger">
-                                            <label for="header-danger"></label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div>
-                                    <h5 class="m-b-0">Side Nav Dark</h5>
-                                    <p>Change Side Nav to dark</p>
-                                    <div class="switch d-inline">
-                                        <input type="checkbox" name="side-nav-theme-toogle" id="side-nav-theme-toogle">
-                                        <label for="side-nav-theme-toogle"></label>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div>
-                                    <h5 class="m-b-0">Folded Menu</h5>
-                                    <p>Toggle Folded Menu</p>
-                                    <div class="switch d-inline">
-                                        <input type="checkbox" name="side-nav-fold-toogle" id="side-nav-fold-toogle">
-                                        <label for="side-nav-fold-toogle"></label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Quick View END -->
-                </div>
-                </div>
-
-
-                </body>
-
-                </html>

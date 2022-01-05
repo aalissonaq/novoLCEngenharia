@@ -17,7 +17,7 @@ if (isset($_POST['login']) && $_POST['login'] == 'entra') {
     if ($login['userName'] == '00000000000' && $login['password'] == md5('admin')) {
         session_start();
 
-        $_SESSION['userName'] = 'Admininstrador do Sistema';
+        $_SESSION['userName'] = 'Administrador do Sistema';
         $_SESSION['released'] = true;
         header('Location: index.php');
     } else {
@@ -78,8 +78,14 @@ if (isset($_POST['login']) && $_POST['login'] == 'entra') {
                     <div class="container h-100">
                         <div class="row no-gutters h-100 align-items-center">
                             <div class="col-md-8 col-lg-7 col-xl-6 mx-auto">
-                                <h2>Login</h2>
-                                <p class="m-b-30">Insira sua credencial para obter acesso</p>
+                                <div class="col-12 d-xs-block d-lg-none">
+                                    <center>
+                                        <img src="assets/images/logo/<?= $information['logo'] ?>" alt="Logo" class="img-fluid">
+                                    </center>
+                                </div>
+                                <br />
+                                <!-- <h2>Login</h2> -->
+                                <p class="m-b-30 opacity-04">Insira sua credencial para obter acesso</p>
                                 <form method="post" enctype="multipart/form-data">
                                     <input type="hidden" name="login" value="entra" />
                                     <div class="form-group">

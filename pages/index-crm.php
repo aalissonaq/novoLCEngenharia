@@ -144,7 +144,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="d-md-flex justify-content-between align-items-center">
-                        <h5>Total Sales</h5>
+                        <h5>Total de Vendas</h5>
                         <div class="d-flex">
                             <div class="m-r-10">
                                 <span class="badge badge-secondary badge-dot m-r-10"></span>
@@ -187,7 +187,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h5>Latest Transactions</h5>
+                        <h5>Ultimas Vendas </h5>
                         <div>
                             <a href="javascript:void(0);" class="btn btn-sm btn-default">View All</a>
                         </div>
@@ -198,10 +198,11 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Customer</th>
-                                        <th>Date</th>
-                                        <th>Amount</th>
+                                        <th>Cliente</th>
+                                        <th>Data</th>
+                                        <th>Vl Projeto</th>
                                         <th>Status</th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -223,6 +224,27 @@
                                             <div class="d-flex align-items-center">
                                                 <span class="badge badge-success badge-dot m-r-10"></span>
                                                 <span>Approved</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="dropdown dropdown-animated scale-left">
+                                                <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
+                                                    <i class="anticon anticon-ellipsis"></i>
+                                                </a>
+                                                <div class="dropdown-menu">
+                                                    <button class="dropdown-item" type="button">
+                                                        <i class="anticon anticon-eye"></i>
+                                                        <span class="m-l-10">Visualizar</span>
+                                                    </button>
+                                                    <button class="dropdown-item" type="button">
+                                                        <i class="anticon anticon-edit"></i>
+                                                        <span class="m-l-10">Editar</span>
+                                                    </button>
+                                                    <button class="dropdown-item" type="button">
+                                                        <i class="anticon anticon-printer"></i>
+                                                        <span class="m-l-10">Imprimir Proposta</span>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </td>
                                     </tr>

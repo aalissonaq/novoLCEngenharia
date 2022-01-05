@@ -1,10 +1,10 @@
 <!-- Content Wrapper START -->
 <div class="main-content">
     <div class="page-header">
-        <h1 class="header-title text-secondary text-uppercase">Perfil</h1>
+        <h1 class="header-title">Perfil</h1>
         <div class="header-sub-title">
             <nav class="breadcrumb breadcrumb-dash">
-                <a href="?page=inicio" class="breadcrumb-item">
+                <a href="/" class="breadcrumb-item">
                     <i class="anticon anticon-home m-r-5"></i>
                     Home
                 </a>
@@ -25,12 +25,12 @@
                                 </div>
                             </div>
                             <div class="text-center text-sm-left m-v-15 p-l-30">
-                                <h2 class="m-b-5">
-                                <?= $_SESSION['userName']; ?>
-                                </h2>
-                                <p class="text-opacity font-size-13">@Marshallnich</p>
-                                <p class="text-dark m-b-20">Frontend Developer, UI/UX Designer</p>
-                                <button class="btn btn-primary btn-tone">Contact</button>
+                                <h3 class="m-b-5">
+                                    <?= $_SESSION['userName']; ?>
+                                </h3>
+                                <p class="text-opacity font-size-13">@Fulano</p>
+                                <p class="text-dark m-b-20">Função do Usuário</p>
+                                <button class="btn btn-primary btn-tone"><i class="fab fa-whatsapp fa-fw"></i>&nbsp;Contato</button>
                             </div>
                         </div>
                     </div>
@@ -42,23 +42,32 @@
                                     <li class="row">
                                         <p class="col-sm-4 col-4 font-weight-semibold text-dark m-b-5">
                                             <i class="m-r-10 text-primary anticon anticon-mail"></i>
-                                            <span>Email: </span>
+                                            <span>E-mail: </span>
                                         </p>
-                                        <p class="col font-weight-semibold"> Marshall123@gmail.com</p>
+                                        <p class="col font-weight-semibold"> adminstrador@gmail.com</p>
                                     </li>
                                     <li class="row">
                                         <p class="col-sm-4 col-4 font-weight-semibold text-dark m-b-5">
                                             <i class="m-r-10 text-primary anticon anticon-phone"></i>
-                                            <span>Phone: </span>
+                                            <span>Telefone: </span>
                                         </p>
-                                        <p class="col font-weight-semibold"> +12-123-1234</p>
+                                        <p class="col font-weight-semibold"> +55 (00) 9.9999-9999
+                                            <small>
+                                                <i class="fab fa-whatsapp fa-fw text-success"></i>
+                                            </small>
+                                        </p>
                                     </li>
                                     <li class="row">
                                         <p class="col-sm-4 col-5 font-weight-semibold text-dark m-b-5">
                                             <i class="m-r-10 text-primary anticon anticon-compass"></i>
-                                            <span>Location: </span>
+                                            <span>Endereço: </span>
                                         </p>
-                                        <p class="col font-weight-semibold"> Los Angeles, CA</p>
+                                        <p class="col font-weight-semibold">
+                                            R. Loudes Vitória, 830<br />
+                                            Cidade Universitaria<br />
+                                            Juazeiro do Norte -CE<br />
+                                            CEP: 63040-280
+                                        </p>
                                     </li>
                                 </ul>
                                 <div class="d-flex font-size-22 m-t-15">

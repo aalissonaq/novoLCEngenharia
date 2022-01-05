@@ -30,6 +30,8 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
 
     <!-- page css -->
     <link href="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="assets/vendors/datatables/dataTables.bootstrap.min.css" rel="stylesheet">
+
 
     <!-- Core css -->
     <link href="assets/css/app.min.css" rel="stylesheet">
@@ -140,21 +142,21 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
                         <!--PROFILE SETTINGS DROPDOWN-->
                         <li class="dropdown dropdown-animated scale-left">
                             <div class="pointer" data-toggle="dropdown">
-                                <div class="avatar avatar-image  m-h-10 m-r-15">
+                                <div class="avatar avatar-image  m-h-15 m-r-10">
                                     <img src="assets/images/avatars/thumb-3.jpg" class="img-fluid" alt="">
                                 </div>
                             </div>
-                            <div class="p-b-15 p-t-20 dropdown-menu pop-profile">
+                            <div class="p-b-8 p-t-10 dropdown-menu pop-profile">
                                 <div class="p-h-20 p-b-15 m-b-10 border-bottom">
-                                    <div class="d-flex m-r-50">
-                                        <div class="avatar avatar-lg avatar-image" style="">
-                                            <img src="assets/images/avatars/thumb-3.jpg" class="img-fluid" alt="" style=" ">
+                                    <div class="media m-v-5 align-items-center">
+                                        <div class="avatar avatar-image avatar-lg">
+                                            <img src="assets/images/avatars/thumb-3.jpg" alt="">
                                         </div>
-                                        <div class="m-l-10">
-                                            <p class="m-b-0 text-dark font-weight-semibold text-uppercase">
+                                        <div class="media-body m-l-10">
+                                            <p class="m-b-0 text-dark font-weight-semibold">
                                                 <?= explode(' ',  $_SESSION['userName'])[0]; ?>
                                             </p>
-                                            <p class="m-b-0 opacity-07" style="font-size:.8rem;"> Função do usuário</p>
+                                            <p class="text-gray" style="font-size:.8rem;">Função do usuário</p>
                                         </div>
                                     </div>
                                 </div>
@@ -196,11 +198,11 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
                                 </a>
                             </div>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">
                                 <i class="anticon anticon-appstore"></i>
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -755,10 +757,15 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     <!-- page js -->
     <script src="assets/vendors/chartjs/Chart.min.js"></script>
     <script src="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="assets/vendors/jquery-validation/jquery.validate.min.js"></script>
+
+    <script src="assets/vendors/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/vendors/datatables/dataTables.bootstrap.min.js"></script>
 
     <script src="assets/js/pages/dashboard-project.js"></script>
     <script src="assets/js/pages/dashboard-crm.js"></script>
     <script src="assets/js/pages/project-list.js"></script>
+    <script src="assets/js/pages/datatables.js"></script>
 
     <!-- Core JS -->
     <script src="assets/js/app.min.js"></script>
