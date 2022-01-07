@@ -1,6 +1,7 @@
 <?php
 session_start();
 !isset($_SESSION['released']) ? header('Location: login.php') : '';
+require __DIR__ . '/vendor/autoload.php';
 
 require_once './db/connection.php';
 require_once './util/util.php';

@@ -1,0 +1,19 @@
+{
+    "name": "caririinovacao/crm-lc-engenharia",
+    "description": "Aplicação para controle de Clietnes e geração de propostas",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "aalissonaq",
+            "email": "aalissonalmeidaq@gmail.com"
+        }
+    ],
+    "require": {
+        "dompdf/dompdf": "^1.1",
+        "twbs/bootstrap": "^5.1"
+    }
+}
