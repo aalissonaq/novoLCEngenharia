@@ -17,7 +17,7 @@ ob_start();
 require __DIR__ . '/proposta.php';
 $dompdf->loadHtml(ob_get_clean());
 
-//$dompdf->setPaper('A4', 'portrait');
+$dompdf->setPaper('A4', 'portrait');
 $dompdf->render();
 
 header('Content-Type: application/pdf');

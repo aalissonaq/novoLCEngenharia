@@ -16,7 +16,7 @@ require __DIR__ . '/../vendor/autoload.php';
       top: -130px;
       right: 0px;
       height: 275px;
-      background-image: url('http://localhost/novoLCEngenharia/pdfs/papel_timprado.jpg');
+      background-image: url('<?= dirname(__DIR__, 1) ?>/pdfs/papel_timprado.jpg');
       background-repeat: no-repeat;
       background-size: cover;
       z-index: -1;
@@ -29,7 +29,7 @@ require __DIR__ . '/../vendor/autoload.php';
       right: 0px;
       height: 310px;
       opacity: 0.6;
-      background-image: url('http://localhost/novoLCEngenharia/pdfs/papel_timprado.png');
+      background-image: url('<?= dirname(__DIR__, 1) ?>/pdfs/papel_timprado.png');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: bottom center;
@@ -70,7 +70,7 @@ require __DIR__ . '/../vendor/autoload.php';
     }
   </style>
 
-<body style="background-image: url(http://localhost/novoLCEngenharia/assets/images/bgpdf/logo_vert.png); background-repeat: no-repeat;background-position:right bottom; background-size: auto;">
+<body style="background-image: url(<?= dirname(__DIR__, 1) ?>/assets/images/bgpdf/logo_vert.png); background-repeat: no-repeat;background-position:right bottom; background-size: auto;">
   <div id="header">
 
   </div>
@@ -149,7 +149,7 @@ require __DIR__ . '/../vendor/autoload.php';
         </h2>
         <p>
           <center>
-            <img src="http://localhost/novoLCEngenharia/pdfs/fornecedores.png" alt="" style="margin-top: -25px;">
+            <img src="<?= dirname(__DIR__, 1) ?>/pdfs/fornecedores.png" alt="" style="margin-top: -25px;">
           </center>
         </p>
         <div class="">
@@ -157,7 +157,7 @@ require __DIR__ . '/../vendor/autoload.php';
             FUNCIONAMENTO E VANTAGENS
           </h2>
           <center>
-            <img src="http://localhost/novoLCEngenharia/pdfs/funcionamento.png" alt="" style="align-items: center;">
+            <img src="<?= dirname(__DIR__, 1) ?>/pdfs/funcionamento.png" alt="" style="align-items: center;">
           </center>
           <p>
 
