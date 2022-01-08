@@ -70,7 +70,7 @@ require __DIR__ . '/../vendor/autoload.php';
     }
   </style>
 
-<body style="background-image: url(<?= dirname(__DIR__, 1) ?>/assets/images/bgpdf/logo_vert.png); background-repeat: no-repeat;background-position:right bottom; background-size: auto;">
+<body style="background-image: url(<?= dirname(__DIR__, 1) ?>/pdfs/logo_vert.png); background-repeat: no-repeat;background-position:right bottom; background-size: auto;">
   <div id="header">
 
   </div>
