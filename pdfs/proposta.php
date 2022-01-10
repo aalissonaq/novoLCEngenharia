@@ -415,7 +415,7 @@ date_default_timezone_set('America/Fortaleza');
             <img src="<?= dirname(__DIR__, 1) . '/pdfs/image_feliz.jpg' ?>" alt="financiamento" style="width: 100%;">
             <img src="<?= dirname(__DIR__, 1) . '/pdfs/financiamentopng.png' ?>" alt="financiamento" style="width: 100%;">
           </div>
-          <p style="page-break-after: always;"></p>
+          <!-- <p style="page-break-after: always;"></p> -->
           <div style="">
             <h2 style="color:darkorange;">
               TEMPO DE RETORNO (2 ANOS E 10 MESES)
