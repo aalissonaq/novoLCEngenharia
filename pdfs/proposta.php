@@ -1,10 +1,12 @@
 <?php
 date_default_timezone_set('America/Fortaleza');
-require __DIR__ . '/../vendor/autoload.php';
+// require dirname(__DIR__, 1) . '/vendor/autoload.php';
+
 ?>
 <html>
 
 <head>
+
   <style>
     @page {
       margin: 130px 0px;
@@ -42,7 +44,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
     #content {
       position: relative;
-      top: 85px;
+      top: 83px;
       left: 10%;
       width: 82%;
     }
@@ -56,7 +58,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
     .title_p1 {
       font-size: 15px;
-      color: darkorange;
+      color: #212761;
       margin-top: 4rem;
       text-align: right;
     }
@@ -67,6 +69,11 @@ require __DIR__ . '/../vendor/autoload.php';
       left: 30%;
       text-align: center;
       color: darkorange;
+    }
+
+    table tbody tr:nth-child(2n+2) {
+      background: #FFE4B5;
+      opacity: 0.4;
     }
   </style>
 
@@ -88,7 +95,7 @@ require __DIR__ . '/../vendor/autoload.php';
         ORÇAMENTO–PE&nbsp;<?= date('m/Y') ?>
       </small>
     </p>
-    <div class="" style="margin-top: 10rem;">
+    <div class="" style="margin-top: 10rem; color: #212761">
       <span class="" style="font-size: 20px; font-weight: bold;">
         <b>
           NOME COMPLETO DO CLIENTE
@@ -153,7 +160,7 @@ require __DIR__ . '/../vendor/autoload.php';
           </center>
         </p>
         <div class="">
-          <h2 style="text-align:left; color:darkorange;">
+          <h2 style="text-align:left; color:darkorange; page-break-before: always;">
             FUNCIONAMENTO E VANTAGENS
           </h2>
           <center>
@@ -196,7 +203,6 @@ require __DIR__ . '/../vendor/autoload.php';
             <li>No mínimo 20 anos de energia grátis após o retorno do seu investimento.</li>
           </ul>
           </p>
-          <p style="page-break-before: always;"></p>
           <h2 style="color:darkorange;">
             FACILIDADES
           </h2>
@@ -205,7 +211,7 @@ require __DIR__ . '/../vendor/autoload.php';
             <li>Baixíssima manutenção - basicamente limpeza e verificações.</li>
           </ul>
 
-          <h2 style="color:darkorange;">
+          <h2 style="color:darkorange; page-break-before: always;">
             ENERGIA LIMPA E INFINITA
           </h2>
           <ul>
@@ -213,13 +219,225 @@ require __DIR__ . '/../vendor/autoload.php';
             <li>Sem ruídos e sem emissão de gases poluentes;</li>
             <li>• Redução do impacto ambiental.</li>
           </ul>
+          <div class="">
+            <h2 style="color:darkorange;">
+              INFORMAÇÕES GERAIS
+            </h2>
+            <div style="display:flex;">
+              <div style="width: 60%; line-height: 150%;">
+                <span style="font-weight: bold; text-transform: uppercase;">Titular:</span>
+                <span style="font-size: 0.9rem;">
+                  Antonio Alisson Almeida Queiroz Sistemas
+                </span>
+                <span style="font-weight: bold; text-transform: uppercase;">Número do contrato:</span>
+                <span style="font-size: 0.9rem;">
+                  0000000000
+                </span>
+                <span style="font-weight: bold; text-transform: uppercase;">Localização:</span>
+                <span style="font-size: 0.9rem;">
+                  Rua João de Deus, nº 0, Centro, São Paulo - SP
+                </span>
+                <br />
+                <span style="font-weight: bold; text-transform: uppercase;">Custo médio:</span>
+                <span style="font-size: 0.9rem;">
+                  R$ 500,00
+                </span>
+                <br />
+                <span style="font-weight: bold; text-transform: uppercase;">Área utilizada:</span>
+                <span style="font-size: 0.9rem;">
+                  50 m²
+                </span>
+              </div>
+              <div style="position: relative;width: 40%; left: 60%; line-height: 150%;">
+                <span style="font-weight: bold; text-transform: uppercase;">
+                  CNPJ/CPF:
+                </span>
+                <span style="font-size: 0.9rem;">
+                  00.000.000/0000-00
+                </span>
+                <br />
+                <br />
+                <span style="font-weight: bold; text-transform: uppercase;">
+                  Tipo de Imóvel:
+                </span>
+                <span style="font-size: 0.9rem;">
+                  Residencial
+                </span>
+                <br />
+                <br />
+                <span style="font-weight: bold; text-transform: uppercase;">
+                  Consumo Médio:
+                </span>
+                <span style="font-size: 0.9rem;">
+                  R$ 500,00
+                </span>
+                <span style="font-weight: bold; text-transform: uppercase;">
+                  Economia mensal:
+                </span>
+                <span style="font-size: 0.9rem;">
+                  R$ 450,00
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="" style="margin-top:-9rem;">
+            <h2 style="color:darkorange;">
+              SISTEMA SOLAR
+            </h2>
+            <table border="0" style=" width: 100%; border-style: solid; border-collapse:collapse; text-align: center;">
+              <thead style="color:#213671; background-color:orange; border-bottom-color: indigo;">
+                <tr>
+                  <th>EQUIPAMENTO</th>
+                  <th>MODELO</th>
+                  <th>QUANTIDADE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Painel Solar</td>
+                  <td>BYD 335 PHK 36 – POLI</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td>Inversor</td>
+                  <td>Growatt - 3,0KW</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>Cabos solares e conectores</td>
+                  <td>Conduspar e Multicontact</td>
+                  <td>Adequado ao projeto</td>
+                </tr>
+                <tr>
+                  <td>Estrutura de Fixação</td>
+                  <td>Telha Colonial</td>
+                  <td>Estrutura para 10 módulos</td>
+                </tr>
+              </tbody>
+            </table>
+            <table border="0" style=" width: 100%; border-style: solid; border-collapse:collapse; text-align: center;">
+              <thead style="color:#213671; background-color:orange; border-bottom-color: indigo;">
+                <tr>
+                  <th colspan="2">SERVIÇOS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align:start;">Projeto e regularização do sistema</td>
+                  <td>INCLUSO</td>
+                </tr>
+                <tr>
+                  <td style="text-align:start;">Instalação completa e Comissionamento</td>
+                  <td>INCLUSO</td>
+                </tr>
+              </tbody>
+            </table>
+            <table border="0" style=" width: 100%; border-style: solid; border-collapse:collapse; text-align: center;">
+              <thead style="color:#213671; background-color:orange; border-bottom-color: indigo;">
+                <tr>
+                  <th colspan="2">ADICIONAIS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align:start;">Material e instalação</td>
+                  <td>INCLUSO</td>
+                </tr>
+                <tr>
+                  <td style="text-align:start;">Monitoramento Remoto</td>
+                  <td>INCLUSO NO INVERSOR</td>
+                </tr>
+              </tbody>
+            </table>
+            <table border="0" style=" width: 100%; border-style: solid; border-collapse:collapse; text-align: center;">
+              <thead style="color:#213671; background-color:orange; border-bottom-color: indigo;">
+                <tr>
+                  <th colspan="2">BÔNUS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="text-align: center; font-weight: bold;">
+                  <td>Retroft da Instalação elétrica </td>
+                  <td>SERVIÇO INCLUSO</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <hr />
+          <div class="">
+            <h2 style="color:darkorange;">
+              GARANTIAS
+            </h2>
+            <div style=" margin-top:-2rem;">
+              <ul>
+                <li>Painéis : 10 anos contra defeitos de fabricação e 25 anos de até 80% da eficiência;</li>
+                <li>Inversor; 5 anos contra defeito de fabricação</li>
+                <li>Stringboxes, Cabos e conectores: 18 meses</li>
+                <li>Instalação: 12 meses</li>
+                <li>Não está incluso neste orçamento nenhuma obra civil, pintura ou qualquer tipo de reforma que seja necessária decorrente da instalação do sistema fotovoltaico.</li>
+              </ul>
+              <p>
+                <b>
+                  OBS:
+                </b>
+                Este orçamento tem validade de 10 dias corridos a contar da data da solicitação.
+              </p>
+            </div>
+          </div>
+          <div style="">
+            <h2 style="color:darkorange;">
+              PROPOSTA
+            </h2>
+            <table border="0" style=" width: 100%; border-style: solid; border-collapse:collapse; text-align: center;">
+
+              <tbody style="">
+                <tr>
+                  <td style="text-align: start;">Material</td>
+                  <td style="text-align:right;">R$ 14.736,92</td>
+                </tr>
+
+                <tr style="text-align: center; ">
+                  <td style="text-align: start;">Instalação</td>
+                  <td style="text-align: right;">R$ 3.690,98</td>
+                </tr>
+                <tr style="text-align: center;font-weight: bold; ">
+                  <td style="">TOTAL</td>
+                  <td style="text-align: right;">R$ 18.454,90</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h2 style="color:darkorange;">
+              FINANCIAMENTO DA SUA GERAÇÃO
+            </h2>
+            <img src="<?= dirname(__DIR__, 1) . '/pdfs/image_feliz.jpg' ?>" alt="financiamento" style="width: 100%;">
+            <img src="<?= dirname(__DIR__, 1) . '/pdfs/financiamentopng.png' ?>" alt="financiamento" style="width: 100%;">
+          </div>
+          <p style="page-break-after: always;"></p>
+          <div style="">
+            <h2 style="color:darkorange;">
+              TEMPO DE RETORNO (2 ANOS E 10 MESES)
+            </h2>
+            <img src="<?= dirname(__DIR__, 1) . '/pdfs/payback.png' ?>" alt="financiamento" style="width: 100%;">
+          </div>
 
 
+          <p class="title">
+            <i>
+              LC ENGENHARIA<br />
+            </i>
+            <small class="title_p1">
+              ENTRE NESSA GERAÇÃO
+            </small>
+          </p>
+          <br />
+
+          <p style="text-align:right;">
+            <small>Estamos a sua disposição</small>
+          </p>
         </div>
-
-
-      </div>
-  </div>
 </body>
 
 </html>
