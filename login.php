@@ -89,10 +89,10 @@ if (isset($_POST['login']) && $_POST['login'] == 'entra') {
                                 <form method="post" enctype="multipart/form-data">
                                     <input type="hidden" name="login" value="entra" />
                                     <div class="form-group">
-                                        <label class="font-weight-semibold" for="userName">Usuário:</label>
+                                        <label class="font-weight-semibold js_cpf" for="userName">Usuário:</label>
                                         <div class="input-affix">
                                             <i class="prefix-icon anticon anticon-user"></i>
-                                            <input type="text" name="userName" id="userName" class="form-control" id="userName" placeholder="Username">
+                                            <input type="text" name="userName" id="userName" class="form-control js_cpf" id="userName" placeholder="Username">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -131,6 +131,9 @@ if (isset($_POST['login']) && $_POST['login'] == 'entra') {
 
     <!-- Core JS -->
     <script src="assets/js/app.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery.mask.min.js"></script>
+    <script src="./assets/js/util.js"></script>
 
 </body>
 
