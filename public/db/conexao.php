@@ -1,11 +1,10 @@
 <?php
 
-function novaConexao()
+function novaConexao($banco = 'lc')
 {
   $servidor = 'localhost';
   $usuario = 'root';
   $senha = 't5r4e3w2q1';
-  $banco = 'new_lc';
 
   try {
     $conexao = new PDO(
