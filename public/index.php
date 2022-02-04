@@ -162,7 +162,7 @@
 
             <div class="col-md-3">
               <label for="nnTelefonePessoa" required>Telefone</label>
-              <input type="text" name="nnTelefonePessoa" class="form-control text-uppercase" id="nnTelefonePessoa" placeholder="" required>
+              <input type="text" name="nnTelefonePessoa" class="form-control text-uppercase js_fone" id="nnTelefonePessoa" placeholder="" required>
               <!-- <div class="invalid-feedback">
                   Obrigatório !
                 </div> -->
@@ -170,7 +170,7 @@
             <div class="col-md-3 ">
               <label class="form-check-label" for="isWhats"> </label>
               <div class="form-check form-switch">
-                <input class="form-check-input mt-md-2 d-flex align-items-center" type="checkbox" role="switch" id="isWhatsÐ" name="isWhats" style="width:3.5rem; height:1.6rem;" />
+                <input class="form-check-input mt-md-2 d-flex align-items-center " type="checkbox" role="switch" id="isWhatsÐ" name="isWhats" style="width:3.5rem; height:1.6rem;" />
                 <label class="form-check-label ml-3" for="flexSwitchCheckDefault" style="">Este Telefone é Whataspp?</label>
               </div>
             </div>
@@ -265,7 +265,10 @@
       </div>
 
 
-      <script type="text/javascript" src="../public/assets/js/app.js"></script>
+      <script type="text/javascript" src="./../public/assets/js/app.js"></script>
+      <script type="text/javascript" src="./../assets/js/jquery.min.js"></script>
+      <script type="text/javascript" src="./../assets/js/jquery.mask.min.js"></script>
+      <script type="text/javascript" src="./../assets/js/util.js"></script>
 
 
 
