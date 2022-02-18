@@ -75,9 +75,9 @@
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
-                            <p class="m-b-0">Net Revenue</p>
+                            <p class="m-b-0">Receita liquida</p>
                             <h2 class="m-b-0">
-                                <span>$14,966</span>
+                                <span><?= formatMoedaBr(14966)?></span>
                             </h2>
                         </div>
                         <div class="avatar avatar-icon avatar-lg avatar-blue">
@@ -92,9 +92,9 @@
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
-                            <p class="m-b-0">Bounce Rate</p>
+                            <p class="m-b-0">Taxa de rejeição</p>
                             <h2 class="m-b-0">
-                                <span>26.80%</span>
+                                <span>16.80%</span>
                             </h2>
                         </div>
                         <div class="avatar avatar-icon avatar-lg avatar-cyan">
@@ -109,7 +109,7 @@
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
-                            <p class="m-b-0">Orders</p>
+                            <p class="m-b-0">Pedidos</p>
                             <h2 class="m-b-0">
                                 <span>3057</span>
                             </h2>
@@ -126,7 +126,7 @@
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
-                            <p class="m-b-0">Total Expense</p>
+                            <p class="m-b-0">Despesas Totais</p>
                             <h2 class="m-b-0">
                                 <span>$6,138</span>
                             </h2>
@@ -168,7 +168,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h5>Overall Rating</h5>
+                        <h5>Avaliação geral</h5>
                     </div>
                     <div class="d-flex align-items-center m-t-20">
                         <h1 class="m-b-0 m-r-10 font-weight-normal">4.5</h1>
@@ -195,11 +195,11 @@
                         <div class="d-flex">
                             <div class="m-r-10">
                                 <span class="badge badge-secondary badge-dot m-r-10"></span>
-                                <span class="text-gray font-weight-semibold font-size-13">Revenue</span>
+                                <span class="text-gray font-weight-semibold font-size-13">receita</span>
                             </div>
                             <div class="m-r-10">
                                 <span class="badge badge-purple badge-dot m-r-10"></span>
-                                <span class="text-gray font-weight-semibold font-size-13">Margin</span>
+                                <span class="text-gray font-weight-semibold font-size-13">Margem</span>
                             </div>
                         </div>
                     </div>
@@ -213,17 +213,17 @@
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h5>Monthly Target</h5>
+                        <h5>Meta Mensal</h5>
                     </div>
                     <div class="d-flex align-items-center position-relative m-v-50" style="height:150px;">
                         <div class="w-100 position-absolute" style="height:150px; top:0;">
                             <canvas class="chart m-h-auto" id="porgress-chart"></canvas>
                         </div>
-                        <h2 class="w-100 text-center text-large m-b-0 text-success font-weight-normal">$3,531</h2>
+                        <h2 class="w-100 text-center text-large m-b-0 text-success font-weight-normal">R$ <?= formatMoedaBr(3531)?></h2>
                     </div>
                     <div class="d-flex justify-content-center align-items-center">
                         <span class="badge badge-success badge-dot m-r-10"></span>
-                        <span><span class="font-weight-semibold">70%</span> of Your Goal</span>
+                        <span><span class="font-weight-semibold">70%</span> do seu objetivo</span>
                     </div>
                 </div>
             </div>
@@ -266,11 +266,11 @@
                                             </div>
                                         </td>
                                         <td>8 May 2019</td>
-                                        <td>$137.00</td>
+                                        <td>R$ <?= formatMoedaBr(137568)?></td>
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <span class="badge badge-success badge-dot m-r-10"></span>
-                                                <span>Approved</span>
+                                                <span>Aprovado</span>
                                             </div>
                                         </td>
                                         <td>
@@ -287,95 +287,11 @@
                                                         <i class="anticon anticon-edit"></i>
                                                         <span class="m-l-10">Editar</span>
                                                     </button>
-                                                    <button class="dropdown-item" type="button">
+                                                    <a href="./pdfs/teste.php" class="dropdown-item" type="button" target="new">
                                                         <i class="anticon anticon-printer"></i>
                                                         <span class="m-l-10">Imprimir Proposta</span>
-                                                    </button>
+                                                    </a>
                                                 </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>#5375</td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar avatar-image" style="height: 30px; min-width: 30px; max-width:30px">
-                                                        <img src="assets/images/avatars/thumb-2.jpg" alt="">
-                                                    </div>
-                                                    <h6 class="m-l-10 m-b-0">Darryl Day</h6>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>6 May 2019</td>
-                                        <td>$322.00</td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <span class="badge badge-success badge-dot m-r-10"></span>
-                                                <span>Approved</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>#5762</td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar avatar-image" style="height: 30px; min-width: 30px; max-width:30px">
-                                                        <img src="assets/images/avatars/thumb-3.jpg" alt="">
-                                                    </div>
-                                                    <h6 class="m-l-10 m-b-0">Marshall Nichols</h6>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>1 May 2019</td>
-                                        <td>$543.00</td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <span class="badge badge-success badge-dot m-r-10"></span>
-                                                <span>Approved</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>#5865</td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar avatar-image" style="height: 30px; min-width: 30px; max-width:30px">
-                                                        <img src="assets/images/avatars/thumb-4.jpg" alt="">
-                                                    </div>
-                                                    <h6 class="m-l-10 m-b-0">Virgil Gonzales</h6>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>28 April 2019</td>
-                                        <td>$876.00</td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <span class="badge badge-primary badge-dot m-r-10"></span>
-                                                <span>Pending</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>#5213</td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar avatar-image" style="height: 30px; min-width: 30px; max-width:30px">
-                                                        <img src="assets/images/avatars/thumb-5.jpg" alt="">
-                                                    </div>
-                                                    <h6 class="m-l-10 m-b-0">Nicole Wyne</h6>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>28 April 2019</td>
-                                        <td>$241.00</td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <span class="badge badge-success badge-dot m-r-10"></span>
-                                                <span>Approved</span>
                                             </div>
                                         </td>
                                     </tr>

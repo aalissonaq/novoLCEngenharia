@@ -51,10 +51,10 @@
                                                         <i class="anticon anticon-ellipsis"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <button class="dropdown-item" type="button">
+                                                    <a href="?page=projectDetails" class="dropdown-item" type="button">
                                                             <i class="anticon anticon-eye"></i>
-                                                            <span class="m-l-10">View</span>
-                                                        </button>
+                                                            <span class="m-l-10">Detalhar</span>
+                                                        </a>
                                                         <button class="dropdown-item" type="button">
                                                             <i class="anticon anticon-edit"></i>
                                                             <span class="m-l-10">Edit</span>
@@ -116,10 +116,10 @@
                                                         <i class="anticon anticon-ellipsis"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <button class="dropdown-item" type="button">
+                                                        <a href="?page=projectDetails" class="dropdown-item" type="button">
                                                             <i class="anticon anticon-eye"></i>
-                                                            <span class="m-l-10">View</span>
-                                                        </button>
+                                                            <span class="m-l-10">Detalhar</span>
+                                                        </a>
                                                         <button class="dropdown-item" type="button">
                                                             <i class="anticon anticon-edit"></i>
                                                             <span class="m-l-10">Edit</span>
@@ -186,10 +186,10 @@
                                                         <i class="anticon anticon-ellipsis"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <button class="dropdown-item" type="button">
+                                                    <a href="?page=projectDetails" class="dropdown-item" type="button">
                                                             <i class="anticon anticon-eye"></i>
-                                                            <span class="m-l-10">View</span>
-                                                        </button>
+                                                            <span class="m-l-10">Detalhar</span>
+                                                        </a>
                                                         <button class="dropdown-item" type="button">
                                                             <i class="anticon anticon-edit"></i>
                                                             <span class="m-l-10">Edit</span>
@@ -256,10 +256,10 @@
                                                         <i class="anticon anticon-ellipsis"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <button class="dropdown-item" type="button">
+                                                    <a href="?page=projectDetails" class="dropdown-item" type="button">
                                                             <i class="anticon anticon-eye"></i>
-                                                            <span class="m-l-10">View</span>
-                                                        </button>
+                                                            <span class="m-l-10">Detalhar</span>
+                                                        </a>
                                                         <button class="dropdown-item" type="button">
                                                             <i class="anticon anticon-edit"></i>
                                                             <span class="m-l-10">Edit</span>
@@ -321,10 +321,10 @@
                                                         <i class="anticon anticon-ellipsis"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <button class="dropdown-item" type="button">
+                                                    <a href="?page=projectDetails" class="dropdown-item" type="button">
                                                             <i class="anticon anticon-eye"></i>
-                                                            <span class="m-l-10">View</span>
-                                                        </button>
+                                                            <span class="m-l-10">Detalhar</span>
+                                                        </a>
                                                         <button class="dropdown-item" type="button">
                                                             <i class="anticon anticon-edit"></i>
                                                             <span class="m-l-10">Edit</span>
@@ -386,10 +386,10 @@
                                                         <i class="anticon anticon-ellipsis"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <button class="dropdown-item" type="button">
+                                                    <a href="?page=projectDetails" class="dropdown-item" type="button">
                                                             <i class="anticon anticon-eye"></i>
-                                                            <span class="m-l-10">View</span>
-                                                        </button>
+                                                            <span class="m-l-10">Detalhar</span>
+                                                        </a>
                                                         <button class="dropdown-item" type="button">
                                                             <i class="anticon anticon-edit"></i>
                                                             <span class="m-l-10">Edit</span>
@@ -456,10 +456,10 @@
                                                         <i class="anticon anticon-ellipsis"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <button class="dropdown-item" type="button">
+                                                    <a href="?page=projectDetails" class="dropdown-item" type="button">
                                                             <i class="anticon anticon-eye"></i>
-                                                            <span class="m-l-10">View</span>
-                                                        </button>
+                                                            <span class="m-l-10">Detalhar</span>
+                                                        </a>
                                                         <button class="dropdown-item" type="button">
                                                             <i class="anticon anticon-edit"></i>
                                                             <span class="m-l-10">Edit</span>
@@ -521,10 +521,10 @@
                                                         <i class="anticon anticon-ellipsis"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <button class="dropdown-item" type="button">
+                                                    <a href="?page=projectDetails" class="dropdown-item" type="button">
                                                             <i class="anticon anticon-eye"></i>
-                                                            <span class="m-l-10">View</span>
-                                                        </button>
+                                                            <span class="m-l-10">Detalhar</span>
+                                                        </a>
                                                         <button class="dropdown-item" type="button">
                                                             <i class="anticon anticon-edit"></i>
                                                             <span class="m-l-10">Edit</span>
@@ -635,10 +635,10 @@
                                                             <i class="anticon anticon-ellipsis"></i>
                                                         </a>
                                                         <div class="dropdown-menu">
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-eye"></i>
-                                                                <span class="m-l-10">View</span>
-                                                            </button>
+                                                            <a href="?page=projectDetails" class="dropdown-item" type="button">
+                                                            <i class="anticon anticon-eye"></i>
+                                                            <span class="m-l-10">Detalhar</span>
+                                                        </a>
                                                             <button class="dropdown-item" type="button">
                                                                 <i class="anticon anticon-edit"></i>
                                                                 <span class="m-l-10">Edit</span>
@@ -702,10 +702,10 @@
                                                             <i class="anticon anticon-ellipsis"></i>
                                                         </a>
                                                         <div class="dropdown-menu">
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-eye"></i>
-                                                                <span class="m-l-10">View</span>
-                                                            </button>
+                                                            <a href="?page=projectDetails" class="dropdown-item" type="button">
+                                                            <i class="anticon anticon-eye"></i>
+                                                            <span class="m-l-10">Detalhar</span>
+                                                        </a>
                                                             <button class="dropdown-item" type="button">
                                                                 <i class="anticon anticon-edit"></i>
                                                                 <span class="m-l-10">Edit</span>
@@ -769,10 +769,10 @@
                                                             <i class="anticon anticon-ellipsis"></i>
                                                         </a>
                                                         <div class="dropdown-menu">
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-eye"></i>
-                                                                <span class="m-l-10">View</span>
-                                                            </button>
+                                                            <a href="?page=projectDetails" class="dropdown-item" type="button">
+                                                            <i class="anticon anticon-eye"></i>
+                                                            <span class="m-l-10">Detalhar</span>
+                                                        </a>
                                                             <button class="dropdown-item" type="button">
                                                                 <i class="anticon anticon-edit"></i>
                                                                 <span class="m-l-10">Edit</span>
@@ -831,10 +831,10 @@
                                                             <i class="anticon anticon-ellipsis"></i>
                                                         </a>
                                                         <div class="dropdown-menu">
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-eye"></i>
-                                                                <span class="m-l-10">View</span>
-                                                            </button>
+                                                            <a href="?page=projectDetails" class="dropdown-item" type="button">
+                                                            <i class="anticon anticon-eye"></i>
+                                                            <span class="m-l-10">Detalhar</span>
+                                                        </a>
                                                             <button class="dropdown-item" type="button">
                                                                 <i class="anticon anticon-edit"></i>
                                                                 <span class="m-l-10">Edit</span>
@@ -893,10 +893,10 @@
                                                             <i class="anticon anticon-ellipsis"></i>
                                                         </a>
                                                         <div class="dropdown-menu">
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-eye"></i>
-                                                                <span class="m-l-10">View</span>
-                                                            </button>
+                                                            <a href="?page=projectDetails" class="dropdown-item" type="button">
+                                                            <i class="anticon anticon-eye"></i>
+                                                            <span class="m-l-10">Detalhar</span>
+                                                        </a>
                                                             <button class="dropdown-item" type="button">
                                                                 <i class="anticon anticon-edit"></i>
                                                                 <span class="m-l-10">Edit</span>
@@ -960,10 +960,10 @@
                                                             <i class="anticon anticon-ellipsis"></i>
                                                         </a>
                                                         <div class="dropdown-menu">
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-eye"></i>
-                                                                <span class="m-l-10">View</span>
-                                                            </button>
+                                                            <a href="?page=projectDetails" class="dropdown-item" type="button">
+                                                            <i class="anticon anticon-eye"></i>
+                                                            <span class="m-l-10">Detalhar</span>
+                                                        </a>
                                                             <button class="dropdown-item" type="button">
                                                                 <i class="anticon anticon-edit"></i>
                                                                 <span class="m-l-10">Edit</span>
@@ -1022,10 +1022,10 @@
                                                             <i class="anticon anticon-ellipsis"></i>
                                                         </a>
                                                         <div class="dropdown-menu">
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-eye"></i>
-                                                                <span class="m-l-10">View</span>
-                                                            </button>
+                                                            <a href="?page=projectDetails" class="dropdown-item" type="button">
+                                                            <i class="anticon anticon-eye"></i>
+                                                            <span class="m-l-10">Detalhar</span>
+                                                        </a>
                                                             <button class="dropdown-item" type="button">
                                                                 <i class="anticon anticon-edit"></i>
                                                                 <span class="m-l-10">Edit</span>
@@ -1089,10 +1089,10 @@
                                                             <i class="anticon anticon-ellipsis"></i>
                                                         </a>
                                                         <div class="dropdown-menu">
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-eye"></i>
-                                                                <span class="m-l-10">View</span>
-                                                            </button>
+                                                            <a href="?page=projectDetails" class="dropdown-item" type="button">
+                                                            <i class="anticon anticon-eye"></i>
+                                                            <span class="m-l-10">Detalhar</span>
+                                                        </a>
                                                             <button class="dropdown-item" type="button">
                                                                 <i class="anticon anticon-edit"></i>
                                                                 <span class="m-l-10">Edit</span>

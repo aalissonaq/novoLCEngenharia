@@ -27,7 +27,7 @@
                             <i class="text-success  anticon anticon-appstore"></i>
                         </div>
                         <div class="d-flex align-items-center m-l-10">
-                            <h2 class="m-b-0 m-r-5">21</h2>
+                            <h2 class="m-b-0 m-r-5">8</h2>
                             <span class="text-gray">Projetos</span>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h5 class="mb-0">Project Completion </h5>
+                            <h5 class="mb-0">Conclusão do projeto </h5>
                             <div class="dropdown dropdown-animated scale-left">
                                 <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
                                     <i class="anticon anticon-ellipsis"></i>
