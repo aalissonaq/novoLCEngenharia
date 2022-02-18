@@ -13,7 +13,10 @@ if (!isset($_GET['page']) || $_GET['page'] == null) {
       break;
 
     case 'users': //Usuarios
-      include "./pages/usuarios.php";
+      include "./pages/users.php";
+      break;
+    case 'setting': //Configurações
+      include "./pages/setting.php";
       break;
 
     case 'customers': //Clientes
@@ -22,10 +25,6 @@ if (!isset($_GET['page']) || $_GET['page'] == null) {
 
     case 'projects': //Projetos
       include "./pages/projects.php";
-      break;
-
-    case 'usuarios':  // Usuarios
-      include "./pages/usuarios.php";
       break;
 
 

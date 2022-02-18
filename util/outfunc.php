@@ -502,6 +502,11 @@ function MascaraCPF($dado)
   $mascaraCPF = substr($dado, 0, 3) . "." . substr($dado, 3, 3) . "." . substr($dado, 6, 3) . "-" . substr($dado, -2);
   return $mascaraCPF;
 }
+function MascaraCEP($dado)
+{
+  $mascaraCEP = substr($dado, 0, 5) . "-" . substr($dado, -3);
+  return $mascaraCEP;
+}
 
 function MascaraCNPJ($dado)
 {

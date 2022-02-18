@@ -4,13 +4,36 @@
         <div class="d-md-flex align-items-md-center justify-content-between">
             <div class="media m-v-10 align-items-center">
                 <div class="avatar avatar-image avatar-lg">
-                    <img src="assets/images/avatars/thumb-3.jpg" alt="">
+                    <img src="assets/images/avatars/<?= $_SESSION['FOTO'];?>" alt="avatar de <?= $_SESSION['USUARIO'];?>">
                 </div>
                 <div class="media-body m-l-15">
                     <h4 class="m-b-0">Bem-Vindo,
-                        <?= explode(' ',  $_SESSION['userName'])[0]; ?>
+                        <?= explode(' ',  $_SESSION['USUARIO'])[0]; ?>
                     </h4>
-                    <span class="text-gray">Função do usuário</span>
+                    <span class="text-gray">
+                    <?php
+                        switch($_SESSION['NIVEL']) {
+                            case '0':
+                                echo 'Master';
+                                break;
+                            case '1':
+                                echo 'Administrador';
+                                break;
+                            case '2':
+                                echo 'Recepcionista';
+                                break;
+                            case '3':
+                                echo 'Atendente';
+                                break;
+                            case '4':
+                                echo 'Cliente';
+                                break;
+                            default:
+                                echo '';
+                                break;
+                        }
+                        ?>
+                    </span>
                 </div>
             </div>
             <div class="d-md-flex align-items-center d-none">
@@ -116,6 +139,30 @@
             </div>
         </div>
     </div>
+
+<!-- Button trigger modal -->
+<button data-toggle="modal" data-target="#side-modal-right" class="btn btn-primary">Side Modal Right</button>
+
+<!-- Modal -->
+<div class="modal modal-right fade " id="side-modal-right">
+    <div class="modal-dialog modal-lg " role="document">
+        <div class="modal-content">
+            <div class="side-modal-wrapper">
+                <div class="vertical-align">
+                    <div class="table-cell">
+                        <div class="modal-body" style="background-color: #fff;">
+
+                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima obcaecati inventore, dicta recusandae suscipit quia dignissimos error incidunt aliquam doloribus possimus quasi tempora iusto, quos doloremque aliquid maxime itaque architecto? </p>
+                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima obcaecati inventore, dicta recusandae suscipit quia dignissimos error incidunt aliquam doloribus possimus quasi tempora iusto, quos doloremque aliquid maxime itaque architecto? </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
     <div class="row">
         <div class="col-lg-3">
             <div class="card">

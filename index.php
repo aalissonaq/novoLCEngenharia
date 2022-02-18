@@ -5,6 +5,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 require_once './db/connection.php';
 require_once './util/util.php';
+require_once './util/outfunc.php';
 
 $connection = novaConexao();
 $sqlInitial = "SELECT * FROM identification";
@@ -35,7 +36,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
 
 
     <!-- Core css -->
-    <link href="assets/css/app.min.css" rel="stylesheet">
+    <link href="./assets/css/app.min.css" rel="stylesheet">
 
 </head>
 
@@ -144,20 +145,43 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
                         <li class="dropdown dropdown-animated scale-left">
                             <div class="pointer" data-toggle="dropdown">
                                 <div class="avatar avatar-image  m-h-15 m-r-10">
-                                    <img src="assets/images/avatars/thumb-3.jpg" class="img-fluid" alt="">
+                                    <img src="assets/images/avatars/<?= $_SESSION['FOTO'];?>" alt="avatar de <?= $_SESSION['USUARIO'];?>" class="img-fluid" >
                                 </div>
                             </div>
                             <div class="p-b-8 p-t-10 dropdown-menu pop-profile">
                                 <div class="p-h-20 p-b-15 m-b-10 border-bottom">
                                     <div class="media m-v-5 align-items-center">
                                         <div class="avatar avatar-image avatar-lg">
-                                            <img src="assets/images/avatars/thumb-3.jpg" alt="">
+                                            <img src="assets/images/avatars/<?= $_SESSION['FOTO'];?>" alt="avatar de <?= $_SESSION['USUARIO'];?>">
                                         </div>
                                         <div class="media-body m-l-10">
                                             <p class="m-b-0 text-dark font-weight-semibold">
-                                                <?= explode(' ',  $_SESSION['userName'])[0]; ?>
+                                                <?= explode(' ',  $_SESSION['USUARIO'])[0]; ?>
                                             </p>
-                                            <p class="text-gray" style="font-size:.8rem;">Função do usuário</p>
+                                            <p class="text-gray" style="font-size:.8rem;">
+                                            <?php
+                        switch($_SESSION['NIVEL']) {
+                            case '0':
+                                echo 'Master';
+                                break;
+                            case '1':
+                                echo 'Administrador';
+                                break;
+                            case '2':
+                                echo 'Recepcionista';
+                                break;
+                            case '3':
+                                echo 'Atendente';
+                                break;
+                            case '4':
+                                echo 'Cliente';
+                                break;
+                            default:
+                                echo '';
+                                break;
+                        }
+                        ?>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -170,7 +194,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
                                         <i class="anticon font-size-10 anticon-right"></i>
                                     </div>
                                 </a>
-                                <a href="javascript:void(0);" class="dropdown-item d-block p-h-15 p-v-10">
+                                <!-- <a href="?page=setting" class="dropdown-item d-block p-h-15 p-v-10">
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div>
                                             <i class="anticon opacity-04 font-size-16 anticon-lock"></i>
@@ -178,7 +202,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
                                         </div>
                                         <i class="anticon font-size-10 anticon-right"></i>
                                     </div>
-                                </a>
+                                </a> -->
                                 <a href="javascript:void(0);" class="dropdown-item d-block p-h-15 p-v-10">
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div>
@@ -258,7 +282,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="">Usuários</a>
+                                    <a href="?page=users">Usuários</a>
                                 </li>
                                 <li>
                                     <a href="">Logs do Sistema</a>
@@ -767,9 +791,14 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     <script src="assets/js/pages/dashboard-crm.js"></script>
     <script src="assets/js/pages/project-list.js"></script>
     <script src="assets/js/pages/datatables.js"></script>
+    <script src="assets/js/sweetalert2.all.min.js"></script>
+
+    <script src="assets/js/jquery.mask.min.js"></script>
+
 
     <!-- Core JS -->
     <script src="assets/js/app.min.js"></script>
+    <script src="assets/js/util.js"></script>
 
 </body>
 

@@ -1,4 +1,3 @@
-
 var SPMaskBehavior = function (val) {
   return val.replace(/\D/g, "").length === 11
     ? "(00) 00000-0000"
@@ -29,6 +28,9 @@ $(".js_data").mask("00/00/0000", {
 $(".js_num").mask("000000000000000000000", {
   reverse: true
 });
+$(".js_numAdress").mask("00000", {
+  reverse: true
+});
 $(".js_numCNJ").mask("0000000-00.0000.0.00.0000", {
   reverse: true
 });
@@ -46,30 +48,30 @@ $(".cpfOuCnpj").length > 11
   : $(".cpfOuCnpj").mask("000.000.000-00#", options);
 
 // DATATABLE
-$(".table").DataTable({
-  responsive: true,
-  bLengthChange: true,
-  pageLength: 10,
-  bInfo: true,
-  bFilter: true,
-  bSort: false,
-  language: {
-    url:
-      "https://cdn.datatables.net/plug-ins/1.10.19/i18n/Portuguese-Brasil.json"
-  }
-});
-$(".tableP").DataTable({
-  responsive: true,
-  bLengthChange: true,
-  pageLength: 4,
-  bInfo: true,
-  bFilter: true,
-  bSort: true,
-  language: {
-    url:
-      "https://cdn.datatables.net/plug-ins/1.10.19/i18n/Portuguese-Brasil.json"
-  }
-});
+// $(".table").DataTable({
+//   responsive: true,
+//   bLengthChange: true,
+//   pageLength: 10,
+//   bInfo: true,
+//   bFilter: true,
+//   bSort: false,
+//   language: {
+//     url:
+//       "https://cdn.datatables.net/plug-ins/1.10.19/i18n/Portuguese-Brasil.json"
+//   }
+// });
+// $(".tableP").DataTable({
+//   responsive: true,
+//   bLengthChange: true,
+//   pageLength: 4,
+//   bInfo: true,
+//   bFilter: true,
+//   bSort: true,
+//   language: {
+//     url:
+//       "https://cdn.datatables.net/plug-ins/1.10.19/i18n/Portuguese-Brasil.json"
+//   }
+// });
 
 
 $(function () {
