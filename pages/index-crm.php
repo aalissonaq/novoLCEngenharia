@@ -77,7 +77,7 @@
                         <div>
                             <p class="m-b-0">Receita liquida</p>
                             <h2 class="m-b-0">
-                                <span><?= formatMoedaBr(14966)?></span>
+                                <span>R$ <?= formatMoedaBr(14966)?></span>
                             </h2>
                         </div>
                         <div class="avatar avatar-icon avatar-lg avatar-blue">
@@ -128,7 +128,7 @@
                         <div>
                             <p class="m-b-0">Despesas Totais</p>
                             <h2 class="m-b-0">
-                                <span>$6,138</span>
+                                <span>R$ <?= formatMoedaBr(6138.9)?></span>
                             </h2>
                         </div>
                         <div class="avatar avatar-icon avatar-lg avatar-gold">
@@ -254,23 +254,23 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>#5331</td>
+                                        <td class="font-weight-light">20220218001</td>
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <div class="d-flex align-items-center">
                                                     <div class="avatar avatar-image" style="height: 30px; min-width: 30px; max-width:30px">
                                                         <img src="assets/images/avatars/thumb-1.jpg" alt="">
                                                     </div>
-                                                    <h6 class="m-l-10 m-b-0">Erin Gonzales</h6>
+                                                    <h6 class="m-l-10 m-b-0 font-weight-light">Erin Gonzales</h6>
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>8 May 2019</td>
-                                        <td>R$ <?= formatMoedaBr(137568)?></td>
+                                        <td class="font-weight-light">18/02/2022</td>
+                                        <td class="font-weight-light">R$ 18.454,90</td>
                                         <td>
                                             <div class="d-flex align-items-center">
                                                 <span class="badge badge-success badge-dot m-r-10"></span>
-                                                <span>Aprovado</span>
+                                                <span class="font-weight-light">Aprovado</span>
                                             </div>
                                         </td>
                                         <td>
