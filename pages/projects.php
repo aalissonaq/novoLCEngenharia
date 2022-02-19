@@ -22,8 +22,8 @@
                                             <i class="anticon anticon-appstore"></i>
                                         </button>
                                     </div>
-                                    <button class="btn btn-primary" data-toggle="modal" data-target="#create-new-project">
-                                        <i class="anticon anticon-plus"></i>
+                                    <button class="btn btn-tone btn-primary" data-toggle="modal" data-target="#create-new-project">
+                                        <i class="anticon anticon-appstore"></i>
                                         <span class="m-l-5">Novo Projeto</span>
                                     </button>
                                 </div>

@@ -145,42 +145,42 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
                         <li class="dropdown dropdown-animated scale-left">
                             <div class="pointer" data-toggle="dropdown">
                                 <div class="avatar avatar-image  m-h-15 m-r-10">
-                                    <img src="assets/images/avatars/<?= $_SESSION['FOTO'];?>" alt="avatar de <?= $_SESSION['USUARIO'];?>" class="img-fluid" >
+                                    <img src="assets/images/avatars/<?= $_SESSION['FOTO']; ?>" alt="avatar de <?= $_SESSION['USUARIO']; ?>" class="img-fluid">
                                 </div>
                             </div>
                             <div class="p-b-8 p-t-10 dropdown-menu pop-profile">
                                 <div class="p-h-20 p-b-15 m-b-10 border-bottom">
                                     <div class="media m-v-5 align-items-center">
                                         <div class="avatar avatar-image avatar-lg">
-                                            <img src="assets/images/avatars/<?= $_SESSION['FOTO'];?>" alt="avatar de <?= $_SESSION['USUARIO'];?>">
+                                            <img src="assets/images/avatars/<?= $_SESSION['FOTO']; ?>" alt="avatar de <?= $_SESSION['USUARIO']; ?>">
                                         </div>
                                         <div class="media-body m-l-10">
                                             <p class="m-b-0 text-dark font-weight-semibold">
                                                 <?= explode(' ',  $_SESSION['USUARIO'])[0]; ?>
                                             </p>
                                             <p class="text-gray" style="font-size:.8rem;">
-                                            <?php
-                        switch($_SESSION['NIVEL']) {
-                            case '0':
-                                echo 'Master';
-                                break;
-                            case '1':
-                                echo 'Administrador';
-                                break;
-                            case '2':
-                                echo 'Recepcionista';
-                                break;
-                            case '3':
-                                echo 'Atendente';
-                                break;
-                            case '4':
-                                echo 'Cliente';
-                                break;
-                            default:
-                                echo '';
-                                break;
-                        }
-                        ?>
+                                                <?php
+                                                switch ($_SESSION['NIVEL']) {
+                                                    case '0':
+                                                        echo 'Master';
+                                                        break;
+                                                    case '1':
+                                                        echo 'Administrador';
+                                                        break;
+                                                    case '2':
+                                                        echo 'Recepcionista';
+                                                        break;
+                                                    case '3':
+                                                        echo 'Atendente';
+                                                        break;
+                                                    case '4':
+                                                        echo 'Cliente';
+                                                        break;
+                                                    default:
+                                                        echo '';
+                                                        break;
+                                                }
+                                                ?>
                                             </p>
                                         </div>
                                     </div>
@@ -203,7 +203,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
                                         <i class="anticon font-size-10 anticon-right"></i>
                                     </div>
                                 </a> -->
-                                <a href="javascript:void(0);" class="dropdown-item d-block p-h-15 p-v-10">
+                                <!-- <a href="javascript:void(0);" class="dropdown-item d-block p-h-15 p-v-10">
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div>
                                             <i class="anticon opacity-04 font-size-16 anticon-project"></i>
@@ -211,7 +211,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
                                         </div>
                                         <i class="anticon font-size-10 anticon-right"></i>
                                     </div>
-                                </a>
+                                </a> -->
                                 <a href="<?= $_SERVER['PHP_SELF'] . '?action=logout' ?>" class="dropdown-item d-block p-h-15 p-v-10">
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div>

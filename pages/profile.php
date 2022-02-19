@@ -21,15 +21,15 @@
                         <div class="d-md-flex align-items-center">
                             <div class="text-center text-sm-left ">
 
-                            <?php
+                                <?php
                                 $sql = "SELECT * FROM person
                                         WHERE id = {$_SESSION['ID']}";
                                 $result = $connection->query($sql)->fetchAll(PDO::FETCH_ASSOC);
                                 $dataPerson = $result[0];
-                            ?>
+                                ?>
 
                                 <div class="avatar avatar-image" style="width: 150px; height:150px">
-                                    <img src="assets/images/avatars/<?= $_SESSION['FOTO'];?>" alt="avatar de <?= $_SESSION['USUARIO'];?>">
+                                    <img src="assets/images/avatars/<?= $_SESSION['FOTO']; ?>" alt="avatar de <?= $_SESSION['USUARIO']; ?>">
                                 </div>
                             </div>
                             <div class="text-center text-sm-left m-v-15 p-l-30">
@@ -37,28 +37,28 @@
                                     <?= $_SESSION['USUARIO']; ?>
                                 </h3>
                                 <p class="text-opacity font-size-13">
-                                <?php
-                        switch($_SESSION['NIVEL']) {
-                            case '0':
-                                echo 'Master';
-                                break;
-                            case '1':
-                                echo 'Administrador';
-                                break;
-                            case '2':
-                                echo 'Recepcionista';
-                                break;
-                            case '3':
-                                echo 'Atendente';
-                                break;
-                            case '4':
-                                echo 'Cliente';
-                                break;
-                            default:
-                                echo '';
-                                break;
-                        }
-                        ?>
+                                    <?php
+                                    switch ($_SESSION['NIVEL']) {
+                                        case '0':
+                                            echo 'Master';
+                                            break;
+                                        case '1':
+                                            echo 'Administrador';
+                                            break;
+                                        case '2':
+                                            echo 'Recepcionista';
+                                            break;
+                                        case '3':
+                                            echo 'Atendente';
+                                            break;
+                                        case '4':
+                                            echo 'Cliente';
+                                            break;
+                                        default:
+                                            echo '';
+                                            break;
+                                    }
+                                    ?>
                                 </p>
                                 <!-- <p class="text-dark m-b-20">Função do Usuário</p> -->
                                 <a href="https://api.whatsapp.com/send?phone=55<?= tiraMascara($dataPerson['cell_phone_number']) ?>&text=Ol%C3%A1%20<?= urlencode($dataPerson['name']); ?>%2C%20temos%20novidades%20sobre%20seu%20projeto.%20%20" target="_blank" title="Contato via WhatsApp" class="btn btn-secondary btn-tone">
@@ -90,9 +90,9 @@
                                         </p>
                                         <p class="col font-weight-semibold"> +55
 
-                                        <a href="tel:<?= tiraMascara($dataPerson['phone_number']) ?>" class="text-gray">
-                                            <?= $dataPerson['phone_number']; ?>
-                                        </a>
+                                            <a href="tel:<?= tiraMascara($dataPerson['phone_number']) ?>" class="text-gray">
+                                                <?= $dataPerson['phone_number']; ?>
+                                            </a>
                                         </p>
                                     </li>
                                     <li class="row">
@@ -101,17 +101,17 @@
                                             <span>Celular: </span>
                                         </p>
                                         <p class="col font-weight-semibold"> +55
-                                        <a href="tel:<?= tiraMascara($dataPerson['cell_phone_number']) ?>" class="text-gray">
-                                            <?= $dataPerson['cell_phone_number']; ?>
-                                        </a>
+                                            <a href="tel:<?= tiraMascara($dataPerson['cell_phone_number']) ?>" class="text-gray">
+                                                <?= $dataPerson['cell_phone_number']; ?>
+                                            </a>
 
 
                                             <?php
-                                            if($dataPerson['is_whatsapp'] == 1){
+                                            if ($dataPerson['is_whatsapp'] == 1) {
                                             ?>
-                                            <a href="https://api.whatsapp.com/send?phone=55<?= tiraMascara($dataPerson['cell_phone_number']) ?>&text=Ol%C3%A1%20<?= urlencode($dataPerson['name']); ?>%2C%20temos%20novidades%20sobre%20seu%20projeto.%20%20" target="_blank" title="Contato via WhatsApp">
-                                                <i class="fab fa-whatsapp text-success"></i>
-                                            </a>
+                                                <a href="https://api.whatsapp.com/send?phone=55<?= tiraMascara($dataPerson['cell_phone_number']) ?>&text=Ol%C3%A1%20<?= urlencode($dataPerson['name']); ?>%2C%20temos%20novidades%20sobre%20seu%20projeto.%20%20" target="_blank" title="Contato via WhatsApp">
+                                                    <i class="fab fa-whatsapp text-success"></i>
+                                                </a>
                                             <?php
                                             }
                                             ?>
@@ -123,10 +123,10 @@
                                             <span>Endereço: </span>
                                         </p>
                                         <p class="col font-weight-semibold">
-                                            <?= $dataPerson['address'].', '.$dataPerson['number_address'].'<br/>'?>
+                                            <?= $dataPerson['street'] . ', ' . $dataPerson['number_address'] . '<br/>' ?>
 
-                                            <?= $dataPerson['complement_address']!= '' ? '<i class="font-weight-light">'.$dataPerson['complement_address'].'</i>' : ''; ?><br/>
-                                            <?= $dataPerson['neighborhood'].'<br/>'.$dataPerson['city'].'-'.$dataPerson['state'].'<br/> CEP: '.MascaraCEP($dataPerson['zip_code']); ?>
+                                            <?= $dataPerson['complement_address'] != '' ? '<i class="font-weight-light">' . $dataPerson['complement_address'] . '</i>' : ''; ?><br />
+                                            <?= $dataPerson['neighborhood'] . '<br/>' . $dataPerson['city'] . '-' . $dataPerson['state'] . '<br/> CEP: ' . MascaraCEP($dataPerson['zip_code']); ?>
                                         </p>
                                     </li>
                                 </ul>
@@ -150,141 +150,141 @@
                 </div>
             </div>
         </div>
-            <div class="container">
-                    <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">Informações básicas</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="media align-items-center">
-                                            <div class="avatar avatar-image  m-h-10 m-r-15" style="height: 80px; width: 80px">
-                                                <img src="assets/images/avatars/<?= $_SESSION['FOTO'];?>" alt="<?= $_SESSION['USUARIO']; ?>">
-                                            </div>
-                                            <div class="m-l-20 m-r-20">
-                                                <h5 class="m-b-5 font-size-18">Mudar Avatar</h5>
-                                                <p class="opacity-07 font-size-13 m-b-0">
-                                                    Dimensões recomendadas: <br>
-                                                    120 x 120 Tamanho máximo do arquivo: 5 MB
-                                                </p>
-                                            </div>
-                                            <div>
-                                                <button class="btn btn-tone btn-secondary">Upload</button>
-                                            </div>
-                                        </div>
-                                        <hr class="m-v-25">
-                                        <form>
-                                            <div class="form-row">
-                                                <div class="form-group col-md-6">
-                                                    <label class="font-weight-semibold" for="name">Nome:</label>
-                                                    <input type="text" class="form-control" name="name" value="<?= $dataPerson['name'] ?>">
-                                                </div>
-                                                <div class="form-group col-md-6">
-                                                    <label class="font-weight-semibold" for="email">E-mail:</label>
-                                                    <input type="mail" class="form-control" name="email" value="<?= $dataPerson['email'] ?>">
-                                                </div>
-                                            </div>
-                                            <div class="form-row">
-                                                <div class="form-group col-md-2">
-                                                    <label class="font-weight-semibold" for="phone_number">Número de telefone:</label>
-                                                    <input type="text" class="form-control js_fone" maxlength="15" name="phone_number" value="<?= $dataPerson['phone_number'] ?>">
-                                                </div>
-                                                <div class="form-group col-md-2">
-                                                    <label class="font-weight-semibold" for="cell_phone_number">Número de Celular:</label>
-                                                    <input type="text" class="form-control js_fone" maxlength="16" name="cell_phone_number" value="<?= $dataPerson['cell_phone_number'] ?>"/>
-                                                </div>
-                                                <div class="form-group col-md-2">
-
-                                                    <!-- <label class="font-weight-semibold" for="language">é WhatsApp?</label> -->
-                                                    <div class="checkbox me m-t-40">
-                                                        <input id="checkbox1" name="is_whatsapp" type="checkbox" <?= $dataPerson['is_whatsapp']?'checked':''?> >
-                                                        <label for="checkbox1">é WhatsApp?</label>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group col-md-3">
-                                                    <label class="font-weight-semibold" for="birth">Data de nascimento:</label>
-                                                    <input type="text" maxlength="10" class="form-control js_da" id="birth" name="birth" value="<?= $dataPerson['birth'] ?>"/>
-                                                </div>
-
-                                                <div class="form-group col-md-3">
-                                                    <label class="font-weight-semibold " for="personal_document">CPF:</label>
-                                                <input type="text" class="form-control js_cpf" name="personal_document" value="<?= $dataPerson['personal_document']; ?>"/>
-                                                </div>
-
-                                            </div>
-                                            <div class="form-row">
-                                                <div class="form-group col-md-2">
-                                                    <label class="font-weight-semibold" for="zip_code">CEP:</label>
-                                                    <input type="text" class="form-control js_cep" onblur="pesquisacep(this.value)" maxlength="9" name="zip_code" id="zip_code" value="<?= $dataPerson['zip_code'] ?>">
-                                                </div>
-                                                <div class="form-group col-md-4">
-                                                    <label class="font-weight-semibold" for="address">Logradouro:</label>
-                                                    <input type="text" class="form-control " id="address" FontLib\Table\Type\name="address" value="<?= $dataPerson['address'] ?>">
-                                                </div>
-                                                <div class="form-group col-md-1">
-                                                    <label class="font-weight-semibold" for="number_address">Nº:</label>
-                                                    <input type="text" class="form-control js_numAdress " id="number_address" maxlength="5" name="number_address" value="<?= $dataPerson['number_address'] ?>">
-                                                </div>
-                                                <div class="form-group col-md-5">
-                                                    <label class="font-weight-semibold" for="complement_address">Complemento:</label>
-                                                    <input type="text" class="form-control " id="complement_address" name="complement_address" value="<?= $dataPerson['complement_address'] ?>">
-                                                </div>
-                                                <div class="form-group col-md-6">
-                                                    <label class="font-weight-semibold" for="neighborhood">Bairro:</label>
-                                                    <input type="text" class="form-control " id="neighborhood" name="neighborhood" value="<?= $dataPerson['neighborhood'] ?>">
-                                                </div>
-                                                <div class="form-group col-md-5">
-                                                    <label class="font-weight-semibold" for="city">Cidade:</label>
-                                                    <input type="text" class="form-control " id="city"  name="city" value="<?= $dataPerson['city'] ?>">
-                                                </div>
-                                                <div class="form-group col-md-1">
-                                                    <label class="font-weight-semibold" for="state">Estado:</label>
-                                                    <input type="text" class="form-control " id="state"maxlength="2" name="state" value="<?= $dataPerson['state'] ?>">
-                                                </div>
-                                            </div>
-                                            <div class="form-row">
-                                                <div class="form-group col-md-12">
-                                                <button class="btn btn-tone btn-secondary">
-                                                <i class="anticon anticon-save"></i>
-                                                Atualizar dados
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Informações básicas</h4>
                 </div>
-            </div>
-                            <div class="container">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">Alterar a senha</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <form>
-                                            <div class="form-row">
-                                                <div class="form-group col-md-3">
-                                                    <label class="font-weight-semibold" for="oldPassword">Senha Antiga:</label>
-                                                    <input type="password" class="form-control" id="oldPassword" placeholder="Old Password">
-                                                </div>
-                                                <div class="form-group col-md-3">
-                                                    <label class="font-weight-semibold" for="newPassword">Nova Senha:</label>
-                                                    <input type="password" class="form-control" id="newPassword" placeholder="New Password">
-                                                </div>
-                                                <div class="form-group col-md-3">
-                                                    <label class="font-weight-semibold" for="confirmPassword">Confirm Password:</label>
-                                                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
-                                                </div>
-                                                <div class="form-group col-md-3">
-                                                    <button class="btn btn-tone btn-secondary m-t-30">
-                                                    <i class="anticon anticon-save"></i>
-                                                        Mudar Senha
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
+                <div class="card-body">
+                    <div class="media align-items-center">
+                        <div class="avatar avatar-image  m-h-10 m-r-15" style="height: 80px; width: 80px">
+                            <img src="assets/images/avatars/<?= $_SESSION['FOTO']; ?>" alt="<?= $_SESSION['USUARIO']; ?>">
+                        </div>
+                        <div class="m-l-20 m-r-20">
+                            <h5 class="m-b-5 font-size-18">Mudar Avatar</h5>
+                            <p class="opacity-07 font-size-13 m-b-0">
+                                Dimensões recomendadas: <br>
+                                120 x 120 Tamanho máximo do arquivo: 5 MB
+                            </p>
+                        </div>
+                        <div>
+                            <button class="btn btn-tone btn-secondary">Upload</button>
+                        </div>
+                    </div>
+                    <hr class="m-v-25">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-semibold" for="name">Nome:</label>
+                                <input type="text" class="form-control" name="name" value="<?= $dataPerson['name'] ?>">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-semibold" for="email">E-mail:</label>
+                                <input type="mail" class="form-control" name="email" value="<?= $dataPerson['email'] ?>">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-2">
+                                <label class="font-weight-semibold" for="phone_number">Número de telefone:</label>
+                                <input type="text" class="form-control js_fone" maxlength="15" name="phone_number" value="<?= $dataPerson['phone_number'] ?>">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label class="font-weight-semibold" for="cell_phone_number">Número de Celular:</label>
+                                <input type="text" class="form-control js_fone" maxlength="16" name="cell_phone_number" value="<?= $dataPerson['cell_phone_number'] ?>" />
+                            </div>
+                            <div class="form-group col-md-2">
+
+                                <!-- <label class="font-weight-semibold" for="language">é WhatsApp?</label> -->
+                                <div class="checkbox me m-t-40">
+                                    <input id="checkbox1" name="is_whatsapp" type="checkbox" <?= $dataPerson['is_whatsapp'] ? 'checked' : '' ?>>
+                                    <label for="checkbox1">é WhatsApp?</label>
                                 </div>
                             </div>
-        <!-- <div class="row">
+                            <div class="form-group col-md-3">
+                                <label class="font-weight-semibold" for="birth">Data de nascimento:</label>
+                                <input type="text" maxlength="10" class="form-control js_da" id="birth" name="birth" value="<?= $dataPerson['birth'] ?>" />
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="font-weight-semibold " for="personal_document">CPF:</label>
+                                <input type="text" class="form-control js_cpf" name="personal_document" value="<?= $dataPerson['personal_document']; ?>" />
+                            </div>
+
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-2">
+                                <label class="font-weight-semibold" for="zip_code">CEP:</label>
+                                <input type="text" class="form-control js_cep" onblur="pesquisacep(this.value)" maxlength="9" name="zip_code" id="zip_code" value="<?= $dataPerson['zip_code'] ?>">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label class="font-weight-semibold" for="address">Logradouro:</label>
+                                <input type="text" class="form-control " id="address" FontLib\Table\Type\name="address" value="<?= $dataPerson['address'] ?>">
+                            </div>
+                            <div class="form-group col-md-1">
+                                <label class="font-weight-semibold" for="number_address">Nº:</label>
+                                <input type="text" class="form-control js_numAdress " id="number_address" maxlength="5" name="number_address" value="<?= $dataPerson['number_address'] ?>">
+                            </div>
+                            <div class="form-group col-md-5">
+                                <label class="font-weight-semibold" for="complement_address">Complemento:</label>
+                                <input type="text" class="form-control " id="complement_address" name="complement_address" value="<?= $dataPerson['complement_address'] ?>">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-semibold" for="neighborhood">Bairro:</label>
+                                <input type="text" class="form-control " id="neighborhood" name="neighborhood" value="<?= $dataPerson['neighborhood'] ?>">
+                            </div>
+                            <div class="form-group col-md-5">
+                                <label class="font-weight-semibold" for="city">Cidade:</label>
+                                <input type="text" class="form-control " id="city" name="city" value="<?= $dataPerson['city'] ?>">
+                            </div>
+                            <div class="form-group col-md-1">
+                                <label class="font-weight-semibold" for="state">Estado:</label>
+                                <input type="text" class="form-control " id="state" maxlength="2" name="state" value="<?= $dataPerson['state'] ?>">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <button class="btn btn-tone btn-secondary">
+                                    <i class="anticon anticon-save"></i>
+                                    Atualizar dados
+                                </button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Alterar a senha</h4>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label class="font-weight-semibold" for="oldPassword">Senha Antiga:</label>
+                            <input type="password" class="form-control" id="oldPassword" placeholder="Old Password">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label class="font-weight-semibold" for="newPassword">Nova Senha:</label>
+                            <input type="password" class="form-control" id="newPassword" placeholder="New Password">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label class="font-weight-semibold" for="confirmPassword">Confirm Password:</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <button class="btn btn-tone btn-secondary m-t-30">
+                                <i class="anticon anticon-save"></i>
+                                Mudar Senha
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="row">
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
@@ -586,6 +586,6 @@
                 </div>
             </div>
         </div> -->
-    </div>
+</div>
 </div>
 <!-- Content Wrapper END -->
