@@ -42,7 +42,6 @@
                                 }
                                 ?>
 
-
                                 <!-- <div class="avatar avatar-image" style="width: 150px; height:150px">
                                     <img src="assets/images/avatars/<? $_SESSION['FOTO']; ?>" alt="avatar de <? $_SESSION['USUARIO']; ?>">
                                 </div> -->
@@ -140,7 +139,7 @@
                                         <p class="col font-weight-semibold">
                                             <?= $dataPerson['street'] . ', ' . $dataPerson['number_address'] . '<br/>' ?>
 
-                                            <?= $dataPerson['complement_address'] != '' ? '<i class="font-weight-light">' . $dataPerson['complement_address'] . '</i>' : ''; ?><br />
+                                            <?= $dataPerson['complement_address'] != '' ? '<i class="font-weight-light">' . $dataPerson['complement_address'] . '</i><br />' : ''; ?>
                                             <?= $dataPerson['neighborhood'] . '<br/>' . $dataPerson['city'] . '-' . $dataPerson['state'] . '<br/> CEP: ' . MascaraCEP($dataPerson['zip_code']); ?>
                                         </p>
                                     </li>
@@ -246,7 +245,7 @@
                             </div>
                             <div class="form-group col-md-4">
                                 <label class="font-weight-semibold" for="address">Logradouro:</label>
-                                <input type="text" class="form-control " id="address" FontLib\Table\Type\name="address" value="<?= $dataPerson['address'] ?>">
+                                <input type="text" class="form-control" id="address" name="address" value="<?= @$dataPerson['street'] ?>"/>
                             </div>
                             <div class="form-group col-md-1">
                                 <label class="font-weight-semibold" for="number_address">Nº:</label>
@@ -266,7 +265,7 @@
                             </div>
                             <div class="form-group col-md-1">
                                 <label class="font-weight-semibold" for="state">Estado:</label>
-                                <input type="text" class="form-control " id="state" maxlength="2" name="state" value="<?= $dataPerson['state'] ?>">
+                                <input type="text" class="form-control text-uppercase"  id="state" maxlength="2" name="state" value="<?= $dataPerson['state'] ?>">
                             </div>
                         </div>
                         <div class="form-row">
