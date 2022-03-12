@@ -26,11 +26,26 @@
                                         WHERE id = {$_SESSION['ID']}";
                                 $result = $connection->query($sql)->fetchAll(PDO::FETCH_ASSOC);
                                 $dataPerson = $result[0];
+
+                                if ($_SESSION['FOTO'] == '') {
+                                    echo '
+                                        <div class="avatar avatar-icon avatar-blue avatar-lg" style="width: 150px; height:150px">
+                                            <i class="anticon anticon-user"></i>
+                                        </div>
+                                        ';
+                                } else {
+                                    echo '
+                                                <div class="avatar avatar-image avatar-lg" style="width: 150px; height:150px">
+                                                <img src="assets/images/avatars/' . $_SESSION['FOTO'] . '" alt="Avatar" class="avatar-img rounded-circle">
+                                                </div>
+                                                ';
+                                }
                                 ?>
 
-                                <div class="avatar avatar-image" style="width: 150px; height:150px">
-                                    <img src="assets/images/avatars/<?= $_SESSION['FOTO']; ?>" alt="avatar de <?= $_SESSION['USUARIO']; ?>">
-                                </div>
+
+                                <!-- <div class="avatar avatar-image" style="width: 150px; height:150px">
+                                    <img src="assets/images/avatars/<? $_SESSION['FOTO']; ?>" alt="avatar de <? $_SESSION['USUARIO']; ?>">
+                                </div> -->
                             </div>
                             <div class="text-center text-sm-left m-v-15 p-l-30">
                                 <h3 class="m-b-5">
@@ -157,9 +172,22 @@
                 </div>
                 <div class="card-body">
                     <div class="media align-items-center">
-                        <div class="avatar avatar-image  m-h-10 m-r-15" style="height: 80px; width: 80px">
-                            <img src="assets/images/avatars/<?= $_SESSION['FOTO']; ?>" alt="<?= $_SESSION['USUARIO']; ?>">
-                        </div>
+
+                        <?php
+                        if ($_SESSION['FOTO'] == '') {
+                            echo '
+        <div class="avatar avatar-icon avatar-blue m-h-10 m-r-15" style="height: 80px; width: 80px">
+            <i class="anticon anticon-user"></i>
+        </div>
+        ';
+                        } else {
+                            echo '
+                <div class="avatar avatar-image m-h-10 m-r-15" style="height: 80px; width: 80px">
+                <img src="assets/images/avatars/' . $_SESSION['FOTO'] . '" alt="Avatar' . $_SESSION['USUARIO'] . '" class="avatar-img rounded-circle">
+                </div>
+                ';
+                        }
+                        ?>
                         <div class="m-l-20 m-r-20">
                             <h5 class="m-b-5 font-size-18">Mudar Avatar</h5>
                             <p class="opacity-07 font-size-13 m-b-0">

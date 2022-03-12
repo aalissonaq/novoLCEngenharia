@@ -34,10 +34,8 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     <link href="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
     <link href="assets/vendors/datatables/dataTables.bootstrap.min.css" rel="stylesheet">
 
-
     <!-- Core css -->
     <link href="./assets/css/app.min.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -145,15 +143,39 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
                         <li class="dropdown dropdown-animated scale-left">
                             <div class="pointer" data-toggle="dropdown">
                                 <div class="avatar avatar-image  m-h-15 m-r-10">
-                                    <img src="assets/images/avatars/<?= $_SESSION['FOTO']; ?>" alt="avatar de <?= $_SESSION['USUARIO']; ?>" class="img-fluid">
+                                    <?php
+                                    if ($_SESSION['FOTO'] == '') {
+                                        echo '
+                                        <div class="avatar avatar-icon avatar-blue">
+                                            <i class="anticon anticon-user"></i>
+                                        </div>
+                                        ';
+                                    } else {
+                                        echo '<img src="assets/images/avatars/' . $_SESSION['FOTO'] . '" alt="Avatar" class="avatar-img rounded-circle">';
+                                    }
+                                    ?>
                                 </div>
                             </div>
                             <div class="p-b-8 p-t-10 dropdown-menu pop-profile">
                                 <div class="p-h-20 p-b-15 m-b-10 border-bottom">
                                     <div class="media m-v-5 align-items-center">
-                                        <div class="avatar avatar-image avatar-lg">
-                                            <img src="assets/images/avatars/<?= $_SESSION['FOTO']; ?>" alt="avatar de <?= $_SESSION['USUARIO']; ?>">
+
+                                        <?php
+                                        if ($_SESSION['FOTO'] == '') {
+                                            echo '
+                                        <div class="avatar avatar-icon avatar-blue avatar-lg">
+                                            <i class="anticon anticon-user"></i>
                                         </div>
+                                        ';
+                                        } else {
+                                            echo '
+                                                <div class="avatar avatar-image avatar-lg">
+                                                <img src="assets/images/avatars/' . $_SESSION['FOTO'] . '" alt="Avatar" class="avatar-img rounded-circle">
+                                                </div>
+                                                ';
+                                        }
+                                        ?>
+
                                         <div class="media-body m-l-10">
                                             <p class="m-b-0 text-dark font-weight-semibold">
                                                 <?= explode(' ',  $_SESSION['USUARIO'])[0]; ?>

@@ -3,16 +3,30 @@
     <div class="page-header no-gutters">
         <div class="d-md-flex align-items-md-center justify-content-between">
             <div class="media m-v-10 align-items-center">
-                <div class="avatar avatar-image avatar-lg">
-                    <img src="assets/images/avatars/<?= $_SESSION['FOTO'];?>" alt="avatar de <?= $_SESSION['USUARIO'];?>">
-                </div>
+
+                <?php
+                if ($_SESSION['FOTO'] == '') {
+                    echo '
+                            <div class="avatar avatar-icon avatar-blue avatar-lg">
+                                <i class="anticon anticon-user"></i>
+                            </div>
+                        ';
+                } else {
+                    echo '
+                            <div class="avatar avatar-image avatar-lg">
+                                <img src="assets/images/avatars/' . $_SESSION['FOTO'] . '" alt="Avatar" class="avatar-img rounded-circle">
+                            </div>
+                        ';
+                }
+                ?>
+
                 <div class="media-body m-l-15">
                     <h4 class="m-b-0">Bem-Vindo,
                         <?= explode(' ',  $_SESSION['USUARIO'])[0]; ?>
                     </h4>
                     <span class="text-gray">
-                    <?php
-                        switch($_SESSION['NIVEL']) {
+                        <?php
+                        switch ($_SESSION['NIVEL']) {
                             case '0':
                                 echo 'Master';
                                 break;
@@ -77,7 +91,7 @@
                         <div>
                             <p class="m-b-0">Receita liquida</p>
                             <h2 class="m-b-0">
-                                <span>R$ <?= formatMoedaBr(14966)?></span>
+                                <span>R$ <?= formatMoedaBr(14966) ?></span>
                             </h2>
                         </div>
                         <div class="avatar avatar-icon avatar-lg avatar-blue">
@@ -128,7 +142,7 @@
                         <div>
                             <p class="m-b-0">Despesas Totais</p>
                             <h2 class="m-b-0">
-                                <span>R$ <?= formatMoedaBr(6138.9)?></span>
+                                <span>R$ <?= formatMoedaBr(6138.9) ?></span>
                             </h2>
                         </div>
                         <div class="avatar avatar-icon avatar-lg avatar-gold">
@@ -140,28 +154,28 @@
         </div>
     </div>
 
-<!-- Button trigger modal -->
-<button data-toggle="modal" data-target="#side-modal-right" class="btn btn-primary">Side Modal Right</button>
+    <!-- Button trigger modal -->
+    <button data-toggle="modal" data-target="#side-modal-right" class="btn btn-primary">Side Modal Right</button>
 
-<!-- Modal -->
-<div class="modal modal-right fade " id="side-modal-right">
-    <div class="modal-dialog modal-lg " role="document">
-        <div class="modal-content">
-            <div class="side-modal-wrapper">
-                <div class="vertical-align">
-                    <div class="table-cell">
-                        <div class="modal-body" style="background-color: #fff;">
+    <!-- Modal -->
+    <div class="modal modal-right fade " id="side-modal-right">
+        <div class="modal-dialog modal-lg " role="document">
+            <div class="modal-content">
+                <div class="side-modal-wrapper">
+                    <div class="vertical-align">
+                        <div class="table-cell">
+                            <div class="modal-body" style="background-color: #fff;">
 
-                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima obcaecati inventore, dicta recusandae suscipit quia dignissimos error incidunt aliquam doloribus possimus quasi tempora iusto, quos doloremque aliquid maxime itaque architecto? </p>
-                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima obcaecati inventore, dicta recusandae suscipit quia dignissimos error incidunt aliquam doloribus possimus quasi tempora iusto, quos doloremque aliquid maxime itaque architecto? </p>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima obcaecati inventore, dicta recusandae suscipit quia dignissimos error incidunt aliquam doloribus possimus quasi tempora iusto, quos doloremque aliquid maxime itaque architecto? </p>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima obcaecati inventore, dicta recusandae suscipit quia dignissimos error incidunt aliquam doloribus possimus quasi tempora iusto, quos doloremque aliquid maxime itaque architecto? </p>
 
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
     <div class="row">
         <div class="col-lg-3">
@@ -219,7 +233,7 @@
                         <div class="w-100 position-absolute" style="height:150px; top:0;">
                             <canvas class="chart m-h-auto" id="porgress-chart"></canvas>
                         </div>
-                        <h2 class="w-100 text-center text-large m-b-0 text-success font-weight-normal">R$ <?= formatMoedaBr(3531)?></h2>
+                        <h2 class="w-100 text-center text-large m-b-0 text-success font-weight-normal">R$ <?= formatMoedaBr(3531) ?></h2>
                     </div>
                     <div class="d-flex justify-content-center align-items-center">
                         <span class="badge badge-success badge-dot m-r-10"></span>

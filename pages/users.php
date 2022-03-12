@@ -39,6 +39,7 @@
                                         $sql = "SELECT * FROM users
                                                 INNER JOIN person
                                                 ON users.id_person = person.id
+                                                WHERE users.user_level >= 1
                                                 ORDER BY person.name ASC";
                                         $result = $connection->query($sql)->fetchAll(PDO::FETCH_ASSOC);
                                         foreach ($result as $user) {
