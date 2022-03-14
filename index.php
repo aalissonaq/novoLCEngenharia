@@ -7,6 +7,8 @@ require_once './db/connection.php';
 require_once './util/util.php';
 require_once './util/outfunc.php';
 
+date_default_timezone_set('America/Sao_Paulo');
+
 $connection = novaConexao();
 $sqlInitial = "SELECT * FROM identification";
 $result = $connection->query($sqlInitial)->fetchAll(PDO::FETCH_ASSOC);
@@ -307,8 +309,12 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
                                     <a href="?page=users">Usuários</a>
                                 </li>
                                 <li>
+                                    <a href="?page=typesProjects">Tipos de Projetos</a>
+                                </li>
+                                <li>
                                     <a href="">Logs do Sistema</a>
                                 </li>
+
                             </ul>
                         </li>
 
@@ -819,7 +825,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
 
 
     <!-- Core JS -->
-    <script src="assets/js/app.min.js"></script>
+    <script src="./assets/js/app.min.js"></script>
     <script src="assets/js/util.js"></script>
 
 </body>

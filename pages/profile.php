@@ -32,13 +32,13 @@
                                         <div class="avatar avatar-icon avatar-blue avatar-lg" style="width: 150px; height:150px">
                                             <i class="anticon anticon-user"></i>
                                         </div>
-                                        ';
+                                    ';
                                 } else {
                                     echo '
-                                                <div class="avatar avatar-image avatar-lg" style="width: 150px; height:150px">
-                                                <img src="assets/images/avatars/' . $_SESSION['FOTO'] . '" alt="Avatar" class="avatar-img rounded-circle">
-                                                </div>
-                                                ';
+                                        <div class="avatar avatar-image avatar-lg" style="width: 150px; height:150px">
+                                            <img src="assets/images/avatars/' . $_SESSION['FOTO'] . '" alt="Avatar" class="avatar-img rounded-circle">
+                                        </div>
+                                    ';
                                 }
                                 ?>
 
@@ -175,16 +175,16 @@
                         <?php
                         if ($_SESSION['FOTO'] == '') {
                             echo '
-        <div class="avatar avatar-icon avatar-blue m-h-10 m-r-15" style="height: 80px; width: 80px">
-            <i class="anticon anticon-user"></i>
-        </div>
-        ';
+                                <div class="avatar avatar-icon avatar-blue m-h-10 m-r-15" style="height: 80px; width: 80px">
+            <                       i class="anticon anticon-user"></>
+                                </div>
+                                ';
                         } else {
                             echo '
-                <div class="avatar avatar-image m-h-10 m-r-15" style="height: 80px; width: 80px">
-                <img src="assets/images/avatars/' . $_SESSION['FOTO'] . '" alt="Avatar' . $_SESSION['USUARIO'] . '" class="avatar-img rounded-circle">
-                </div>
-                ';
+                                <div class="avatar avatar-image m-h-10 m-r-15" style="height: 80px; width: 80px">
+                                <img src="assets/images/avatars/' . $_SESSION['FOTO'] . '" alt="Avatar' . $_SESSION['USUARIO'] . '" class="avatar-img rounded-circle">
+                                </div>
+                                ';
                         }
                         ?>
                         <div class="m-l-20 m-r-20">
@@ -244,8 +244,8 @@
                                 <input type="text" class="form-control js_cep" onblur="pesquisacep(this.value)" maxlength="9" name="zip_code" id="zip_code" value="<?= $dataPerson['zip_code'] ?>">
                             </div>
                             <div class="form-group col-md-4">
-                                <label class="font-weight-semibold" for="address">Logradouro:</label>
-                                <input type="text" class="form-control" id="address" name="address" value="<?= @$dataPerson['street'] ?>"/>
+                                <label class="font-weight-semibold" for="street">Logradouro:</label>
+                                <input type="text" class="form-control" id="street" name="street" value="<?= @$dataPerson['street'] ?>"/>
                             </div>
                             <div class="form-group col-md-1">
                                 <label class="font-weight-semibold" for="number_address">Nº:</label>
