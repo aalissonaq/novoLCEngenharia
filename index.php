@@ -35,6 +35,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     <!-- page css -->
     <link href="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
     <link href="assets/vendors/datatables/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendors/select2/select2.css" rel="stylesheet">
 
     <!-- Core css -->
     <link href="./assets/css/app.min.css" rel="stylesheet">
@@ -820,6 +821,8 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     <script src="assets/js/pages/project-list.js"></script>
     <script src="assets/js/pages/datatables.js"></script>
     <script src="assets/js/sweetalert2.all.min.js"></script>
+    <script src="assets/vendors/select2/select2.min.js"></script>
+    <script src="assets/vendors/quill/quill.min.js"></script>
 
     <script src="assets/js/jquery.mask.min.js"></script>
 

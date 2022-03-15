@@ -283,7 +283,7 @@
                                                             <div class="form-group ">
                                                                 <button type="submit" class="btn btn-tone btn-success mr-5">
                                                                     <i class="anticon anticon-save"></i>
-                                                                    Atualizar dados
+                                                                    Gravar Dados
                                                                 </button>
                                                                 <button type="reset" class="btn btn-tone btn-danger" style="position: absolute; right: 2.5rem;">
                                                                     <i class="anticon anticon-delete"></i>
