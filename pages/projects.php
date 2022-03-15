@@ -22,10 +22,10 @@
                                             <i class="anticon anticon-appstore"></i>
                                         </button>
                                     </div>
-                                    <button class="btn btn-tone btn-primary" data-toggle="modal" data-target="#create-new-project">
+                                    <!-- <button class="btn btn-tone btn-primary" data-toggle="modal" data-target="#create-new-project" >
                                         <i class="anticon anticon-appstore"></i>
                                         <span class="m-l-5">Novo Projeto</span>
-                                    </button>
+                                    </button> -->
                                 </div>
                             </div>
                         </div>
@@ -35,8 +35,6 @@
                     if (isset($_POST['action']) && $_POST['action'] == 'create') {
                         echo $_POST['decription'];
                     }
-
-
                     ?>
 
                     <div class="container-fluid">

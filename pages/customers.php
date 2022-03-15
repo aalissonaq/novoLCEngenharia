@@ -57,6 +57,8 @@
                         // } else {
                         //     sweetalert('Erro!', 'Não foi possível cadastrar o usuário!', 'error', '2000');
                         // }
+                    } else if (isset($_POST['action']) && $_POST['action'] == 'createProject') {
+                        echo $_POST['decription'];
                     }
                     ?>
                     <div class="card">
@@ -92,6 +94,7 @@
                                                 ORDER BY person.name ASC";
                                         $result = $connection->query($sql)->fetchAll(PDO::FETCH_ASSOC);
                                         foreach ($result as $user) {
+
                                         ?>
                                             <tr class="font-weight-light">
                                                 <td>
@@ -164,8 +167,10 @@
                                                     <?= $user['status'] == 1 ? 'Ativo' : 'Inativo'; ?>
                                                 </th>
                                                 <td>
-                                                    <button class="btn btn-icon btn-sm btn-tone btn-secondary" title="Criar Projeto">
+                                                    <? $idParson = $user['id'] ?>
+                                                    <button class="btn btn-icon btn-sm btn-tone btn-secondary" title="Criar Projeto" data-toggle="modal" data-target="#create-new-project" onclick="setaDadosModal(<?= $idParson ?> )">
                                                         <i class="anticon anticon-appstore  font-size-20"></i>
+
                                                     </button>
                                                     <div class="dropdown dropdown-animated scale-left">
                                                         <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
@@ -180,7 +185,7 @@
                                                                 <i class="fas fa-user-alt-slash"></i>
                                                                 <span class="m-l-10">Inativar</span>
                                                             </button>
-                                                            <button class="dropdown-item" type="button">
+                                                            <button class="dropdown-item" type="button" data-toggle="modal" data-target="#create-new-project">
                                                                 <i class="anticon anticon-appstore"></i>
                                                                 <span class="m-l-10">Criar Projetos</span>
                                                             </button>
@@ -293,7 +298,6 @@
                                                         </div>
                                                 </form>
                                             </section>
-
                                         </div>
                                     </div>
                                 </div>
@@ -301,3 +305,121 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Modal new Project -->
+                <div class="modal modal-right fade" id="create-new-project">
+                    <div class="modal-dialog modal-xl" role="document">
+                        <div class="modal-content">
+                            <div class="side-modal-wrapper">
+                                <div class="vertical-align">
+                                    <div class="table-cell">
+                                        <div class="modal-body" style="background-color: #fff;">
+                                            <h3 class="modal-title text-primary">
+                                                <i class="anticon anticon-appstore"></i>
+                                                Novo Projeto
+                                                <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                                                    <h1 aria-hidden="true" class="modal-title text-danger">&times;</h1>
+                                                </button>
+                                            </h3>
+                                            <span class="text-muted">
+                                                # <?= $uuid = uuidv4() ?>
+                                            </span>
+                                            <input type="text" id="idCustumer" name="idCustumer" value="" />
+                                            <hr />
+                                            <section class="container">
+                                                <form action="" method="post" enctype="multipart/form">
+                                                    <input type="hidden" name="uuid" value="<?= $uuid ?>">
+                                                    <div class="form-group">
+                                                        <label for="title">Titulo do Projeto</label>
+                                                        <input type="text" focus class="form-control" id="title" placeholder="Nome do Projeto">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="decription">Descrição do Projeto</label>
+                                                        <textarea class=" form-control" name="decription" rows="3"></textarea>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="states">Estado do Projeto</label></br>
+                                                        <select class="select2">
+                                                            <option value="" selected disabled>Selecione ...</option>
+                                                            <option value="create">Criando</option>
+                                                            <option value="in progress">Em Andamento</option>
+                                                            <option value="suspended">Suspenso</option>
+                                                            <option value="cancel">Canselado</option>
+                                                        </select>
+
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="project-members">Membros do Projeto</label>
+                                                        <div class="d-flex align-items-center">
+                                                            <div>
+                                                                <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Pamela Wanda">
+                                                                    <div class="avatar avatar-image avatar-sm">
+                                                                        <img src="assets/images/avatars/thumb-7.jpg" alt="">
+                                                                    </div>
+                                                                </a>
+                                                                <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Darryl Day">
+                                                                    <div class="avatar avatar-image avatar-sm">
+                                                                        <img src="assets/images/avatars/thumb-2.jpg" alt="">
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Status do Projeto</label>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="progress progress-sm w-100 m-b-0">
+                                                                <div class="progress-bar bg-success" role="progressbar" style="width: 50%"></div>
+                                                            </div>
+                                                            <div class="m-l-10">
+                                                                <i class="anticon anticon-check-o text-success"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Tags do Projeto</label>
+                                                        <div class="d-flex align-items-center">
+                                                            <div>
+                                                                <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Pamela Wanda">
+                                                                    <div class="avatar avatar-image avatar-sm">
+                                                                        <img src="assets/images/avatars/thumb-7.jpg" alt="">
+                                                                    </div>
+                                                                </a>
+                                                                <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Darryl Day">
+                                                                    <div class="avatar avatar-image avatar-sm">
+                                                                        <img src="assets/images/avatars/thumb-2.jpg" alt="">
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row ">
+                                                        <input type="hidden" name="action" value="createProject">
+                                                        <div class="form-group ">
+                                                            <button type="submit" class="btn btn-tone btn-success mr-5">
+                                                                <i class="anticon anticon-save"></i>
+                                                                Criar Projeto
+                                                            </button>
+                                                            <button type="reset" class="btn btn-tone btn-danger" style="position: absolute; right: 2.5rem;">
+                                                                <i class="anticon anticon-delete"></i>
+                                                                Limpar Formulário
+                                                            </button>
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    function setaDadosModal(valor) {
+                        document.getElementById('idCustumer').value = valor;
+
+                    };
+                </script>
