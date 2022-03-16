@@ -167,7 +167,7 @@
                                                     <?= $user['status'] == 1 ? 'Ativo' : 'Inativo'; ?>
                                                 </th>
                                                 <td>
-                                                    <? $idParson = $user['id'] ?>
+                                                    <?php $idParson = $user['id'] ?>
                                                     <button class="btn btn-icon btn-sm btn-tone btn-secondary" title="Criar Projeto" data-toggle="modal" data-target="#create-new-project" onclick="setaDadosModal(<?= $idParson ?> )">
                                                         <i class="anticon anticon-appstore  font-size-20"></i>
 
@@ -324,7 +324,7 @@
                                             <span class="text-muted">
                                                 # <?= $uuid = uuidv4() ?>
                                             </span>
-                                            <input type="text" id="idCustumer" name="idCustumer" value="" />
+                                            <input type="hidden" id="idCustumer" name="id_person_responsable" value="" />
                                             <hr />
                                             <section class="container">
                                                 <form action="" method="post" enctype="multipart/form">
@@ -337,45 +337,36 @@
                                                         <label for="decription">Descrição do Projeto</label>
                                                         <textarea class=" form-control" name="decription" rows="3"></textarea>
                                                     </div>
-                                                    <div class="form-group">
+                                                    <!--<div class="form-group">
                                                         <label for="states">Estado do Projeto</label></br>
-                                                        <select class="select2">
+                                                        <select class="select2" name="states">
                                                             <option value="" selected disabled>Selecione ...</option>
                                                             <option value="create">Criando</option>
                                                             <option value="in progress">Em Andamento</option>
                                                             <option value="suspended">Suspenso</option>
                                                             <option value="cancel">Canselado</option>
                                                         </select>
+                                                    </div> -->
+                                                    <div class="form-group">
+                                                        <label for="id_type_project">Tipo do Projeto</label></br>
+                                                        <?php
+                                                        $sql = "SELECT * FROM types_project";
+                                                        $result = $connection->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+
+                                                        ?>
+                                                        <select class="select2" name="id_type_project">
+                                                            <option value="" selected disabled>Selecione ...</option>
+                                                            <?php foreach ($result as $key => $value) : ?>
+                                                                <option value="<?= $value['id'] ?>"><?= $value['title'] ?></option>
+                                                            <?php endforeach; ?>
+                                                        </select>
 
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="project-members">Membros do Projeto</label>
-                                                        <div class="d-flex align-items-center">
-                                                            <div>
-                                                                <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Pamela Wanda">
-                                                                    <div class="avatar avatar-image avatar-sm">
-                                                                        <img src="assets/images/avatars/thumb-7.jpg" alt="">
-                                                                    </div>
-                                                                </a>
-                                                                <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Darryl Day">
-                                                                    <div class="avatar avatar-image avatar-sm">
-                                                                        <img src="assets/images/avatars/thumb-2.jpg" alt="">
-                                                                    </div>
-                                                                </a>
-                                                            </div>
-                                                        </div>
+                                                        <label for="deadline">Previsão do Projeto</label>
+                                                        <input type="date" class="form-control" id="deadline" name="deadline" placeholder="Previsão do Projeto">
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label>Status do Projeto</label>
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="progress progress-sm w-100 m-b-0">
-                                                                <div class="progress-bar bg-success" role="progressbar" style="width: 50%"></div>
-                                                            </div>
-                                                            <div class="m-l-10">
-                                                                <i class="anticon anticon-check-o text-success"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+
                                                     <div class="form-group">
                                                         <label>Tags do Projeto</label>
                                                         <div class="d-flex align-items-center">
