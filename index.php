@@ -267,7 +267,8 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
                                 <span class="icon-holder">
                                     <i class="anticon anticon-dashboard"></i>
                                 </span>
-                                <span class="title">Dashboard</span>
+
+                                <span class="title <?= !isset($_GET['page']) ? 'text-secondary' : ''; ?>">Dashboard</span>
                                 <span class="arrow">
                                     <i class="arrow-icon"></i>
                                 </span>
@@ -278,7 +279,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
                                 <span class="icon-holder">
                                     <i class="anticon anticon-team"></i>
                                 </span>
-                                <span class="title">Clientes</span>
+                                <span class="title <?= isset($_GET['page']) && $_GET['page'] == 'customers'  ? 'text-secondary' : ''; ?>">Clientes</span>
                                 <span class="arrow">
                                     <i class="arrow-icon"></i>
                                 </span>
@@ -289,13 +290,13 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
                                 <span class="icon-holder">
                                     <i class="anticon anticon-appstore"></i>
                                 </span>
-                                <span class="title">Projetos</span>
+                                <span class="title <?= isset($_GET['page']) && ($_GET['page'] == 'projects' || $_GET['page'] == 'projectcustomer') ? 'text-secondary' : ''; ?>">Projetos</span>
                                 <span class="arrow">
                                     <i class="arrow-icon"></i>
                                 </span>
                             </a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown <?= isset($_GET['page']) && $_GET['page'] == 'users' ? 'open' : ''; ?>">
                             <a class="dropdown-toggle" href="javascript:void(0);">
                                 <span class="icon-holder">
                                     <i class="anticon anticon-setting"></i>
@@ -307,7 +308,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="?page=users">Usuários</a>
+                                    <a href="?page=users" class="<?= isset($_GET['page']) && $_GET['page'] == 'users' ? 'text-secondary' : ''; ?>">Usuários</a>
                                 </li>
                                 <li>
                                     <a href="?page=typesProjects">Tipos de Projetos</a>

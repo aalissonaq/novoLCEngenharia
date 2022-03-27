@@ -107,7 +107,6 @@ function selectTipoProjeto() {
       document.getElementById("iPublica").style.display = "none";
 
       break;
-
   }
 
   // if (option.value == "solar") {

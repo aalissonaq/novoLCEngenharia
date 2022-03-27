@@ -168,10 +168,12 @@
                                                 </th>
                                                 <td>
                                                     <?php $idParson = $user['id'] ?>
-                                                    <button class="btn btn-icon btn-sm btn-tone btn-secondary" title="Criar Projeto" data-toggle="modal" data-target="#create-new-project" onclick="setaDadosModal(<?= $idParson ?> )">
+                                                    <a href="?page=projectcustomer&idcliente=<?= $user['id'] ?>" class="btn btn-icon btn-sm btn-tone btn-secondary" data-toggle="tooltip" title="Projetos do Cliente">
                                                         <i class="anticon anticon-appstore  font-size-20"></i>
-
-                                                    </button>
+                                                    </a>
+                                                    <!-- <button class="btn btn-icon btn-sm btn-tone btn-secondary" title="Criar Projeto" data-toggle="modal" data-target="#create-new-project" onclick="setaDadosModal(<?= $idParson ?> )">
+                                                        <i class="anticon anticon-appstore  font-size-20" data-toggle="tooltip" title="Projetos do Cliente"></i>
+                                                    </button> -->
                                                     <div class="dropdown dropdown-animated scale-left">
                                                         <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
                                                             <i class="anticon anticon-ellipsis"></i>
@@ -185,7 +187,7 @@
                                                                 <i class="fas fa-user-alt-slash"></i>
                                                                 <span class="m-l-10">Inativar</span>
                                                             </button>
-                                                            <button class="dropdown-item" type="button" data-toggle="modal" data-target="#create-new-project">
+                                                            <button class="dropdown-item" type="button" data-toggle="modal" data-target="#create-new-project" onclick="setaDadosModal(<?= $idParson ?> )">
                                                                 <i class="anticon anticon-appstore"></i>
                                                                 <span class="m-l-10">Criar Projetos</span>
                                                             </button>
@@ -307,10 +309,11 @@
                 </div>
 
                 <!-- Modal new Project -->
+                <!-- Modal new Project -->
                 <div class="modal modal-right fade" id="create-new-project">
                     <div class="modal-dialog modal-xl" role="document">
                         <div class="modal-content">
-                            <div class="side-modal-wrapper">
+                            <div class="side-modal-wrapper page-header">
                                 <div class="vertical-align">
                                     <div class="table-cell">
                                         <div class="modal-body" style="background-color: #fff;">
@@ -354,7 +357,7 @@
                                                         $result = $connection->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 
                                                         ?>
-                                                        <select class="select2" name="id_type_project">
+                                                        <select class="select2" name="id_type_project" onChange="selectTipoProjeto()">
                                                             <option value="" selected disabled>Selecione ...</option>
                                                             <?php foreach ($result as $key => $value) : ?>
                                                                 <option value="<?= $value['id'] ?>"><?= $value['title'] ?></option>
@@ -362,6 +365,7 @@
                                                         </select>
 
                                                     </div>
+
                                                     <div class="form-group">
                                                         <label for="deadline">Previsão do Projeto</label>
                                                         <input type="date" class="form-control" id="deadline" name="deadline" placeholder="Previsão do Projeto">
@@ -384,20 +388,30 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="form-row ">
-                                                        <input type="hidden" name="action" value="createProject">
-                                                        <div class="form-group ">
-                                                            <button type="submit" class="btn btn-tone btn-success mr-5">
-                                                                <i class="anticon anticon-save"></i>
-                                                                Criar Projeto
-                                                            </button>
-                                                            <button type="reset" class="btn btn-tone btn-danger" style="position: absolute; right: 2.5rem;">
-                                                                <i class="anticon anticon-delete"></i>
-                                                                Limpar Formulário
-                                                            </button>
-                                                        </div>
-                                                    </div>
 
+                                                    <div class=" no-gutters">
+                                                        <div class="row align-items-md-center">
+                                                            <div class="col-md-6">
+                                                                <div class="row">
+                                                                    <div class="input-affix m-v-10">
+                                                                        <button type="submit" class="btn btn-tone btn-success m-v-10">
+                                                                            <i class="anticon anticon-save"></i>
+                                                                            Criar Projeto
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="text-md-right m-v-10">
+                                                                    <div class="btn-group m-r-10">
+                                                                        <button type="reset" class="btn btn-tone btn-danger m-v-10">
+                                                                            <i class="anticon anticon-delete"></i>
+                                                                            Limpar Formulário
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                 </form>
                                             </section>
                                         </div>
