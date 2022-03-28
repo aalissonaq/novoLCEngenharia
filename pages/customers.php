@@ -58,7 +58,14 @@
                         //     sweetalert('Erro!', 'Não foi possível cadastrar o usuário!', 'error', '2000');
                         // }
                     } else if (isset($_POST['action']) && $_POST['action'] == 'createProject') {
-                        echo $_POST['decription'];
+                        $uuid = strip_tags(trim($_POST['uuid']));
+                        $id_person_responsable = strip_tags(trim($_SESSION['ID']));
+                        $id_type_project = strip_tags(trim($_POST['id_type_project']));
+                        $id_person_client = strip_tags(trim($_POST['id_person_responsable']));
+                        $title = strip_tags(trim($_POST['title']));
+                        $description = strip_tags(trim($_POST['description']));
+                        $states = strip_tags(trim($_POST['states']));
+                        $deadline = strip_tags(trim($_POST['deadline']));
                     }
                     ?>
                     <div class="card">
@@ -309,7 +316,6 @@
                 </div>
 
                 <!-- Modal new Project -->
-                <!-- Modal new Project -->
                 <div class="modal modal-right fade" id="create-new-project">
                     <div class="modal-dialog modal-xl" role="document">
                         <div class="modal-content">
@@ -327,11 +333,12 @@
                                             <span class="text-muted">
                                                 # <?= $uuid = uuidv4() ?>
                                             </span>
-                                            <input type="hidden" id="idCustumer" name="id_person_responsable" value="" />
+
                                             <hr />
                                             <section class="container">
                                                 <form action="" method="post" enctype="multipart/form">
                                                     <input type="hidden" name="uuid" value="<?= $uuid ?>">
+                                                    <input type="hidden" id="idCustumer" name="id_person_responsable" value="" />
                                                     <div class="form-group">
                                                         <label for="title">Titulo do Projeto</label>
                                                         <input type="text" focus class="form-control" id="title" placeholder="Nome do Projeto">
@@ -370,25 +377,7 @@
                                                         <label for="deadline">Previsão do Projeto</label>
                                                         <input type="date" class="form-control" id="deadline" name="deadline" placeholder="Previsão do Projeto">
                                                     </div>
-
-                                                    <div class="form-group">
-                                                        <label>Tags do Projeto</label>
-                                                        <div class="d-flex align-items-center">
-                                                            <div>
-                                                                <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Pamela Wanda">
-                                                                    <div class="avatar avatar-image avatar-sm">
-                                                                        <img src="assets/images/avatars/thumb-7.jpg" alt="">
-                                                                    </div>
-                                                                </a>
-                                                                <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Darryl Day">
-                                                                    <div class="avatar avatar-image avatar-sm">
-                                                                        <img src="assets/images/avatars/thumb-2.jpg" alt="">
-                                                                    </div>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
+                                                    <input type="hidden" name="action" value="createProject">
                                                     <div class=" no-gutters">
                                                         <div class="row align-items-md-center">
                                                             <div class="col-md-6">
