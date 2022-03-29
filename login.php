@@ -85,16 +85,16 @@ if (isset($_POST['login']) && $_POST['login'] == 'entra') {
     <div class="app">
         <div class="container-fluid p-0 h-100">
             <div class="row no-gutters h-100 full-height">
-                <div class="col-lg-4 d-none d-lg-flex bg" style="background-image:url('assets/images/others/login-1.jpg')">
+                <div class="col-lg-7 d-none d-lg-flex bg" style="background-image:url('assets/images/others/login-1.jpg')">
                     <div class="d-flex h-100 p-h-40 p-v-15 flex-column justify-content-between">
                         <div>
                             <img src="assets/images/logo/logo-white.png" alt="<?= $information['fantasy_name'] ?>">
                         </div>
                         <div>
                             <h1 class="text-white m-b-20 font-weight-normal">
-                                Seja bem-vindo a <br /> <?= $information['fantasy_name'] ?>
+                                Seja bem-vindo a <br /><b> <?= $information['fantasy_name'] ?></b>
                             </h1>
-                            <p class="text-white font-size-16 lh-2 w-80 opacity-08">
+                            <p class=" font-size-12 m-l-100 lh-2 w-80 opacity-08" style="margin-top: -2rem; color: #E7D137;">
                                 <?= $information['slogan']; ?>
                             </p>
                         </div>
@@ -111,7 +111,7 @@ if (isset($_POST['login']) && $_POST['login'] == 'entra') {
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8 bg-white">
+                <div class="col-lg-5 bg-white">
                     <div class="container h-100">
                         <div class="row no-gutters h-100 align-items-center">
                             <div class="col-md-8 col-lg-7 col-xl-6 mx-auto">
@@ -129,7 +129,7 @@ if (isset($_POST['login']) && $_POST['login'] == 'entra') {
                                         <label class="font-weight-semibold js_cpf" for="userName">Usuário:</label>
                                         <div class="input-affix">
                                             <i class="prefix-icon anticon anticon-user"></i>
-                                            <input type="text" name="userName" id="userName" class="form-control js_cpf" id="userName" placeholder="Username">
+                                            <input type="text" name="userName" autofocus id="userName" class="form-control js_cpf" id="userName" placeholder="Username">
                                         </div>
                                     </div>
                                     <div class="form-group">

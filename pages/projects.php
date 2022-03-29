@@ -40,72 +40,80 @@
                     <div class="container-fluid">
                         <div id="card-view">
                             <div class="row">
-                                <div class="col-md-3">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="media">
-                                                    <div class="avatar avatar-image rounded">
-                                                        <img src="assets/images/others/thumb-1.jpg" alt="">
-                                                    </div>
-                                                    <div class="m-l-10">
-                                                        <h5 class="m-b-0">Mind Cog App</h5>
-                                                        <span class="text-muted font-size-13">31 Tasks</span>
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown dropdown-animated scale-left">
-                                                    <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
-                                                        <i class="anticon anticon-ellipsis"></i>
-                                                    </a>
-                                                    <div class="dropdown-menu">
-                                                        <a href="?page=projectDetails" class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-eye"></i>
-                                                            <span class="m-l-10">Detalhar</span>
-                                                        </a>
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-edit"></i>
-                                                            <span class="m-l-10">Edit</span>
-                                                        </button>
-                                                        <button class="dropdown-item" type="button">
-                                                            <i class="anticon anticon-delete"></i>
-                                                            <span class="m-l-10">Delete</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <p class="m-t-25">European minnow priapumfish mosshead warbonnet shrimpfish.</p>
-                                            <div class="m-t-30">
+                                <?php
+                                $sql = "SELECT * FROM projects";
+                                $result = $connection->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+                                foreach ($result as $project) {
+                                ?>
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-body">
                                                 <div class="d-flex justify-content-between">
-                                                    <span class="font-weight-semibold">Progress</span>
-                                                    <span class="font-weight-semibold">100%</span>
-                                                </div>
-                                                <div class="progress progress-sm m-t-10">
-                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%"></div>
-                                                </div>
-                                            </div>
-                                            <div class="m-t-20">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div>
-                                                        <span class="badge badge-pill badge-cyan">Ready</span>
+                                                    <div class="media">
+                                                        <div class="avatar avatar-image rounded">
+                                                            <?= $project['id_type_project'] == 1 ? '<img src="assets/images/logo/logo-fold.png" alt="">' : '<i class="anticon anticon-appstore text-primary"></i>' ?>
+                                                            <!-- <img src="assets/images/logo/logo-fold.png" alt=""> -->
+                                                        </div>
+                                                        <div class="m-l-10">
+                                                            <h5 class="m-b-0"><?= $project['title'] ?></h5>
+                                                            <span class="text-muted font-size-11"><?= $project['uuid'] ?></span>
+                                                        </div>
                                                     </div>
-                                                    <div>
-                                                        <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Pamela Wanda">
-                                                            <div class="avatar avatar-image avatar-sm">
-                                                                <img src="assets/images/avatars/thumb-7.jpg" alt="">
-                                                            </div>
+                                                    <div class="dropdown dropdown-animated scale-left">
+                                                        <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
+                                                            <i class="anticon anticon-ellipsis"></i>
                                                         </a>
-                                                        <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Darryl Day">
-                                                            <div class="avatar avatar-image avatar-sm">
-                                                                <img src="assets/images/avatars/thumb-2.jpg" alt="">
-                                                            </div>
-                                                        </a>
+                                                        <div class="dropdown-menu">
+                                                            <button class="dropdown-item" type="button">
+                                                                <i class="anticon anticon-eye"></i>
+                                                                <span class="m-l-10">Detalhes</span>
+                                                            </button>
+                                                            <button class="dropdown-item" type="button">
+                                                                <i class="anticon anticon-edit"></i>
+                                                                <span class="m-l-10">Editar</span>
+                                                            </button>
+                                                            <button class="dropdown-item" type="button">
+                                                                <i class="anticon anticon-delete"></i>
+                                                                <span class="m-l-10">Delete</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="m-t-25">
+                                                    <?= $project['decription'] ?>
+                                                </p>
+                                                <div class="m-t-30">
+                                                    <div class="d-flex justify-content-between">
+                                                        <span class="font-weight-semibold">Progress</span>
+                                                        <span class="font-weight-semibold">100%</span>
+                                                    </div>
+                                                    <div class="progress progress-sm m-t-10">
+                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="m-t-20">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <div>
+                                                            <span class="badge badge-pill badge-cyan">Ready</span>
+                                                        </div>
+                                                        <div>
+                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Pamela Wanda">
+                                                                <div class="avatar avatar-image avatar-sm">
+                                                                    <img src="assets/images/avatars/thumb-7.jpg" alt="">
+                                                                </div>
+                                                            </a>
+                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Darryl Day">
+                                                                <div class="avatar avatar-image avatar-sm">
+                                                                    <img src="assets/images/avatars/thumb-2.jpg" alt="">
+                                                                </div>
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
+                                <?php } ?>
                             </div>
                         </div>
                         <div class="card d-none" id="list-view">

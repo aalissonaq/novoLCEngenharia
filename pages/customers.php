@@ -63,9 +63,23 @@
                         $id_type_project = strip_tags(trim($_POST['id_type_project']));
                         $id_person_client = strip_tags(trim($_POST['id_person_responsable']));
                         $title = strip_tags(trim($_POST['title']));
-                        $description = strip_tags(trim($_POST['description']));
-                        $states = strip_tags(trim($_POST['states']));
+                        $decription = strip_tags(trim($_POST['decription']));
                         $deadline = strip_tags(trim($_POST['deadline']));
+
+                        $sql = "SELECT uuid FROM projects WHERE uuid = '$uuid'";
+                        if ($connection->query($sql)->rowCount() == 0) {
+
+                            $sql = "INSERT INTO projects (uuid, id_person_responsable, id_type_project, id_person_client, title, decription, deadline) VALUES ('$uuid', '$id_person_responsable', '$id_type_project', '$id_person_client', '$title', '$decription', '$deadline')";
+
+
+                            if ($connection->exec($sql)) {
+                                echo "<div class='alert alert-success'>Projeto cadastrado com sucesso!</div>";
+                            } else {
+                                echo "<div class='alert alert-danger'>Erro ao cadastrar projeto!</div>";
+                            }
+                        } else {
+                            echo "<div class='alert alert-danger'>Projeto já existe</div>";
+                        }
                     }
                     ?>
                     <div class="card">
@@ -341,11 +355,11 @@
                                                     <input type="hidden" id="idCustumer" name="id_person_responsable" value="" />
                                                     <div class="form-group">
                                                         <label for="title">Titulo do Projeto</label>
-                                                        <input type="text" focus class="form-control" id="title" placeholder="Nome do Projeto">
+                                                        <input type="text" autofocus class="form-control" id="title" name="title" placeholder="Nome do Projeto">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="decription">Descrição do Projeto</label>
-                                                        <textarea class=" form-control" name="decription" rows="3"></textarea>
+                                                        <textarea class="form-control" name="decription" rows="3"></textarea>
                                                     </div>
                                                     <!--<div class="form-group">
                                                         <label for="states">Estado do Projeto</label></br>
