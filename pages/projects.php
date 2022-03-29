@@ -122,76 +122,83 @@
                                     <table class="table table-hover table-sm">
                                         <thead>
                                             <tr>
-                                                <th>Project</th>
-                                                <th>Tasks</th>
+                                                <th>Titilo de Projeto</th>
+                                                <th>UUID</th>
                                                 <th>Members</th>
                                                 <th>Progress</th>
                                                 <th></th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="media align-items-center">
-                                                        <div class="avatar avatar-image rounded">
-                                                            <img src="assets/images/others/thumb-1.jpg" alt="">
+                                            <?php
+                                            $sql = "SELECT * FROM projects";
+                                            $result = $connection->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+                                            foreach ($result as $project) {
+                                            ?>
+                                                <tr>
+                                                    <td>
+                                                        <div class="media align-items-center">
+                                                            <div class="avatar avatar-image rounded">
+                                                                <?= $project['id_type_project'] == 1 ? '<img src="assets/images/logo/logo-fold.png" alt="">' : '<i class="anticon anticon-appstore text-primary"></i>' ?>
+                                                                <!-- <img src="assets/images/others/thumb-1.jpg" alt=""> -->
+                                                            </div>
+                                                            <div class="m-l-10">
+                                                                <h5 class="m-b-0"><?= $project['title'] ?></h5>
+                                                            </div>
                                                         </div>
-                                                        <div class="m-l-10">
-                                                            <h5 class="m-b-0">Mind Cog App</h5>
+                                                    </td>
+                                                    <td>
+                                                        <span><?= $project['uuid'] ?></span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div>
+                                                                <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Pamela Wanda">
+                                                                    <div class="avatar avatar-image avatar-sm">
+                                                                        <img src="assets/images/avatars/thumb-7.jpg" alt="">
+                                                                    </div>
+                                                                </a>
+                                                                <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Darryl Day">
+                                                                    <div class="avatar avatar-image avatar-sm">
+                                                                        <img src="assets/images/avatars/thumb-2.jpg" alt="">
+                                                                    </div>
+                                                                </a>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span>31 Tasks</span>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div>
-                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Pamela Wanda">
-                                                                <div class="avatar avatar-image avatar-sm">
-                                                                    <img src="assets/images/avatars/thumb-7.jpg" alt="">
-                                                                </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="progress progress-sm w-100 m-b-0">
+                                                                <div class="progress-bar bg-success" role="progressbar" style="width: 100%"></div>
+                                                            </div>
+                                                            <div class="m-l-10">
+                                                                <i class="anticon anticon-check-o text-success"></i>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <div class="dropdown dropdown-animated scale-left">
+                                                            <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
+                                                                <i class="anticon anticon-ellipsis"></i>
                                                             </a>
-                                                            <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Darryl Day">
-                                                                <div class="avatar avatar-image avatar-sm">
-                                                                    <img src="assets/images/avatars/thumb-2.jpg" alt="">
-                                                                </div>
-                                                            </a>
+                                                            <div class="dropdown-menu">
+                                                                <a href="?page=projectDetails" class="dropdown-item" type="button">
+                                                                    <i class="anticon anticon-eye"></i>
+                                                                    <span class="m-l-10">Detalhar</span>
+                                                                </a>
+                                                                <button class="dropdown-item" type="button">
+                                                                    <i class="anticon anticon-edit"></i>
+                                                                    <span class="m-l-10">Editar</span>
+                                                                </button>
+                                                                <button class="dropdown-item" type="button">
+                                                                    <i class="anticon anticon-delete"></i>
+                                                                    <span class="m-l-10">Delete</span>
+                                                                </button>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="progress progress-sm w-100 m-b-0">
-                                                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%"></div>
-                                                        </div>
-                                                        <div class="m-l-10">
-                                                            <i class="anticon anticon-check-o text-success"></i>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="text-right">
-                                                    <div class="dropdown dropdown-animated scale-left">
-                                                        <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
-                                                            <i class="anticon anticon-ellipsis"></i>
-                                                        </a>
-                                                        <div class="dropdown-menu">
-                                                            <a href="?page=projectDetails" class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-eye"></i>
-                                                                <span class="m-l-10">Detalhar</span>
-                                                            </a>
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-edit"></i>
-                                                                <span class="m-l-10">Edit</span>
-                                                            </button>
-                                                            <button class="dropdown-item" type="button">
-                                                                <i class="anticon anticon-delete"></i>
-                                                                <span class="m-l-10">Delete</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                                    </td>
+                                                </tr>
+                                            <?php } ?>
 
                                         </tbody>
                                     </table>
