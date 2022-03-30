@@ -15,10 +15,10 @@
                             <div class="col-md-6">
                                 <div class="text-md-right m-v-10">
                                     <div class="btn-group m-r-10">
-                                        <button id="list-view-btn" type="button" class="btn btn-default btn-icon" data-toggle="tooltip" data-placement="bottom" title="List View">
+                                        <button id="list-view-btn" type="button" class="btn btn-default btn-icon" data-toggle="tooltip" data-placement="bottom" title="Ver Lista">
                                             <i class="anticon anticon-ordered-list"></i>
                                         </button>
-                                        <button id="card-view-btn" type="button" class="btn btn-default btn-icon active" data-toggle="tooltip" data-placement="bottom" title="Card View">
+                                        <button id="card-view-btn" type="button" class="btn btn-default btn-icon active" data-toggle="tooltip" data-placement="bottom" title="Ver Cartões">
                                             <i class="anticon anticon-appstore"></i>
                                         </button>
                                     </div>
@@ -80,7 +80,7 @@
                                                     </div>
                                                 </div>
                                                 <p class="m-t-25">
-                                                    <?= $project['decription'] ?>
+                                                    <?= lmWord($project['decription'],120) ?>
                                                 </p>
                                                 <div class="m-t-30">
                                                     <div class="d-flex justify-content-between">
