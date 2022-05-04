@@ -64,10 +64,10 @@
                                                             <i class="anticon anticon-ellipsis"></i>
                                                         </a>
                                                         <div class="dropdown-menu">
-                                                            <button class="dropdown-item" type="button">
+                                                            <a href="?page=projectDetails&uuid=<?= $project['uuid'] ?>" class="dropdown-item" type="button">
                                                                 <i class="anticon anticon-eye"></i>
                                                                 <span class="m-l-10">Detalhes</span>
-                                                            </button>
+                                                            </a>
                                                             <button class="dropdown-item" type="button">
                                                                 <i class="anticon anticon-edit"></i>
                                                                 <span class="m-l-10">Editar</span>
@@ -80,7 +80,7 @@
                                                     </div>
                                                 </div>
                                                 <p class="m-t-25">
-                                                    <?= lmWord($project['decription'],120) ?>
+                                                    <?= lmWord($project['decription'], 120) ?>
                                                 </p>
                                                 <div class="m-t-30">
                                                     <div class="d-flex justify-content-between">

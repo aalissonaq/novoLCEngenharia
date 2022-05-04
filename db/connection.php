@@ -3,7 +3,7 @@
 function novaConexao()
 {
   $servidor = 'localhost';
-  $usuario = 'root';
+  $usuario = 'ci';
   $senha = 't5r4e3w2q1';
   $banco = 'new_lc';
 
