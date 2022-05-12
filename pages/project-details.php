@@ -4,6 +4,7 @@ $sql = "SELECT * FROM projects WHERE uuid = '{$uuid}'";
 $result = $connection->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 $refer = $result[0];
 
+
 ?>
 <!-- Content Wrapper START -->
 <div class="main-content">
@@ -24,12 +25,43 @@ $refer = $result[0];
                                 </div>
                             </div>
                             <div>
-                                <span class="badge badge-pill badge-blue">Em andamento</span>
+                                <?php
+                                switch ($refer['states']) {
+                                    case 'create':
+                                        $stateColor = 'purple';
+                                        $Status = 'Criado';
+                                        break;
+                                    case 'in progress':
+                                        $stateColor = 'cyan';
+                                        $Status = 'Em Andamento';
+                                        break;
+                                    case 'suspended':
+                                        $stateColor = 'gold';
+                                        $Status = 'Suspenso';
+                                        break;
+                                    case 'cancel':
+                                        $stateColor = 'red';
+                                        $Status = 'Canselado';
+                                        break;
+                                };
+                                ?>
+                                <span class="badge badge-pill badge-<?= $stateColor ?>">
+                                    <?= $Status; ?>
+                                </span>
+                                <span>
+                                    <button class="btn btn-secondary btn-tone btn-xs" onclick="history.go(-1)">
+                                        <i class="anticon anticon-left"></i>
+                                        Voltar
+                                    </button>
+                                </span>
+
                             </div>
                         </div>
                         <div class="m-t-40">
                             <h6>Descrição do Projeto:</h6>
-                            <?= $refer['decription'] ?>
+                            <p class="text-justify">
+                                <?= $refer['decription'] ?>
+                            </p>
                         </div>
                         <div class="d-md-flex m-t-30 align-items-center justify-content-between">
                             <div class="d-flex align-items-center m-t-10">
@@ -67,7 +99,10 @@ $refer = $result[0];
                             </div>
                             <div class="m-t-10">
                                 <span class="font-weight-semibold m-r-10 m-b-5 text-dark">Previsão: </span>
-                                <span>,<?= date('m-d-Y', $refer['deadline']) ?></span>
+                                <span>
+                                    <?= date('d/m/Y', strtotime($refer['deadline'])) ?>
+
+                                </span>
                             </div>
                         </div>
                     </div>

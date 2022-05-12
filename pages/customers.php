@@ -366,7 +366,7 @@
                                                         <select class="select2" name="states">
                                                             <option value="" selected disabled>Selecione ...</option>
                                                             <option value="create">Criando</option>
-                                                            <option value="in progress">Em Andamento</option>
+                                                            <option value="progress">Em Andamento</option>
                                                             <option value="suspended">Suspenso</option>
                                                             <option value="cancel">Canselado</option>
                                                         </select>

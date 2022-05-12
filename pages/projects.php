@@ -79,8 +79,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <p class="m-t-25">
-                                                    <?= lmWord($project['decription'], 120) ?>
+                                                <p class="m-t-25 text-justify">
+                                                    <?= lmWord($project['decription'], 80) ?>
                                                 </p>
                                                 <div class="m-t-30">
                                                     <div class="d-flex justify-content-between">
@@ -94,7 +94,30 @@
                                                 <div class="m-t-20">
                                                     <div class="d-flex justify-content-between align-items-center">
                                                         <div>
-                                                            <span class="badge badge-pill badge-cyan">Ready</span>
+                                                            <?php
+                                                            switch ($project['states']) {
+                                                                case 'create':
+                                                                    $stateColor = 'purple';
+                                                                    $Status = 'Criado';
+                                                                    break;
+                                                                case 'in progress':
+                                                                    $stateColor = 'cyan';
+                                                                    $Status = 'Em Andamento';
+                                                                    break;
+                                                                case 'suspended':
+                                                                    $stateColor = 'gold';
+                                                                    $Status = 'Suspenso';
+                                                                    break;
+                                                                case 'cancel':
+                                                                    $stateColor = 'red';
+                                                                    $Status = 'Canselado';
+                                                                    break;
+                                                            };
+                                                            ?>
+                                                            <span class="badge badge-pill badge-<?= $stateColor ?>">
+                                                                <?= $Status; ?>
+                                                            </span>
+
                                                         </div>
                                                         <div>
                                                             <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Pamela Wanda">
