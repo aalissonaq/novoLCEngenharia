@@ -66,7 +66,13 @@
                         <i class="text-success  anticon anticon-appstore"></i>
                     </div>
                     <div class="d-flex align-items-center m-l-10">
-                        <h2 class="m-b-0 m-r-5">21</h2>
+                        <h2 class="m-b-0 m-r-5">
+                            <?php
+                            $sql = "SELECT * FROM projects";
+                            $result = $connection->query($sql)->rowCount();
+                            echo $result;
+                            ?>
+                        </h2>
                         <span class="text-gray">Projetos</span>
                     </div>
                 </div>
@@ -75,7 +81,13 @@
                         <i class="text-danger anticon anticon-team"></i>
                     </div>
                     <div class="d-flex align-items-center m-l-10">
-                        <h2 class="m-b-0 m-r-5">39</h2>
+                        <h2 class="m-b-0 m-r-5">
+                            <?php
+                            $sql = "SELECT * FROM users WHERE user_level ='4'";
+                            $result = $connection->query($sql)->rowCount();
+                            echo $result;
+                            ?>
+                        </h2>
                         <span class="text-gray">Clientes</span>
                     </div>
                 </div>
