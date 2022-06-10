@@ -83,12 +83,17 @@
                                                     <?= lmWord($project['decription'], 80) ?>
                                                 </p>
                                                 <div class="m-t-30">
+                                                    <?php
+                                                    $progress = rand(1, 100);
+                                                    ?>
                                                     <div class="d-flex justify-content-between">
-                                                        <span class="font-weight-semibold">Progress</span>
-                                                        <span class="font-weight-semibold">100%</span>
+                                                        <span class="font-weight-semibold">O Projeto esta em:</span>
+                                                        <span class="font-weight-semibold">
+                                                            <?= $progress ?> %
+                                                        </span>
                                                     </div>
                                                     <div class="progress progress-sm m-t-10">
-                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%"></div>
+                                                        <div class="progress-bar bg-warning" role="progressbar" style="width: <?= $progress ?>%"></div>
                                                     </div>
                                                 </div>
                                                 <div class="m-t-20">

@@ -3,9 +3,9 @@
 function novaConexao()
 {
   $servidor = 'localhost';
-  $usuario = 'ci';
-  $senha = 't5r4e3w2q1';
-  $banco = 'new_lc';
+  $usuario = 'aalissonaq';
+  $senha = '4l15s0n3aQ!';
+  $banco = 'lc';
 
   try {
     $conexao = new PDO(
