@@ -45,7 +45,7 @@
                                 $result = $connection->query($sql)->fetchAll(PDO::FETCH_ASSOC);
                                 foreach ($result as $project) {
                                 ?>
-                                    <div class="col-md-3">
+                                    <div class="col-md-4">
                                         <div class="card">
                                             <div class="card-body">
                                                 <div class="d-flex justify-content-between">
@@ -79,7 +79,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <p class="m-t-25 text-justify">
+                                                <p class="m-t-25 text-justify" style="min-height: 160px;">
                                                     <?= lmWord($project['decription'], 80) ?>
                                                 </p>
                                                 <div class="m-t-30">
@@ -89,11 +89,45 @@
                                                     <div class="d-flex justify-content-between">
                                                         <span class="font-weight-semibold">O Projeto esta em:</span>
                                                         <span class="font-weight-semibold">
-                                                            <?= $progress ?> %
+                                                            <?php
+                                                            echo  $project['states'] == 'finished'
+                                                                ? '100%'
+                                                                :  $progress . "%"
+                                                            ?>
                                                         </span>
                                                     </div>
+
+                                                    <?php
+                                                    switch ($project['states']) {
+                                                        case 'create':
+                                                            $progressBarColor = 'info ';
+                                                            $Status = 'Criado';
+                                                            break;
+                                                        case 'progress':
+                                                            $progressBarColor = 'secondary ';
+                                                            $Status = 'Em Andamento';
+                                                            break;
+                                                        case 'suspended':
+                                                            $progressBarColor = 'warning ';
+                                                            $Status = 'Suspenso';
+                                                            break;
+                                                        case 'cancel':
+                                                            $progressBarColor = 'danger ';
+                                                            $Status = 'Canselado';
+                                                            break;
+                                                        case 'finished':
+                                                            $progressBarColor = 'success ';
+                                                            $Status = 'Concluido';
+                                                            break;
+                                                    };
+                                                    ?>
+
                                                     <div class="progress progress-sm m-t-10">
-                                                        <div class="progress-bar bg-warning" role="progressbar" style="width: <?= $progress ?>%"></div>
+                                                        <?php
+                                                        echo  $project['states'] == 'finished'
+                                                            ? "<div class=\"progress-bar bg-{$progressBarColor}\" role=\"progressbar\" style=\"width: 100%\"></div>"
+                                                            : "<div class=\"progress-bar bg-{$progressBarColor}\" role=\"progressbar\" style=\"width: {$progress}%\"></div>"
+                                                        ?>
                                                     </div>
                                                 </div>
                                                 <div class="m-t-20">
@@ -102,10 +136,10 @@
                                                             <?php
                                                             switch ($project['states']) {
                                                                 case 'create':
-                                                                    $stateColor = 'purple';
+                                                                    $stateColor = 'cyan';
                                                                     $Status = 'Criado';
                                                                     break;
-                                                                case 'in progress':
+                                                                case 'progress':
                                                                     $stateColor = 'cyan';
                                                                     $Status = 'Em Andamento';
                                                                     break;
@@ -117,8 +151,13 @@
                                                                     $stateColor = 'red';
                                                                     $Status = 'Canselado';
                                                                     break;
+                                                                case 'finished':
+                                                                    $stateColor = 'green';
+                                                                    $Status = 'Concluido';
+                                                                    break;
                                                             };
                                                             ?>
+
                                                             <span class="badge badge-pill badge-<?= $stateColor ?>">
                                                                 <?= $Status; ?>
                                                             </span>

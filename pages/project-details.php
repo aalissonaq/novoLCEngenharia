@@ -3,8 +3,6 @@ $uuid = $_GET['uuid'];
 $sql = "SELECT * FROM projects WHERE uuid = '{$uuid}'";
 $result = $connection->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 $refer = $result[0];
-
-
 ?>
 <!-- Content Wrapper START -->
 <div class="main-content">
@@ -28,11 +26,11 @@ $refer = $result[0];
                                 <?php
                                 switch ($refer['states']) {
                                     case 'create':
-                                        $stateColor = 'purple';
+                                        $stateColor = 'cyan';
                                         $Status = 'Criado';
                                         break;
-                                    case 'in progress':
-                                        $stateColor = 'cyan';
+                                    case 'progress':
+                                        $stateColor = 'purple';
                                         $Status = 'Em Andamento';
                                         break;
                                     case 'suspended':
@@ -42,6 +40,10 @@ $refer = $result[0];
                                     case 'cancel':
                                         $stateColor = 'red';
                                         $Status = 'Canselado';
+                                        break;
+                                    case 'finished':
+                                        $stateColor = 'green';
+                                        $Status = 'Concluido';
                                         break;
                                 };
                                 ?>

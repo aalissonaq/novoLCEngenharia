@@ -53,8 +53,29 @@
 
                   <?php
                     if (isset($_POST['action']) && $_POST['action'] == 'create') {
-                        echo $_POST['decription'];
+                        $uuid = strip_tags(trim($_POST['uuid']));
+                        $id_person_responsable = strip_tags(trim($_SESSION['ID']));
+                        $id_type_project = strip_tags(trim($_POST['id_type_project']));
+                        $id_person_client = $_GET['idcliente'];
+                        $title = strip_tags(trim($_POST['title']));
+                        $decription = strip_tags(trim($_POST['decription']));
+                        $deadline = strip_tags(trim($_POST['deadline']));
+
+                        $sql = "SELECT uuid FROM projects WHERE uuid = '$uuid'";
+                        if ($connection->query($sql)->rowCount() == 0) {
+
+                            $sqlInsert = "INSERT INTO projects (uuid, id_person_responsable, id_type_project, id_person_client, title, decription, deadline)
+                                    VALUES ('$uuid', '$id_person_responsable', '$id_type_project', '$id_person_client', '$title', '$decription', '$deadline')";
+
+                            $connection->query($sqlInsert);
+                            echo '<div class="alert alert-success" role="alert">
+                                    Projeto criado com sucesso!
+                                </div>';
+                        } else {
+                            echo "<div class='alert alert-danger'>Projeto já existe</div>";
+                        }
                     }
+
                     ?>
 
                   <div class="container-fluid">
@@ -63,13 +84,14 @@
                               <?php
                                 foreach ($result as $projectPerson) {
                                 ?>
-                                  <div class="col-md-3">
+                                  <div class="col-md-4">
                                       <div class="card">
                                           <div class="card-body">
                                               <div class="d-flex justify-content-between">
                                                   <div class="media">
                                                       <div class="avatar avatar-image rounded">
-                                                          <img src="assets/images/others/thumb-1.jpg" alt="">
+                                                          <?= $project['id_type_project'] == 1 ? '<img src="assets/images/logo/logo-fold.png" alt="">' : '<i class="anticon anticon-appstore text-primary"></i>' ?>
+                                                          <!-- <img src="assets/images/logo/logo-fold.png" alt=""> -->
                                                       </div>
                                                       <div class="m-l-10">
                                                           <h5 class="m-b-0">
@@ -83,9 +105,9 @@
                                                           <i class="anticon anticon-ellipsis"></i>
                                                       </a>
                                                       <div class="dropdown-menu">
-                                                          <a href="?page=projectDetails" class="dropdown-item" type="button">
+                                                          <a href="?page=projectDetails&uuid=<?= $projectPerson['uuid'] ?>" class="dropdown-item" type="button">
                                                               <i class="anticon anticon-eye"></i>
-                                                              <span class="m-l-10">Detalhar</span>
+                                                              <span class="m-l-10">Detalhes</span>
                                                           </a>
                                                           <button class="dropdown-item" type="button">
                                                               <i class="anticon anticon-edit"></i>
@@ -98,23 +120,87 @@
                                                       </div>
                                                   </div>
                                               </div>
-                                              <p class="m-t-25 text-justify">
+                                              <p class="m-t-25 text-justify" style="min-height: 160px;">
                                                   <?= lmWord($projectPerson['decription'], 80) ?>
 
                                               </p>
                                               <div class="m-t-30">
+                                                  <?php
+                                                    switch ($projectPerson['states']) {
+                                                        case 'create':
+                                                            $progressBarColor = 'info ';
+                                                            $Status = 'Criado';
+                                                            break;
+                                                        case 'progress':
+                                                            $progressBarColor = 'secondary ';
+                                                            $Status = 'Em Andamento';
+                                                            break;
+                                                        case 'suspended':
+                                                            $progressBarColor = 'warning ';
+                                                            $Status = 'Suspenso';
+                                                            break;
+                                                        case 'cancel':
+                                                            $progressBarColor = 'danger ';
+                                                            $Status = 'Canselado';
+                                                            break;
+                                                        case 'finished':
+                                                            $progressBarColor = 'success ';
+                                                            $Status = 'Concluido';
+                                                            break;
+                                                    };
+
+                                                    $progress = rand(1, 100);
+                                                    ?>
                                                   <div class="d-flex justify-content-between">
-                                                      <span class="font-weight-semibold">Progress</span>
-                                                      <span class="font-weight-semibold">100%</span>
+                                                      <span class="font-weight-semibold">O Projeto esta em:</span>
+                                                      <span class="font-weight-semibold">
+                                                          <?php
+                                                            echo  $projectPerson['states'] == 'finished'
+                                                                ? '100%'
+                                                                :  $progress . "%"
+                                                            ?>
+                                                      </span>
                                                   </div>
                                                   <div class="progress progress-sm m-t-10">
-                                                      <div class="progress-bar bg-success" role="progressbar" style="width: 100%"></div>
+                                                      <?php
+                                                        echo  $projectPerson['states'] == 'finished'
+                                                            ? "<div class=\"progress-bar bg-{$progressBarColor}\" role=\"progressbar\" style=\"width: 100%\"></div>"
+                                                            : "<div class=\"progress-bar bg-{$progressBarColor}\" role=\"progressbar\" style=\"width: {$progress}%\"></div>"
+                                                        ?>
+
                                                   </div>
                                               </div>
                                               <div class="m-t-20">
                                                   <div class="d-flex justify-content-between align-items-center">
                                                       <div>
-                                                          <span class="badge badge-pill badge-cyan">Ready</span>
+                                                          <?php
+                                                            switch ($projectPerson['states']) {
+                                                                case 'create':
+                                                                    $stateColor = 'cyan';
+                                                                    $Status = 'Criado';
+                                                                    break;
+                                                                case 'progress':
+                                                                    $stateColor = 'purple';
+                                                                    $Status = 'Em Andamento';
+                                                                    break;
+                                                                case 'suspended':
+                                                                    $stateColor = 'gold';
+                                                                    $Status = 'Suspenso';
+                                                                    break;
+                                                                case 'cancel':
+                                                                    $stateColor = 'red';
+                                                                    $Status = 'Canselado';
+                                                                    break;
+                                                                case 'finished':
+                                                                    $stateColor = 'green';
+                                                                    $Status = 'Concluido';
+                                                                    break;
+                                                            };
+                                                            ?>
+
+                                                          <span class="badge badge-pill badge-<?= $stateColor ?>">
+                                                              <?= $Status; ?>
+                                                          </span>
                                                       </div>
                                                       <div>
                                                           <a class="m-r-5" href="javascript:void(0);" data-toggle="tooltip" title="Pamela Wanda">
@@ -242,14 +328,14 @@
                                           <span class="text-muted">
                                               # <?= $uuid = uuidv4() ?>
                                           </span>
-                                          <input type="hidden" id="idCustumer" name="id_person_responsable" value="" />
+                                          <input type="hidden" id="idCustumer" name="id_person_client" value="<?= $_GET["idcliente"] ?>" />
                                           <hr />
                                           <section class="container">
                                               <form action="" method="post" enctype="multipart/form">
                                                   <input type="hidden" name="uuid" value="<?= $uuid ?>">
                                                   <div class="form-group">
                                                       <label for="title">Titulo do Projeto</label>
-                                                      <input type="text" focus class="form-control" id="title" placeholder="Nome do Projeto">
+                                                      <input type="text" focus name="title" class="form-control" id="title" placeholder="Nome do Projeto">
                                                   </div>
                                                   <div class="form-group">
                                                       <label for="decription">Descrição do Projeto</label>
@@ -291,6 +377,7 @@
                                                           <div class="col-md-6">
                                                               <div class="row">
                                                                   <div class="input-affix m-v-10">
+                                                                      <input type="hidden" name="action" value="create">
                                                                       <button type="submit" class="btn btn-tone btn-success m-v-10">
                                                                           <i class="anticon anticon-save"></i>
                                                                           Criar Projeto
