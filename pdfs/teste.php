@@ -15,7 +15,9 @@ $dompdf = new Dompdf($options);
 //$dompdf->loadHtmlFile(__DIR__ . '/base.html');
 
 ob_start();
-require __DIR__ . '/proposta.php';
+require __DIR__ . "/proposta.php";
+//require __DIR__ . "/proposta.php?{$_GET['id']}";
+
 $dompdf->loadHtml(ob_get_clean());
 
 $dompdf->setPaper('A4', 'portrait');
