@@ -9,10 +9,15 @@ require '../util/outfunc.php';
 $connection = novaConexao();
 
 
-$sql = "SELECT * FROM person
+
+/*$sql = "SELECT * FROM person
         INNER JOIN projects
         ON person.id = projects.id_person_client
-        WHERE projects.uuid = '{$_GET['id']}'";
+        INNER JOIN types_project
+        ON projects.id_type_project = types_project.id
+        WHERE projects.uuid = '{$_GET['id']}'";*/
+$sql = "SELECT * FROM vw_proposal
+        WHERE uuid = '{$_GET['id']}'";
 $result = $connection->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 $refer = $result[0];
 
@@ -119,7 +124,8 @@ $refer = $result[0];
 
     <p class="title">
       <i>
-        Proposta Comercial Sistema de Energia Solar<br />
+        Proposta Comercial: <?= $refer['title_type_project'] ?>
+        <br />
       </i>
       <small class="title_p1">
         ORÇAMENTO–PE&nbsp;<?= date('m/Y') ?>
@@ -259,7 +265,7 @@ $refer = $result[0];
                 <td height="30">
                   <span style="font-weight: bold; text-transform: uppercase;">Titular:</span>
                   <span style="font-size: 0.84rem; text-transform: uppercase;margin-left: -4px;">
-                    <?= $refer['name'] ?>
+                    <?= $refer['nome_person'] ?>
                   </span>
                 </td>
                 <td height="30">
@@ -281,7 +287,7 @@ $refer = $result[0];
                 <td height="30">
                   <span style="font-weight: bold; text-transform: uppercase;">Localização:</span>
                   <span style="font-size: 0.84rem;margin-left: -8px;">
-                    <?= $refer['street'] . ", " . $refer['number_address'] . " - " . $refer['neighborhood'] . ", " . $refer['city'] . '/' . $refer['state'] . ' CEP: ' . $refer['zip_code']  ?>
+                    <?= $refer['street'] . ", " . $refer['number_address'] . " - " . $refer['neighborhood'] . ", " . $refer['city'] . '/' . $refer['state'] . ' CEP: ' . mascaraCEP($refer['CEP'])  ?>
                   </span>
                 </td>
                 <td height="30">
