@@ -58,7 +58,7 @@
                         $id_type_project = strip_tags(trim($_POST['id_type_project']));
                         $id_person_client = $_GET['idcliente'];
                         $title = strip_tags(trim($_POST['title']));
-                        $decription = strip_tags(trim($_POST['decription']));
+                        $decription = nl2br(strip_tags(trim($_POST['decription'])));
                         $deadline = strip_tags(trim($_POST['deadline']));
 
                         $sql = "SELECT uuid FROM projects WHERE uuid = '$uuid'";
@@ -75,9 +75,7 @@
                             echo "<div class='alert alert-danger'>Projeto já existe</div>";
                         }
                     }
-
                     ?>
-
                   <div class="container-fluid">
                       <div id="card-view">
                           <div class="row">
@@ -94,14 +92,14 @@
                                                           <!-- <img src="assets/images/logo/logo-fold.png" alt=""> -->
                                                       </div>
                                                       <div class="m-l-10">
-                                                          <h5 class="m-b-0">
+                                                          <h5 class="m-b-0 text-uppercase">
                                                               <?= $projectPerson['title'] ?>
                                                           </h5>
                                                           <span class="text-muted font-size-11"><?= uuidv4() ?></span>
                                                       </div>
                                                   </div>
                                                   <div class="dropdown dropdown-animated scale-left">
-                                                      <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
+                                                      <a class="text-gray font-size-18" href="" data-toggle="dropdown">
                                                           <i class="anticon anticon-ellipsis"></i>
                                                       </a>
                                                       <div class="dropdown-menu">
@@ -109,6 +107,7 @@
                                                               <i class="anticon anticon-eye"></i>
                                                               <span class="m-l-10">Detalhes</span>
                                                           </a>
+
                                                           <button class="dropdown-item" type="button">
                                                               <i class="anticon anticon-edit"></i>
                                                               <span class="m-l-10">Edit</span>
@@ -223,6 +222,7 @@
 
                           </div>
                       </div>
+                      <!-- Listagem de Projetos -->
                       <div class="card d-none" id="list-view">
                           <div class="card-body">
                               <div class="table">
@@ -244,7 +244,9 @@
                                                           <img src="assets/images/others/thumb-1.jpg" alt="">
                                                       </div>
                                                       <div class="m-l-10">
-                                                          <h5 class="m-b-0">Mind Cog App</h5>
+                                                          <h5 class="m-b-0 text-uppercase">
+                                                              <?= $projectPerson['title'] ?>
+                                                          </h5>
                                                       </div>
                                                   </div>
                                               </td>
@@ -405,6 +407,138 @@
                       </div>
                   </div>
               </div>
+
+              <!-- Modal new Proposta -->
+              <div class="modal modal-right fade" id="create-new-proposal">
+                  <div class="modal-dialog modal-xl" role="document">
+                      <div class="modal-content">
+                          <div class="side-modal-wrapper page-header">
+                              <div class="vertical-align">
+                                  <div class="table-cell">
+                                      <div class="modal-body" style="background-color: #fff;">
+                                          <h3 class="modal-title text-primary">
+                                              <i class="anticon anticon-file-text"></i>
+                                              Criar Proposta
+                                              <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                                                  <h1 aria-hidden="true" class="modal-title text-danger">&times;</h1>
+                                              </button>
+                                          </h3>
+                                          <!-- <span class="text-muted">
+                                              # <? $uuid = uuidv4() ?>
+                                          </span>-->
+                                          <?php
+                                            echo $idProject = "<span id=\"uuidProjetct\"></span>";
+
+                                            // $sql = "SELECT * FROM projects WHERE id = '" . $idProject . "'";
+                                            ?>
+                                          <hr />
+                                          <section class="container">
+                                              <form action="" method="post" enctype="multipart/form">
+                                                  <input type="hidden" name="uuid" value="<?= $uuid ?>">
+                                                  <input type="hidden" id="idCustumer" name="id_person_responsable" value="" />
+                                                  <div class="form-group">
+                                                      <label for="title">Titulo do Projeto</label>
+                                                      <input type="text" disabled class="form-control" id="title" name="title" id="uuidProjetct" value="<?= $projectPerson['title'] ?>">
+                                                  </div>
+                                                  <!--<div class="form-group">
+                                                      <label for="decription">Descrição do Projeto</label>
+                                                      <textarea class="form-control" name="decription" rows="3"></textarea>
+                                                  </div>
+                                                  <div class="form-group">
+                                                        <label for="states">Estado do Projeto</label></br>
+                                                        <select class="select2" name="states">
+                                                            <option value="" selected disabled>Selecione ...</option>
+                                                            <option value="create">Criando</option>
+                                                            <option value="progress">Em Andamento</option>
+                                                            <option value="suspended">Suspenso</option>
+                                                            <option value="cancel">Canselado</option>
+                                                        </select>
+                                                    </div> -->
+                                                  <div class="form-group">
+                                                      <label for="id_type_project">Tipo do Projeto</label></br>
+                                                      <script>
+                                                          function setIdPorject(valor) {
+                                                              var idProject = valor;
+                                                              document.getElementById("idProject").value = idProject;
+                                                              // console.log(idProject);
+                                                              // document.getElementById('idProject').value = valor;
+                                                          };
+                                                      </script>
+                                                      <?php
+                                                        $sql = "SELECT * FROM types_project WHERE id = '" . $projectPerson['id_type_project'] . "'";
+                                                        $result = $connection->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+                                                        $resultado = $result[0];
+
+
+                                                        switch ($resultado['id_type_project']) {
+                                                            case 1:
+                                                                $typeProject = "Energia Solar";
+                                                                break;
+                                                            case 2:
+                                                                $typeProject = "Iluminação Publica";
+                                                                break;
+                                                            case 3:
+                                                                $typeProject = "Subestação";
+                                                                break;
+                                                            case 4:
+                                                                $typeProject = "Projeto Elétrico";
+                                                                break;
+                                                            case 5:
+                                                                $typeProject = "Projeto SPDA";
+                                                                break;
+                                                            case 6:
+                                                                $typeProject = "MUC";
+                                                                break;
+                                                            case 7:
+                                                                $typeProject = "Loteamento";
+                                                                break;
+                                                        }
+                                                        ?>
+                                                      <input type="text" disabled class="form-control" id="id_type_project" name="id_type_project" value="<?= $resultado['title'] ?>">
+
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <label for="title">Valor da Proposta</label>
+                                                      <input type="text" class="form-control js_dinheiro" id="title" name="title" id="uuidProjetct" value="">
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <label for="deadline">Validade da Proposta</label>
+                                                      <input type="date" class="form-control" id="deadline" name="deadline" placeholder="Previsão do Projeto">
+                                                  </div>
+                                                  <input type="hidden" name="action" value="createProject">
+                                                  <div class=" no-gutters">
+                                                      <div class="row align-items-md-center">
+                                                          <div class="col-md-6">
+                                                              <div class="row">
+                                                                  <div class="input-affix m-v-10">
+                                                                      <button type="submit" class="btn btn-tone btn-success m-v-10">
+                                                                          <i class="anticon anticon-save"></i>
+                                                                          Criar Projeto
+                                                                      </button>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                          <div class="col-md-6">
+                                                              <div class="text-md-right m-v-10">
+                                                                  <div class="btn-group m-r-10">
+                                                                      <button type="reset" class="btn btn-tone btn-danger m-v-10">
+                                                                          <i class="anticon anticon-delete"></i>
+                                                                          Limpar Formulário
+                                                                      </button>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                              </form>
+                                          </section>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
               <script type="text/javascript">
                   $(document).ready(function() {
                       $('.select2').select2();
@@ -415,4 +549,9 @@
                       alert(described);
 
                   }
+
+                  function setaDadosModal(valor) {
+                      document.getElementById('uuidProjetct').value = valor;
+
+                  };
               </script>

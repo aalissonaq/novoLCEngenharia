@@ -17,7 +17,7 @@ $refer = $result[0];
                                     <img src="assets/images/others/thumb-3.jpg" alt="">
                                 </div>
                                 <div class="m-l-10">
-                                    <h4 class="m-b-0">
+                                    <h4 class="m-b-0 text-uppercase">
                                         <?= $refer['title'] ?>
                                     </h4>
                                 </div>
@@ -47,8 +47,13 @@ $refer = $result[0];
                                         break;
                                 };
                                 ?>
-                                <span class="badge badge-pill badge-<?= $stateColor ?>">
+                                <span class="badge badge-pill badge-<?= $stateColor ?> ">
                                     <?= $Status; ?>
+                                </span>
+                                <span>
+                                    <a href="./../pdfs/proposta-solar.php?id=<?= $uuid ?>" target="_new" class="btn btn-primary btn-tone btn-xs">
+                                        <i class="anticon anticon-file-pdf text-danger font-size-18 m-h-5"></i>Proposta
+                                    </a>
                                 </span>
                                 <span>
                                     <button class="btn btn-secondary btn-tone btn-xs" onclick="history.go(-1)">
@@ -68,36 +73,21 @@ $refer = $result[0];
                         <div class="d-md-flex m-t-30 align-items-center justify-content-between">
                             <div class="d-flex align-items-center m-t-10">
                                 <span class="text-dark font-weight-semibold m-r-10 m-b-5">Responsável: </span>
-                                <a class="m-r-5 m-b-5" href="javascript:void(0);" data-toggle="tooltip" title="Erin Gonzales">
-                                    <div class="avatar avatar-image" style="width: 30px; height: 30px;">
-                                        <img src="assets/images/avatars/thumb-1.jpg" alt="">
-                                    </div>
-                                </a>
-                                <a class="m-r-5 m-b-5" href="javascript:void(0);" data-toggle="tooltip" title="Darryl Day">
-                                    <div class="avatar avatar-image" style="width: 30px; height: 30px;">
-                                        <img src="assets/images/avatars/thumb-2.jpg" alt="">
-                                    </div>
-                                </a>
-                                <a class="m-r-5 m-b-5" href="javascript:void(0);" data-toggle="tooltip" title="Marshall Nichols">
-                                    <div class="avatar avatar-image" style="width: 30px; height: 30px;">
-                                        <img src="assets/images/avatars/thumb-3.jpg" alt="">
-                                    </div>
-                                </a>
-                                <a class="m-r-5 m-b-5" href="javascript:void(0);" data-toggle="tooltip" title="Virgil Gonzales">
-                                    <div class="avatar avatar-image" style="width: 30px; height: 30px;">
-                                        <img src="assets/images/avatars/thumb-4.jpg" alt="">
-                                    </div>
-                                </a>
-                                <a class="m-r-5 m-b-5" href="javascript:void(0);" data-toggle="tooltip" title="Riley Newman">
-                                    <div class="avatar avatar-image" style="width: 30px; height: 30px;">
-                                        <img src="assets/images/avatars/thumb-6.jpg" alt="">
-                                    </div>
-                                </a>
-                                <a class="m-r-5 m-b-5" href="javascript:void(0);" data-toggle="tooltip" title="Pamela Wanda">
-                                    <div class="avatar avatar-image" style="width: 30px; height: 30px;">
-                                        <img src="assets/images/avatars/thumb-7.jpg" alt="">
-                                    </div>
-                                </a>
+                                <?php
+                                $sql = "SELECT * FROM projects
+                                        INNER JOIN person
+                                        ON projects.id_person_responsable = person.id
+                                        WHERE uuid = '{$_GET['uuid']}'";
+                                $result = $connection->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+                                foreach ($result as $resultado) {
+
+                                ?>
+                                    <a class="m-r-5 m-b-5" href="javascript:void(0);" data-toggle="tooltip" title="<?= $resultado['name'] ?>">
+                                        <div class="avatar avatar-image" style="width: 30px; height: 30px;">
+                                            <img src="assets/images/avatars/<?= $resultado['avatar'] ?>" alt="<?= $resultado['name'] ?>">
+                                        </div>
+                                    </a>
+                                <?php } ?>
                             </div>
                             <div class="m-t-10">
                                 <span class="font-weight-semibold m-r-10 m-b-5 text-dark">Previsão: </span>
@@ -111,13 +101,19 @@ $refer = $result[0];
                     <div class="m-t-30">
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#project-details-tasks">Tasks (8)</a>
+                                <a class="nav-link active" data-toggle="tab" href="#project-details-tasks">Tarefas</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#project-details-comments">Comments</a>
+                                <a class="nav-link" data-toggle="tab" href="#project-details-comments">Comentários</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#project-details-attachment">Attachment</a>
+                                <a class="nav-link" data-toggle="tab" href="#project-details-project">Dados do Projeto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#project-details-attachment">Arquivos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#project-details-proposal">Criar Proposta</a>
                             </li>
                         </ul>
                         <div class="tab-content m-t-15 p-25">
@@ -154,6 +150,24 @@ $refer = $result[0];
                                     <input id="task-8" type="checkbox" checked="">
                                     <label for="task-8">I'll be sure to note that in my log</label>
                                 </div>
+                            </div>
+                            <div class="tab-pane fade" id="project-details-project">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item p-h-0">
+                                        <div class="media m-b-15">
+                                            <div class="avatar avatar-image">
+                                                <img src="assets/images/avatars/thumb-8.jpg" alt="">
+                                            </div>
+                                            <div class="media-body m-l-20">
+                                                <h6 class="m-b-0">
+                                                    <a href="" class="text-dark">Lillian Stone</a>
+                                                </h6>
+                                                <span class="font-size-13 text-gray">28th Jul 2018</span>
+                                            </div>
+                                        </div>
+                                        <p>The palatable sensation we lovingly refer to as The Cheeseburger has a distinguished and illustrious history. It was born from humble roots, only to rise to well-seasoned greatness.</p>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="tab-pane fade" id="project-details-comments">
                                 <ul class="list-group list-group-flush">
@@ -202,6 +216,10 @@ $refer = $result[0];
                                 </ul>
                             </div>
                             <div class="tab-pane fade" id="project-details-attachment">
+                                <div class="custom-file m-b-15">
+                                    <input type="file" class="custom-file-input" id="customFile">
+                                    <label class="custom-file-label" for="customFile">Selecione um Arquivo</label>
+                                </div>
                                 <div class="file" style="min-width: 200px;">
                                     <div class="media align-items-center">
                                         <div class="avatar avatar-icon avatar-cyan rounded m-r-15">
@@ -235,6 +253,121 @@ $refer = $result[0];
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="tab-pane fade" id="project-details-proposal">
+                                <section class="container">
+                                    <form action="" method="post" enctype="multipart/form">
+                                        <input type="hidden" name="uuid" value="<?= $uuid ?>">
+                                        <input type="hidden" id="idCustumer" name="id_person_responsable" value="" />
+
+                                        <label for="">Material do Projeto</label><br />
+                                        <div class="form-row align-items-center m-b-20">
+                                            <div class="col-5">
+                                                <label class="sr-only" for="description">Description</label>
+                                                <input type="text" class="form-control mb-9" id="description" placeholder="Descrição">
+                                            </div>
+                                            <div class="col-2">
+                                                <label class="sr-only" for="qtd">qtd</label>
+                                                <input type="number" class="form-control mb-9" id="qtd" placeholder="Quantidade ">
+                                            </div>
+                                            <div class="col-3">
+                                                <label class="sr-only" for="valor">Valor</label>
+                                                <input type="text" class="form-control mb-9 js_dinheiro" id="valor" placeholder="Valor ">
+                                            </div>
+                                            <div class="col-2">
+                                                <button type="submit" class="btn btn-secondary btn-tone m-r-5">
+                                                    <i class="fas fa-boxess"></i>
+                                                    Salvar
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">#</th>
+                                                        <th scope="col">Descrição</th>
+                                                        <th scope="col">Quantidade</th>
+                                                        <th scope="col">Valor Unit</th>
+                                                        <th scope="col">Valor total</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>Descrição no mareial utilizado no projeto</td>
+                                                        <td class="text-center">10</td>
+                                                        <td>R$ <?= formatMoedaBr(1000) ?></td>
+                                                        <td>R$ <?= formatMoedaBr(1000 * 10) ?></td>
+                                                    </tr>
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                        <td colspan="4" class="text-right"><b>Total Geral</b></td>
+                                                        <td>R$ <?= formatMoedaBr(1000 * 10) ?></td>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+
+
+                                        <!--<div class="form-group">
+                                            <label for="title">Titulo do Projeto</label>
+                                            <input type="text" disabled class="form-control" id="title" name="title" id="uuidProjetct" value="<?= $projectPerson['title'] ?>">
+                                        </div>
+                                        <div class="form-group">
+                                                      <label for="decription">Descrição do Projeto</label>
+                                                      <textarea class="form-control" name="decription" rows="3"></textarea>
+                                                  </div>-->
+
+
+                                        <div class="form-group ">
+                                            <label for="title">Valor da Proposta (R$)</label>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">R$ </span>
+                                                </div>
+                                                <input type="text" class="form-control js_dinheiro" id="title" name="title" id="uuidProjetct" value="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="states">Forma de Pagamento</label></br>
+                                            <select class="select2" name="states">
+                                                <option value="" selected disabled>Escolha a forma de Pagamento</option>
+                                                <option value="transPix">Transferência Bancária ou PIX</option>
+                                                <option value="Crédito">Cartão de Crédito</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="deadline">Validade da Proposta</label>
+                                            <input type="date" class="form-control" id="deadline" name="deadline" placeholder="Previsão do Projeto">
+                                        </div>
+                                        <input type="hidden" name="action" value="createProject">
+                                        <div class=" no-gutters">
+                                            <div class="row align-items-md-center">
+                                                <div class="col-md-6">
+                                                    <div class="row">
+                                                        <div class="input-affix m-v-10">
+                                                            <button type="submit" class="btn btn-tone btn-success m-v-10">
+                                                                <i class="anticon anticon-save"></i>
+                                                                Criar Projeto
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="text-md-right m-v-10">
+                                                        <div class="btn-group m-r-10">
+                                                            <button type="reset" class="btn btn-tone btn-danger m-v-10">
+                                                                <i class="anticon anticon-delete"></i>
+                                                                Limpar Formulário
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </form>
+                                </section>
                             </div>
                         </div>
                     </div>

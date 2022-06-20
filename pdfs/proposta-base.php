@@ -124,7 +124,10 @@ $refer = $result[0];
 
     <p class="title">
       <i>
-        Proposta Comercial: <?= $refer['title_type_project'] ?>
+        Proposta Comercial:
+        <span style="text-transform: uppercase;">
+          <?= $refer['title_type_project'] ?>
+        </span>
         <br />
       </i>
       <small class="title_p1">

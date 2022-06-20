@@ -208,6 +208,7 @@
                                                                 <i class="fas fa-user-alt-slash"></i>
                                                                 <span class="m-l-10">Inativar</span>
                                                             </button>
+
                                                             <button class="dropdown-item" type="button" data-toggle="modal" data-target="#create-new-project" onclick="setaDadosModal(<?= $idParson ?> )">
                                                                 <i class="anticon anticon-appstore"></i>
                                                                 <span class="m-l-10">Criar Projetos</span>
@@ -425,9 +426,9 @@
                     </div>
                 </div>
 
+
                 <script>
                     function setaDadosModal(valor) {
                         document.getElementById('idCustumer').value = valor;
-
                     };
                 </script>
