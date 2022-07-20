@@ -89,7 +89,7 @@
                                 <div>
                                     <button data-toggle="modal" data-target="#newCustomer" class="btn btn-tone btn-primary">
                                         <i class="anticon anticon-user-add"></i>
-                                        Novo Usuário
+                                        Novo Cliente
                                     </button>
                                 </div>
                             </div>

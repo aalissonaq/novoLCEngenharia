@@ -36,6 +36,8 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     <link href="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
     <link href="assets/vendors/datatables/dataTables.bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendors/select2/select2.css" rel="stylesheet">
+    <!-- MDI -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
 
     <!-- Core css -->
     <link href="./assets/css/app.min.css" rel="stylesheet">
@@ -296,7 +298,19 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
                                 </span>
                             </a>
                         </li>
-                        <li class="nav-item dropdown <?= isset($_GET['page']) && $_GET['page'] == 'users' ? 'open' : ''; ?>">
+                        <li class="nav-item dropdown <?php
+                                                        switch ($_GET['page']) {
+                                                            case 'users':
+                                                                echo 'open';
+                                                                break;
+                                                            case 'equipment':
+                                                                echo 'open';
+                                                                break;
+                                                            default:
+                                                                echo '';
+                                                                break;
+                                                        }
+                                                        ?>">
                             <a class="dropdown-toggle" href="javascript:void(0);">
                                 <span class="icon-holder">
                                     <i class="anticon anticon-setting"></i>
@@ -312,6 +326,9 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
                                 </li>
                                 <li>
                                     <a href="?page=typesProjects">Tipos de Projetos</a>
+                                </li>
+                                <li>
+                                    <a href="?page=equipment" class="<?= isset($_GET['page']) && $_GET['page'] == 'equipment' ? 'text-secondary active' : ''; ?>">Equipamentos & Materiais</a>
                                 </li>
                                 <li>
                                     <a href="">Logs do Sistema</a>
