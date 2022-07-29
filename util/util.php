@@ -1,8 +1,9 @@
 <?php
 
-function sweetalert($title, $message, $type, $time, $position = null)
+function sweetalert($title, $message, $type, $time = null, $position = null)
 {
   $position = $position ? $position : 'center';
+  $time = $time ? $time : '3000';
   echo "<script type='text/javascript'>
   Swal.fire({
     icon: '$type',
